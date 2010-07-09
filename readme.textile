@@ -1,6 +1,7 @@
 h1. Dependency Injection in Lift
 
-h2. The 'Lift' way:
+h2. The 'Lift' way
+
 http://groups.google.com/group/liftweb/browse_thread/thread/49abb968212f2743/02b4506fc58c946e
 
 h2. Spring, Aspects, @Configurable and Compile Time Weaving using maven
