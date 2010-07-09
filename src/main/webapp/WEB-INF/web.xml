@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!DOCTYPE web-app
-PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-"http://java.sun.com/dtd/web-app_2_3.dtd">
+        PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
-<filter>
-  <filter-name>LiftFilter</filter-name>
-  <display-name>Lift Filter</display-name>
-  <description>The Filter that intercepts lift calls</description>
-  <filter-class>net.liftweb.http.LiftFilter</filter-class>
-</filter>
-  	
 
-<filter-mapping>
-  <filter-name>LiftFilter</filter-name>
-  <url-pattern>/*</url-pattern>
-</filter-mapping>
+    <!-- Context Configuration locations for Spring XML files -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring/applicationContext.xml</param-value>
+	</context-param>
+
+    <filter>
+        <filter-name>LiftFilter</filter-name>
+        <display-name>Lift Filter</display-name>
+        <description>The Filter that intercepts lift calls</description>
+        <filter-class>net.liftweb.http.LiftFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LiftFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+		<!--
+			Loads the root application context of this web app at startup.
+			The application context is then available via
+			WebApplicationContextUtils.getWebApplicationContext(servletContext).
+		-->
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 
 </web-app>
