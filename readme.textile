@@ -1,5 +1,7 @@
 h1. Dependency Injection in Lift
 
+see "blog post":http://technbolts.blogspot.com/2010/07/dependency-injection-in-lift.html
+
 h2. The 'Lift' way
 
 "Google group discussion":http://groups.google.com/group/liftweb/browse_thread/thread/49abb968212f2743/02b4506fc58c946e
