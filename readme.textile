@@ -20,14 +20,17 @@ h1. GIT
 * git commit
 * git push
 
-* branch
-create:
+Branch
+* create:
   git branch <branch-name>
-switch to
+  
+* switch to
   git checkout <branch-name>
-push branch to origin (github)
+
+* push branch to origin (github)
   git push origin <branch-name>
-back to master (aka local trunk)
+
+* back to master (aka local trunk)
   git checkout master
 
 h1. Protocol buffer
