@@ -1,23 +1,8 @@
 h1. Dependency Injection in Lift
 
-h2. The 'Lift' way
+see "blog post":http://technbolts.blogspot.com/2010/07/dependency-injection-in-lift.html
 
-"Google group discussion":http://groups.google.com/group/liftweb/browse_thread/thread/49abb968212f2743/02b4506fc58c946e
-
-h2. Spring, Aspects, @Configurable and Compile Time Weaving using maven
-
-h3. aspectj-maven-plugin: FAILED
-
-"aspectj-maven-plugin":http://www.chrissearle.org/node/285
-
-It does not work since it is based on java file and not on classes.
-I didn't find in aspectj-maven-plugin source code the way to give classes instead of java source. The only closest behavior is through module dependency jar processing...
-
-h3. aspect's main tools: SUCCESS
-
-Another solution is to use the aspectj's main classes to process the generated classes.
-
-h4. "can't determine annotations of missing type javax.persistence.Entity" issue:
+"can't determine annotations of missing type javax.persistence.Entity" issue:
 
 "springsource forum":http://forum.springsource.org/showthread.php?p=287675
 added:
@@ -35,6 +20,15 @@ h1. GIT
 * git commit
 * git push
 
+* branch
+create:
+  git branch <branch-name>
+switch to
+  git checkout <branch-name>
+push branch to origin (github)
+  git push origin <branch-name>
+back to master (aka local trunk)
+  git checkout master
 
 h1. Protocol buffer
 
