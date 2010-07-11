@@ -21,14 +21,15 @@ h1. GIT
 * git push
 
 Branch
+
 * create:
-  git branch <branch-name>
+  git branch &lt;branch-name&gt;
   
 * switch to
-  git checkout <branch-name>
+  git checkout &lt;branch-name&gt;
 
 * push branch to origin (github)
-  git push origin <branch-name>
+  git push origin &lt;branch-name&gt;
 
 * back to master (aka local trunk)
   git checkout master
