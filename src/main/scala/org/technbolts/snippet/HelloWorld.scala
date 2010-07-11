@@ -1,26 +1,21 @@
-package org.technbolts {
-package snippet {
+package org.technbolts.snippet
 
 import _root_.scala.xml.NodeSeq
 import _root_.net.liftweb.util.Helpers
 import Helpers._
 import org.springframework.beans.factory.annotation.{Qualifier, Autowired, Configurable}
-import util.ExecutionService
+import org.technbolts.util.TimeService
 
 @Configurable
 class HelloWorld {
 
-  var executionService:ExecutionService = null
+  var timeService:TimeService = null
   @Autowired
-  @Qualifier("sharedExecutionService")
-  def setExecutionService(executionService:ExecutionService) = {
-    this.executionService = executionService
-    println("Execution service set: "+executionService)
+  @Qualifier("timeService")
+  def setTimeService(timeService:TimeService) = {
+    this.timeService = timeService
   }
 
   def howdy(in: NodeSeq): NodeSeq =
-    Helpers.bind("b", in, "time" -> (new _root_.java.util.Date).toString)
-}
-
-}
+    Helpers.bind("b", in, "time" -> timeService.getFormattedTime)
 }
