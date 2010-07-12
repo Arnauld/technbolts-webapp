@@ -3,11 +3,7 @@
 # except for .gitignore
 !.gitignore
 
-# ignore intellij files
-*.ipr
-*.iml
-*.iws
-
 # Ignore target...
 target/
-
+db/
+logs/

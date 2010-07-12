@@ -24,6 +24,8 @@
         <log4j.version>1.2.15</log4j.version>
         <slf4j.version>1.5.10</slf4j.version>
         <joda-time.version>1.6</joda-time.version>
+
+        <h2.version>139</h2.version>
         <berkeley-db.version>4.0.103</berkeley-db.version>
 
         <spring.version>3.0.3.RELEASE</spring.version>
@@ -103,6 +105,15 @@
             <groupId>com.sleepycat</groupId>
             <artifactId>je</artifactId>
             <version>${berkeley-db.version}</version>
+        </dependency>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!--         h2                       -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.1.107</version>
         </dependency>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
