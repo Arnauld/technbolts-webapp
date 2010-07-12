@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ddc30583-131e-40a6-8389-560d918b153e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/default.log4j.xml" afterPath="$PROJECT_DIR$/src/main/resources/default.log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/style/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates-hidden/default.html" afterPath="$PROJECT_DIR$/src/main/webapp/templates-hidden/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" afterPath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iml" afterPath="$PROJECT_DIR$/technbolts-webapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iws" afterPath="$PROJECT_DIR$/technbolts-webapp.iws" />
     </list>
     <ignored path="technbolts-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,10 +64,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="-1.36">
+            <state line="7" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="0.1891892">
               <folding />
             </state>
           </provider>
@@ -87,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Boot.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Boot.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="57" selection-start="820" selection-end="820" vertical-scroll-proportion="0.103975534">
+            <state line="45" column="17" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,7 +94,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+            <state line="7" column="3" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,19 +118,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/style/default.css">
+      <file leaf-file-name="User.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
+            <state line="24" column="7" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala">
+      <file leaf-file-name="HelloWorld.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="27" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+            <state line="30" column="80" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.textile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.textile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="10" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,15 +149,6 @@
         <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-mapper/2.0-scala280-SNAPSHOT/lift-mapper-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/mapper/ProtoUser.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="33" column="12" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeService.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/util/TimeService.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="26" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,12 +164,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/util/TimeProvider.scala" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/util/ExecutionService.scala" />
         <option value="$PROJECT_DIR$/readme.textile" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/util/TimeService.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
@@ -185,6 +178,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/templates-hidden/default.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -342,7 +337,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="snippet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,6 +360,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liftweb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -697,23 +696,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.textile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="10" selection-start="597" selection-end="597" vertical-scroll-proportion="0.50595236">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="20" selection-start="416" selection-end="416" vertical-scroll-proportion="0.24107143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="75" selection-start="325" selection-end="398" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -739,30 +724,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-mapper/2.0-scala280-SNAPSHOT/lift-mapper-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/mapper/ProtoUser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="12" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/default.log4j.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="39" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="-1.36">
           <folding />
         </state>
       </provider>
@@ -776,14 +740,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+        <state line="7" column="3" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.textile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="10" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-mapper/2.0-scala280-SNAPSHOT/lift-mapper-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/mapper/ProtoUser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="12" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="7" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="57" selection-start="820" selection-end="820" vertical-scroll-proportion="0.103975534">
+        <state line="45" column="17" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="80" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="0.1891892">
           <folding />
         </state>
       </provider>
