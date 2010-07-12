@@ -5,9 +5,11 @@ import _root_.net.liftweb.util.Helpers
 import Helpers._
 import org.springframework.beans.factory.annotation.{Qualifier, Autowired, Configurable}
 import org.technbolts.util.TimeService
+import org.slf4j.{Logger, LoggerFactory}
 
 @Configurable
 class HelloWorld {
+  private val logger: Logger = LoggerFactory.getLogger(classOf[HelloWorld])
 
   var timeService:TimeService = null
   @Autowired
@@ -16,6 +18,8 @@ class HelloWorld {
     this.timeService = timeService
   }
 
-  def howdy(in: NodeSeq): NodeSeq =
+  def howdy(in: NodeSeq): NodeSeq = {
+    logger.debug("howdy !");
     Helpers.bind("b", in, "time" -> timeService.getFormattedTime)
+  }
 }
