@@ -24,6 +24,7 @@
         <log4j.version>1.2.15</log4j.version>
         <slf4j.version>1.5.10</slf4j.version>
         <joda-time.version>1.6</joda-time.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version>
 
         <h2.version>139</h2.version>
         <berkeley-db.version>4.0.103</berkeley-db.version>
@@ -96,6 +97,15 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>${joda-time.version}</version>
+        </dependency>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!--         HttpClient               -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>${commons-httpclient.version}</version>
         </dependency>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -420,6 +430,8 @@
                 <configuration>
                     <contextPath>/</contextPath>
                     <scanIntervalSeconds>5</scanIntervalSeconds>
+                    <stopPort>8083</stopPort>
+                    <stopKey>STOP</stopKey>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
                             <port>8082</port>
@@ -427,7 +439,49 @@
                         </connector>
                     </connectors>
                 </configuration>
+
+                <!-- integration tests -->
+                <executions>
+                    <execution>
+                        <id>start-jetty</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <scanIntervalSeconds>0</scanIntervalSeconds>
+                            <daemon>true</daemon>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
             </plugin>
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!--  integration tests                 -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>failsafe-maven-plugin</artifactId>
+                <version>2.4.3-alpha-1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- stop/start jetty see jetty execution conf-->
 
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
             <!--  js compress                       -->
