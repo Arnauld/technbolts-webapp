@@ -10,6 +10,7 @@ import org.slf4j.{Logger, LoggerFactory}
 import org.technbolts.model.User
 import provider.HTTPRequest
 import net.liftweb.mapper.{Schemifier, DefaultConnectionIdentifier, StandardDBVendor, DB}
+import org.technbolts.service.ApiService
 
 /**
  * A class that's instantiated early and run.  It allows the application
@@ -33,6 +34,7 @@ class Boot {
 
     // where to search snippet
     LiftRules.addToPackages("org.technbolts")
+    LiftRules.statelessDispatchTable.append(ApiService.dispatch)
 
     Schemifier.schemify(true, Schemifier.infoF _, User)
 

@@ -370,17 +370,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: com.h2database:h2:1.1.107">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.1.107/h2-1.1.107.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.1.107/h2-1.1.107-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.1.107/h2-1.1.107-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.apache.derby:derby:10.5.3.0_1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/derby/derby/10.5.3.0_1/derby-10.5.3.0_1.jar!/" />
@@ -711,7 +700,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.2/commons-codec-1.2-sources.jar!/" />
       </SOURCES>
     </library>
-<<<<<<< HEAD:technbolts-webapp.ipr
     <library name="Maven: commons-logging:commons-logging:1.0.4">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar!/" />
@@ -721,7 +709,8 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4-sources.jar!/" />
-=======
+      </SOURCES>
+    </library>
     <library name="Maven: com.google.protobuf:protobuf-java:2.3.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/2.3.0/protobuf-java-2.3.0.jar!/" />
@@ -742,7 +731,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.2.139/h2-1.2.139-sources.jar!/" />
->>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.ipr
       </SOURCES>
     </library>
   </component>

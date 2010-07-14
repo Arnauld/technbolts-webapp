@@ -21,18 +21,15 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-<<<<<<< HEAD:technbolts-webapp.iml
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
-=======
       <sourceFolder url="file://$MODULE_DIR$/src/main/generated-java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
->>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iml
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/scala" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Maven: net.liftweb:lift-mapper:2.0-scala280-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="Maven: net.liftweb:lift-webkit:2.0-scala280-SNAPSHOT" level="project" />

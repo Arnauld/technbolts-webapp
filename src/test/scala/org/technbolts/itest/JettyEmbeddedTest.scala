@@ -8,7 +8,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(classOf[Suite])
 @SuiteClasses(Array(classOf[SimpleIT]))
-object JettyEmbeddedSuite {
+object JettyEmbeddedTest {
   val jetty = new JettyEmbeddedImpl
   
   @BeforeClass
