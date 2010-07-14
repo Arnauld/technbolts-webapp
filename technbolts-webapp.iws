@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ddc30583-131e-40a6-8389-560d918b153e" name="Default" comment="">
+<<<<<<< HEAD:technbolts-webapp.iws
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala" />
@@ -9,6 +10,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.ipr" afterPath="$PROJECT_DIR$/technbolts-webapp.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iml" afterPath="$PROJECT_DIR$/technbolts-webapp.iml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.ipr" afterPath="$PROJECT_DIR$/technbolts-webapp.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iws" afterPath="$PROJECT_DIR$/technbolts-webapp.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iml" afterPath="$PROJECT_DIR$/technbolts-webapp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
     </list>
     <ignored path="technbolts-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,12 +80,17 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD:technbolts-webapp.iws
             <state line="7" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="-4.5652175">
+=======
+            <state line="9" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="-6.12">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD:technbolts-webapp.iws
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,32 +105,179 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="44" column="45" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
               <folding />
+=======
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="623" column="104" selection-start="24731" selection-end="24731" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1279027316732" expanded="true" signature="89:28465" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="744:2632" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="2522:2614" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="2850:13082" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="3022:3391" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="3186:3369" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="3214:3343" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="3563:3721" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="3893:4080" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="4253:4415" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="4587:4748" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="4920:5073" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="5245:5420" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="5593:5751" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="5824:5986" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="6008:6842" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="6161:6820" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="6189:6317" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="6345:6472" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="6500:6635" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="6663:6794" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="7008:7046" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="7069:7222" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="7237:7427" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="7450:7621" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="7636:7938" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="7961:8130" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="8145:8394" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="8417:8591" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="8606:8813" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="8836:9018" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="9033:9236" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="9259:9429" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="9451:9625" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="9647:9809" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="9824:10177" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="10200:10370" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="10385:10637" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="10660:10863" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="11041:11223" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="11245:11434" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="11489:11689" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="11711:11914" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="11936:12132" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="12419:12621" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="12643:12844" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="12866:13061" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13293:21814" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13436:21801" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13458:13937" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13616:13924" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13633:13906" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13711:13757" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13779:13888" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="13796:13865" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="14122:14956" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="14307:14643" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="14408:14610" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="14672:14934" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="14704:14904" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="14736:14871" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="15140:15473" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="15336:15451" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="15657:17036" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="15854:15934" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="15963:17014" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="15995:16984" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="16140:16229" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="16269:16951" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="16455:16910" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="16498:16869" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="16627:16761" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="17226:17891" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="17413:17869" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="17560:17836" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="17658:17802" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="18081:18611" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="18268:18478" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="18300:18448" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="18332:18415" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="18510:18589" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="18906:20295" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="19086:19347" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="19118:19317" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="19205:19284" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="19379:20273" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="19461:20240" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="19718:19900" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="20485:20790" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="20675:20768" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="20811:21782" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="21004:21760" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="21111:21248" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="21294:21429" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="21471:21727" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22046:22344" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22100:22214" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22121:22188" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22239:22325" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22513:23688" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22564:23669" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22590:23648" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22619:23621" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22797:23591" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22837:23553" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="22991:23099" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="23147:23512" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="24205:24299" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="24590:26148" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="26298:26916" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="26316:26899" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="26337:26880" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="26522:26858" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="26623:26825" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="27134:27978" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="27155:27353" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="27375:27601" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="27623:27781" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="27803:27957" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="28202:28454" placeholder="..." />
+                <marker date="1279027316732" expanded="true" signature="28229:28428" placeholder="..." />
+              </folding>
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD:technbolts-webapp.iws
       <file leaf-file-name="JettyEmbeddedTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="35" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloWorld.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala">
+=======
+      <file leaf-file-name="sample.proto" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/sample.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="6" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="UserPBOTest.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD:technbolts-webapp.iws
+            <state line="14" column="6" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+=======
+            <state line="19" column="53" selection-start="583" selection-end="583" vertical-scroll-proportion="0.48065478">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD:technbolts-webapp.iws
       <file leaf-file-name="SimpleIT.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="10" column="4" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+=======
+      <file leaf-file-name="UserPBO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/UserPBO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="19" selection-start="138" selection-end="138" vertical-scroll-proportion="-2.72">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <folding />
             </state>
           </provider>
@@ -125,7 +286,11 @@
       <file leaf-file-name="AppTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/AppTest.scala">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD:technbolts-webapp.iws
             <state line="13" column="3" selection-start="215" selection-end="296" vertical-scroll-proportion="0.0">
+=======
+            <state line="4" column="15" selection-start="50" selection-end="98" vertical-scroll-proportion="0.0">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <folding />
             </state>
           </provider>
@@ -141,6 +306,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< HEAD:technbolts-webapp.iws
+=======
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/util/ExecutionService.scala" />
+        <option value="$PROJECT_DIR$/readme.textile" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/util/TimeService.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
@@ -152,11 +322,17 @@
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala" />
+<<<<<<< HEAD:technbolts-webapp.iws
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/scala/RunWebApp.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala" />
+=======
+        <option value="$PROJECT_DIR$/src/main/proto/sample.proto" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
       </list>
     </option>
   </component>
@@ -205,6 +381,10 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD:technbolts-webapp.iws
+=======
+      <pane id="Scope" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,6 +464,10 @@
               <option name="myItemId" value="technbolts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppTest.scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -311,7 +495,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD:technbolts-webapp.iws
               <option name="myItemId" value="itest" />
+=======
+              <option name="myItemId" value="protobuf" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,6 +517,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD:technbolts-webapp.iws
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -356,6 +545,9 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="technbolts" />
+=======
+              <option name="myItemId" value="test" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,16 +568,34 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD:technbolts-webapp.iws
               <option name="myItemId" value="technbolts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="snippet" />
+=======
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proto" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,25 +617,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD:technbolts-webapp.iws
               <option name="myItemId" value="scala" />
+=======
+              <option name="myItemId" value="generated-java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protobuf" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD:technbolts-webapp.iws
       <pane id="Scope" />
+=======
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
       <pane id="PackagesPane" />
       <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+<<<<<<< HEAD:technbolts-webapp.iws
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="project.structure.side.proportion" value="0.0" />
+=======
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
+    <property name="project.structure.side.proportion" value="0.2" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -663,10 +893,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD:technbolts-webapp.iws
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32036847" sideWeight="0.65525115" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3230438" sideWeight="0.6609442" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -731,6 +968,7 @@
         <state line="7" column="3" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+<<<<<<< HEAD:technbolts-webapp.iws
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates-hidden/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="25" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" />
@@ -749,12 +987,39 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="8" selection-start="241" selection-end="241" vertical-scroll-proportion="-4.5652175">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="-6.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-mapper/2.0-scala280-SNAPSHOT/lift-mapper-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/mapper/ProtoUser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="16" selection-start="4924" selection-end="4934" vertical-scroll-proportion="0.62637365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.textile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="10" selection-start="597" selection-end="597" vertical-scroll-proportion="0.22018349">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="80" selection-start="934" selection-end="934" vertical-scroll-proportion="0.7589286">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD:technbolts-webapp.iws
         <state line="14" column="6" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
           <folding />
         </state>
@@ -763,38 +1028,66 @@
     <entry file="file://$PROJECT_DIR$/src/test/scala/LiftConsole.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="7" selection-start="93" selection-end="93" vertical-scroll-proportion="0.07633588">
+=======
+        <state line="7" column="25" selection-start="301" selection-end="301" vertical-scroll-proportion="0.026275115">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD:technbolts-webapp.iws
     <entry file="file://$PROJECT_DIR$/src/test/scala/RunWebApp.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="17" selection-start="676" selection-end="676" vertical-scroll-proportion="0.8015267">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/User.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="6" selection-start="274" selection-end="274" vertical-scroll-proportion="0.22767857">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD:technbolts-webapp.iws
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="4" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/AppTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="15" selection-start="50" selection-end="98" vertical-scroll-proportion="0.0">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD:technbolts-webapp.iws
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/AppTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="3" selection-start="215" selection-end="296" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/UserPBO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="138" selection-end="138" vertical-scroll-proportion="-2.72">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD:technbolts-webapp.iws
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="45" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/proto/sample.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD:technbolts-webapp.iws
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="35" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
@@ -805,6 +1098,140 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="571" column="0" selection-start="22762" selection-end="22762" vertical-scroll-proportion="0.13333334">
+=======
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="623" column="104" selection-start="24731" selection-end="24731" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1279027316732" expanded="true" signature="89:28465" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="744:2632" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="2522:2614" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="2850:13082" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="3022:3391" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="3186:3369" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="3214:3343" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="3563:3721" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="3893:4080" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="4253:4415" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="4587:4748" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="4920:5073" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="5245:5420" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="5593:5751" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="5824:5986" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="6008:6842" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="6161:6820" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="6189:6317" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="6345:6472" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="6500:6635" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="6663:6794" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="7008:7046" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="7069:7222" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="7237:7427" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="7450:7621" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="7636:7938" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="7961:8130" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="8145:8394" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="8417:8591" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="8606:8813" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="8836:9018" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="9033:9236" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="9259:9429" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="9451:9625" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="9647:9809" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="9824:10177" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="10200:10370" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="10385:10637" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="10660:10863" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="11041:11223" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="11245:11434" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="11489:11689" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="11711:11914" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="11936:12132" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="12419:12621" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="12643:12844" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="12866:13061" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13293:21814" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13436:21801" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13458:13937" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13616:13924" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13633:13906" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13711:13757" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13779:13888" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="13796:13865" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="14122:14956" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="14307:14643" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="14408:14610" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="14672:14934" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="14704:14904" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="14736:14871" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="15140:15473" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="15336:15451" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="15657:17036" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="15854:15934" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="15963:17014" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="15995:16984" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="16140:16229" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="16269:16951" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="16455:16910" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="16498:16869" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="16627:16761" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="17226:17891" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="17413:17869" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="17560:17836" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="17658:17802" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="18081:18611" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="18268:18478" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="18300:18448" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="18332:18415" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="18510:18589" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="18906:20295" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="19086:19347" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="19118:19317" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="19205:19284" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="19379:20273" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="19461:20240" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="19718:19900" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="20485:20790" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="20675:20768" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="20811:21782" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="21004:21760" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="21111:21248" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="21294:21429" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="21471:21727" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22046:22344" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22100:22214" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22121:22188" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22239:22325" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22513:23688" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22564:23669" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22590:23648" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22619:23621" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22797:23591" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22837:23553" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="22991:23099" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="23147:23512" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="24205:24299" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="24590:26148" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="26298:26916" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="26316:26899" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="26337:26880" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="26522:26858" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="26623:26825" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="27134:27978" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="27155:27353" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="27375:27601" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="27623:27781" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="27803:27957" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="28202:28454" placeholder="..." />
+            <marker date="1279027316732" expanded="true" signature="28229:28428" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="53" selection-start="583" selection-end="583" vertical-scroll-proportion="0.48065478">
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iws
           <folding />
         </state>
       </provider>

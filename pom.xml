@@ -20,21 +20,31 @@
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <scala.version>2.8.0.RC7</scala.version>
         <lift.version>2.0-scala280-SNAPSHOT</lift.version>
+
+        <!-- misc -->
         <java-mail.version>1.4.2</java-mail.version>
         <log4j.version>1.2.15</log4j.version>
         <slf4j.version>1.5.10</slf4j.version>
         <joda-time.version>1.6</joda-time.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
 
-        <h2.version>139</h2.version>
+        <!-- db -->
+        <h2.version>1.2.139</h2.version>
         <berkeley-db.version>4.0.103</berkeley-db.version>
 
+        <!-- spring -->
         <spring.version>3.0.3.RELEASE</spring.version>
         <aspectj.version>1.6.9</aspectj.version>
 
+        <!-- test -->
         <junit.version>4.8.1</junit.version>
         <hamcrest-all.version>1.1</hamcrest-all.version>
         <mockito.version>1.8.4</mockito.version>
+
+        <!-- protobuf -->
+        <protobuf.version>2.3.0</protobuf.version>
+        <protoc.path>/usr/bin/protoc</protoc.path>
+        <generated-java.sourceDirectory>${project.basedir}/src/main/generated-java</generated-java.sourceDirectory>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <!--         Project                  -->
@@ -123,7 +133,16 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.1.107</version>
+            <version>${h2.version}</version>
+        </dependency>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!--         Protocol Buffer          -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
         </dependency>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -349,6 +368,27 @@
         <testSourceDirectory>src/test/scala</testSourceDirectory>
 
         <plugins>
+
+            <plugin><!-- add generated sources in compilation -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>./src/main/generated-java</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
             <!--         scala                    -->
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -568,7 +608,25 @@
         </plugins>
     </build>
 
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--         Profiles                                     -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <profiles>
+        <profile>
+            <id>windows</id>
+            <activation>
+                <os>
+                    <family>Windows</family>
+                </os>
+            </activation>
+            <properties>
+                <protoc.path>D:/outils/protoc</protoc.path>
+            </properties>
+        </profile>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!--         lib dependencies         -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <profile>
             <id>classpath</id>
             <build>
@@ -595,8 +653,56 @@
                 </plugins>
             </build>
         </profile>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!--         Protocol Buffer          -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <profile>
+            <id>protobuf</id>
+            <build>
+                <plugins>
+
+                    <plugin>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>compile-protoc</id>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <phase>generate-sources</phase>
+                                <configuration>
+                                    <tasks>
+                                        <mkdir dir="${generated-java.sourceDirectory}"/>
+                                        <!-- remove any existing generated file,
+                                             in order to prevent deleted file from still being there -->
+                                        <delete includeemptydirs="true">
+                                            <fileset dir="${generated-java.sourceDirectory}" includes="**/*"/>
+                                        </delete>
+                                        <path id="proto.path">
+                                            <fileset dir="src/main/proto">
+                                                <include name="**/*.proto"/>
+                                            </fileset>
+                                        </path>
+                                        <pathconvert pathsep=" " property="proto.files" refid="proto.path"/>
+                                        <exec executable="protoc" failonerror="true">
+                                            <arg value="--java_out=${generated-java.sourceDirectory}"/>
+                                            <arg value="-I${project.basedir}/src/main/proto"/>
+                                            <arg line="${proto.files}"/>
+                                        </exec>
+                                    </tasks>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--         Reporting                                    -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <reporting>
         <plugins>
             <plugin>

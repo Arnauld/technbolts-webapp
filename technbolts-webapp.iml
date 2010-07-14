@@ -21,7 +21,12 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD:technbolts-webapp.iml
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/src/main/generated-java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+>>>>>>> 48dee956456ef28e8a29574e90ff56ed06c8976f:technbolts-webapp.iml
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/scala" isTestSource="true" />
@@ -46,12 +51,13 @@
     <orderEntry type="library" exported="" name="Maven: commons-httpclient:commons-httpclient:3.1" level="project" />
     <orderEntry type="library" exported="" name="Maven: commons-logging:commons-logging:1.0.4" level="project" />
     <orderEntry type="library" exported="" name="Maven: commons-fileupload:commons-fileupload:1.2.1" level="project" />
-    <orderEntry type="library" exported="" name="Maven: com.h2database:h2:1.1.107" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.h2database:h2:1.2.139" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Maven: org.apache.derby:derby:10.5.3.0_1" level="project" />
     <orderEntry type="library" exported="" name="Maven: javax.mail:mail:1.4.2" level="project" />
     <orderEntry type="library" exported="" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" exported="" name="Maven: com.sleepycat:je:4.0.103" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.google.protobuf:protobuf-java:2.3.0" level="project" />
     <orderEntry type="library" exported="" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
     <orderEntry type="library" exported="" name="Maven: org.springframework:spring-core:3.0.3.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Maven: org.springframework:spring-asm:3.0.3.RELEASE" level="project" />
