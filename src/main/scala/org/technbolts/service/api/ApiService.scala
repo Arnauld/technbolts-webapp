@@ -6,5 +6,12 @@ object ApiService {
   val ContentType = "application/octet-stream+protobuf"
 
   def dispatchList: List[LiftRules.DispatchPF] =
-    List(RootApiService.dispatch, EntityApiService.dispatch)
+    List(
+      RootApiService.dispatch,
+      EntityApiService.dispatch,
+      ClusterApiService.dispatch)
+}
+
+trait ApiService {
+  
 }

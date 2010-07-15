@@ -1,0 +1,35 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "ClusterPBO";
+
+option optimize_for = SPEED;
+
+message NodeInfo {
+    optional string id = 1;
+    optional string url = 2;
+    repeated Feature feature = 3;
+}
+message SearchNodeInfo {
+    optional NodeInfo sample = 1;
+    optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchNodeInfoResponse {
+    repeated Error error = 1;
+    repeated uint32 descriptor_id = 2;
+    repeated NodeInfo node_info = 3;
+}
+
+message NodeUpdate {
+    optional string id = 1;
+    repeated Feature feature_changed = 2;
+}
+message NodeUpdateResponse {
+    repeated Error error = 1;
+}
+
+message Feature {
+    optional string id = 1;
+    optional bool active = 2;
+}

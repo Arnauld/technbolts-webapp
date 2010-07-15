@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ddc30583-131e-40a6-8389-560d918b153e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/EntityApiService.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/resource.proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/cluster.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ClusterApiService.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iws" afterPath="$PROJECT_DIR$/technbolts-webapp.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/proto/common.proto" afterPath="$PROJECT_DIR$/src/main/proto/common.proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/api/EntityApiServiceIT.scala" />
-      <change type="DELETED" beforePath="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\service\ApiService.scala" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.ipr" afterPath="$PROJECT_DIR$/technbolts-webapp.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/UserPBO.java" afterPath="$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/UserPBO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/proto/user.proto" afterPath="$PROJECT_DIR$/src/main/proto/user.proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" afterPath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/HttpClientHelper.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iml" afterPath="$PROJECT_DIR$/technbolts-webapp.iml" />
     </list>
     <ignored path="technbolts-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,7 +68,7 @@
       <file leaf-file-name="EntityApiService.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/EntityApiService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="27" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0">
+            <state line="16" column="3" selection-start="636" selection-end="720" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,7 +77,7 @@
       <file leaf-file-name="ApiService.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="1" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
+            <state line="15" column="2" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,7 +86,7 @@
       <file leaf-file-name="common.proto" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/proto/common.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="46" selection-start="2248" selection-end="2248" vertical-scroll-proportion="-4.76">
+            <state line="117" column="45" selection-start="2709" selection-end="2819" vertical-scroll-proportion="-20.4">
               <folding />
             </state>
           </provider>
@@ -127,16 +113,25 @@
       <file leaf-file-name="RootApiService.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="23" selection-start="186" selection-end="186" vertical-scroll-proportion="0.18195719">
+            <state line="7" column="7" selection-start="170" selection-end="170" vertical-scroll-proportion="0.18195719">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpClientHelper.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/HttpClientHelper.scala">
+      <file leaf-file-name="ClusterApiService.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ClusterApiService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="3" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
+            <state line="5" column="7" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cluster.proto" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/cluster.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="26" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,15 +141,6 @@
         <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserPBOTest.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="55" selection-end="134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,14 +156,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/ApiService.scala" />
-        <option value="$PROJECT_DIR$/src/main/proto/user.proto" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiEntityService.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiRootService.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/EntityApiService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/EntityApiServiceIT.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala" />
@@ -186,6 +168,10 @@
         <option value="$PROJECT_DIR$/src/main/proto/resource.proto" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/HttpClientHelper.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/api/EntityApiServiceIT.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/OrchesterApiService.scala" />
+        <option value="$PROJECT_DIR$/src/main/proto/cluster.proto" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ClusterApiService.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" />
       </list>
     </option>
   </component>
@@ -525,6 +511,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ApiService.scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="liftweb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -805,7 +825,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32017228" sideWeight="0.6609442" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2390524" sideWeight="0.6609442" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -851,20 +871,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-webkit/2.0-scala280-SNAPSHOT/lift-webkit-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/http/LiftRules.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1458" column="14" selection-start="51934" selection-end="51942" vertical-scroll-proportion="0.11930926">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/proto/user.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="38" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
@@ -882,13 +888,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="55" selection-end="134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -914,34 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/EntityApiService.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/common.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="46" selection-start="2248" selection-end="2248" vertical-scroll-proportion="-4.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/resource.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="1" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/HttpClientHelper.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="3" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/org/apache/commons/httpclient/HttpStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="193" column="7" selection-start="8389" selection-end="8389" vertical-scroll-proportion="0.9571865">
@@ -956,9 +927,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/HttpClientHelper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="3" selection-start="741" selection-end="741" vertical-scroll-proportion="0.42813456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/EntityApiService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="3" selection-start="636" selection-end="720" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/resource.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="1" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/common.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="45" selection-start="2709" selection-end="2819" vertical-scroll-proportion="-20.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/cluster.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="26" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ClusterApiService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="7" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="2" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="23" selection-start="186" selection-end="186" vertical-scroll-proportion="0.18195719">
+        <state line="7" column="7" selection-start="170" selection-end="170" vertical-scroll-proportion="0.18195719">
           <folding />
         </state>
       </provider>
