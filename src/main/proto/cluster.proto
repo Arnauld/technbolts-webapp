@@ -5,6 +5,8 @@ option java_outer_classname = "ClusterPBO";
 
 option optimize_for = SPEED;
 
+import "common.proto";
+
 message NodeInfo {
     optional string id = 1;
     optional string url = 2;

@@ -1,4 +1,4 @@
-package org.technbolts.service.api
+package org.technbolts.service.entity
 
 import net.liftweb.common.Full
 import net.liftweb.http._
@@ -9,7 +9,7 @@ object EntityApiService {
     case request @ Req("api"::"entity"::"create"::Nil, _ , reqType) => () => Full(createEntity(request, reqType))
     case request @ Req("api"::"entity"::"delete"::Nil, _ , reqType) => () => Full(deleteEntity(request, reqType))
     case request @ Req("api"::"entity"::"search"::Nil, _ , reqType) => () => Full(searchEntity(request, reqType))
-    case request @ Req("api"::"entity"::command::Nil, _ , reqType)  => () => Full(unknownCommand(request, command, reqType))
+    case request @ Req("api"::"entity"::command::Nil, _ , reqType)  => () => Full(NotAcceptableResponse())
   }
 
   def createEntity(req:Req, reqType:RequestType):LiftResponse = {
@@ -22,9 +22,5 @@ object EntityApiService {
 
   def searchEntity(req:Req, reqType:RequestType):LiftResponse = {
     OkResponse()
-  }
-
-  def unknownCommand(req:Req, command:String, reqType:RequestType):LiftResponse = {
-    NotAcceptableResponse()
   }
 }

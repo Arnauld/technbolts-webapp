@@ -1,7 +1,9 @@
-package org.technbolts.service.api
+package org.technbolts.service.cluster
 
 import net.liftweb.common.Full
 import net.liftweb.http._
+import org.technbolts.protobuf.ClusterPBO
+import org.technbolts.protobuf.ClusterPBO.{NodeInfo, SearchNodeInfo}
 
 object ClusterApiService {
   def dispatch: LiftRules.DispatchPF = {
@@ -14,6 +16,7 @@ object ClusterApiService {
   }
 
   def nodeInfo(req:Req, reqType:RequestType):LiftResponse = {
+    val search : SearchNodeInfo = ClusterPBO.SearchNodeInfo.parseFrom(req.request.inputStream)
     OkResponse()
   }
 
