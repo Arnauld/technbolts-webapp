@@ -190,6 +190,9 @@
   <component name="ProjectDetails">
     <option name="projectName" value="technbolts-webapp" />
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="loyer" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/technbolts-webapp.iml" filepath="$PROJECT_DIR$/technbolts-webapp.iml" />

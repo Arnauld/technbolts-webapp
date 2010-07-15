@@ -5,14 +5,6 @@ import org.mortbay.jetty.nio.SelectChannelConnector
 import org.mortbay.jetty.webapp.WebAppContext
 import org.slf4j.LoggerFactory
 
-/**
- * Created by IntelliJ IDEA.
- * User: arnauld
- * Date: 14 juil. 2010
- * Time: 11:15:52
- * To change this template use File | Settings | File Templates.
- */
-
 trait JettyEmbedded {
   private val logger = LoggerFactory.getLogger(classOf[JettyEmbedded])
 

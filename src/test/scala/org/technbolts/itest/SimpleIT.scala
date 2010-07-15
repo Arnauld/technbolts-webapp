@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory
 import org.junit.{Before, Assert, Test}
 import org.technbolts.protobuf.UserPBO._
 import java.io.ByteArrayOutputStream
-import org.technbolts.service.ApiService
+import org.technbolts.service.api.ApiService
 
 class SimpleIT {
   private val logger = LoggerFactory.getLogger(classOf[SimpleIT])
@@ -15,7 +15,7 @@ class SimpleIT {
 
   @Before
   def setUp: Unit = {
-    user = User.newBuilder.setId(1).setName("nabu").addEmail("nabu@kodono.zor").build
+    user = User.newBuilder.setId(1).setNickname("nabu").setEmail("nabu@kodono.zor").build
   }
 
   @Test
@@ -38,7 +38,8 @@ class SimpleIT {
       Assert.fail("Method failed: " + method.getStatusLine());
     }
 
-    val response = method.getResponseBodyAsString
-    println(response)
+    val responseStream = method.getResponseBody
+    var userReturned = User.parseFrom(responseStream)
+    println("userReturned="+userReturned)
   }
 }

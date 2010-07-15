@@ -1,0 +1,28 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "ResourcePBO";
+
+option optimize_for = SPEED;
+
+import "common.proto";
+
+message Resource {
+    optional uint32 id = 1;
+    optional string name = 2;
+    optional uint64 size = 3;
+    optional string content_type = 4;
+    repeated Label label = 5;
+
+    // value management: either directly (size==0 => value!=null) or chunked (size>0 => value==null)
+    optional uint32 chunkSize = 6 [default = 0];
+    optional bytes value = 7;
+}
+
+message ResourceChunk {
+    optional bytes value = 1;
+}
+
+message GetResource {
+    optional uint32 id = 1;
+}

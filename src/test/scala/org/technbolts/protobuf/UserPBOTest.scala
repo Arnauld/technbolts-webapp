@@ -1,7 +1,6 @@
 package org.technbolts.protobuf
 
-import org.junit.{Test, Before}
-import org.junit.Assert._
+import org.junit.Test
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.CoreMatchers._
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
@@ -12,7 +11,7 @@ class UserPBOTest {
   @Test
   def simpleCase:Unit = {
     val outstream = new ByteArrayOutputStream
-    val userWritten:User = User.newBuilder().setId(1).setName("John").addEmail("john@doe.nowhere").build
+    val userWritten:User = User.newBuilder().setId(1).setNickname("John").setEmail("john@doe.nowhere").build
 
     userWritten.writeTo(outstream)
 
@@ -23,8 +22,7 @@ class UserPBOTest {
     val instream = new ByteArrayInputStream(outstream.toByteArray)
     val user:User = User.parseFrom(instream)
     assertThat(user.getId, equalTo(1))
-    assertThat(user.getName, equalTo("John"))
-    assertThat(user.getEmailCount, equalTo(1))
-    assertThat(user.getEmail(0), equalTo("john@doe.nowhere"))
+    assertThat(user.getNickname, equalTo("John"))
+    assertThat(user.getEmail(), equalTo("john@doe.nowhere"))
   }
 }

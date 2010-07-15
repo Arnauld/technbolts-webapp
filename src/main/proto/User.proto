@@ -1,26 +1,27 @@
-package org.technbolts.protobuf.user;
+package org.technbolts.protobuf;
 
 option java_package = "org.technbolts.protobuf";
 option java_outer_classname = "UserPBO";
 
 option optimize_for = SPEED;
 
-import "Common.proto";
+import "common.proto";
 
 message User {
-  optional uint32 id = 1;
-  optional string nickname = 2;
-  optional string first_name = 3;
-  optional string last_name = 4;
-  optional string email = 5;
-  //repeated Property property = 6;
+    optional uint32 id = 1;
+    optional string nickname = 2;
+    optional string firstname = 3;
+    optional string lastname = 4;
+    optional string email = 5;
+    optional EntityDescriptor entity_descriptor = 6;
+    repeated PropertyValue property = 7;
 }
 
 message CreateUser {
-  repeated User user = 1;
+    repeated User user = 1;
 }
 
 message SearchUser {
-  optional User sample = 1;
-  //optional Paging paging = 2;
+    optional User sample = 1;
+    optional Paging paging = 2;
 }
