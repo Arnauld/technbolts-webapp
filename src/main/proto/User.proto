@@ -7,21 +7,129 @@ option optimize_for = SPEED;
 
 import "common.proto";
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   role
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+message Role {
+    optional uint32 id = 1;
+    optional string name = 2;
+    repeated Label label = 3;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   user
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 message User {
     optional uint32 id = 1;
+    optional uint32 entity_descriptor_id = 2;
+    optional uint32 group_id = 3;
+    optional uint32 status = 4;
+    repeated Role role = 5;
+    optional UserDetails details = 6;
+}
+
+message UserDetails {
+    optional string email = 1;
     optional string nickname = 2;
     optional string firstname = 3;
     optional string lastname = 4;
-    optional string email = 5;
-    optional EntityDescriptor entity_descriptor = 6;
-    repeated PropertyValue property = 7;
+    optional Entity entity = 5;
 }
+
+message UserList {
+    repeated uint32 user_id = 1;
+    repeated User user = 2;
+}
+
+// ~~ Create
 
 message CreateUser {
     repeated User user = 1;
+    optional bool id_only = 2 [default=false];
 }
+
+message CreateUserResponse {
+    repeated Error error = 1;
+    repeated User user = 2;
+}
+
+// ~~ Search
 
 message SearchUser {
     optional User sample = 1;
     optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchUserResponse {
+    repeated Error error = 1;
+    repeated uint32 user_id = 2;
+    repeated User user = 3;
+}
+
+// ~~ Delete
+
+message DeleteUser {
+    repeated uint32 user_id = 2;
+}
+message DeleteUserResponse {
+    repeated Error error = 1;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   group
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+message Group {
+    optional uint32 id = 1;
+    optional uint32 entity_descriptor_id = 2;
+    optional uint32 status = 3;
+    optional string name = 4;
+
+    optional uint32 parent_id = 5;
+    repeated uint32 sub_group_id = 6;
+
+    optional GroupDetails details = 7;
+}
+
+message GroupDetails {
+    repeated Label label = 1;
+    optional Entity entity = 5;
+}
+
+message GroupList {
+    repeated uint32 group_id = 1;
+    repeated Group group = 2;
+}
+
+// ~~ Create
+
+message CreateGroup {
+    repeated Group group = 1;
+    optional bool id_only = 2 [default=false];
+}
+
+message CreateGroupResponse {
+    repeated Error error = 1;
+    repeated Group group = 2;
+}
+
+// ~~ Search
+
+message SearchGroup {
+    optional Group sample = 1;
+    optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchGroupResponse {
+    repeated Error error = 1;
+    repeated uint32 group_id = 2;
+    repeated Group group = 3;
+}
+
+// ~~ Delete
+
+message DeleteGroup {
+    repeated uint32 group_id = 2;
+}
+message DeleteGroupResponse {
+    repeated Error error = 1;
 }

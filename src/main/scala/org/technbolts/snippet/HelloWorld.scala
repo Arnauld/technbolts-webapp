@@ -9,7 +9,7 @@ import Helpers._
 import org.springframework.beans.factory.annotation.{Qualifier, Autowired, Configurable}
 import org.technbolts.util.TimeService
 import org.slf4j.{Logger, LoggerFactory}
-import org.technbolts.model.User
+import org.technbolts.model.user.User
 
 @Configurable
 class HelloWorld {

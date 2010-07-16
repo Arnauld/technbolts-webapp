@@ -7,7 +7,7 @@ import _root_.net.liftweb.sitemap._
 import _root_.net.liftweb.sitemap.Loc._
 import Helpers._
 import org.slf4j.{Logger, LoggerFactory}
-import org.technbolts.model.User
+import org.technbolts.model.user.User
 import provider.HTTPRequest
 import net.liftweb.mapper.{Schemifier, DefaultConnectionIdentifier, StandardDBVendor, DB}
 import org.technbolts.service.api.{ApiService}

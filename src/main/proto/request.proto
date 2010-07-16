@@ -1,0 +1,89 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "RequestPBO";
+
+option optimize_for = SPEED;
+
+import "common.proto";
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   request
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+message Request {
+    // system
+    optional uint64 id = 1;
+    optional uint32 system_state = 2;
+    optional uint32 request_state = 3;
+
+    optional int64  creation_date = 4;
+    optional int64  last_update_date = 5;
+    optional int64  close_date = 6;
+    optional uint32 distribution_mode = 7;
+
+    //
+    optional Ref    responsible = 8;
+
+    // details
+    optional RequestDetails details = 10;
+}
+
+message RequestDetails {
+    optional string locale = 1;
+    optional Ref    created_by = 2;
+    optional Ref    originator = 3;
+    optional Ref    last_updated_by = 4;
+    optional Ref    closed_by = 5;
+    repeated RequestEvent event = 6;
+
+    optional Entity entity = 7;
+}
+
+message RequestEvent {
+    optional uint64 id = 1;
+    optional uint32 type = 2;
+    optional int64  date = 3;
+    optional Ref originated_by = 4;
+    optional Ref destination = 5;
+    optional string comment = 6;
+    optional Entity entity = 7;
+}
+
+message RequestList {
+    repeated uint32 request_id = 1;
+    repeated Request request = 2;
+}
+
+// ~~ Create
+
+message CreateRequest {
+    repeated Request request = 1;
+    optional bool id_only = 2 [default=false];
+}
+
+message CreateRequestResponse {
+    repeated Error error = 1;
+    repeated Request request = 2;
+}
+
+// ~~ Search
+
+message SearchRequest {
+    optional Request sample = 1;
+    optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchRequestResponse {
+    repeated Error error = 1;
+    repeated uint32 request_id = 2;
+    repeated Request request = 3;
+}
+
+// ~~ Delete
+
+message DeleteRequest {
+    repeated uint32 request_id = 2;
+}
+message DeleteRequestResponse {
+    repeated Error error = 1;
+}

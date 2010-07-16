@@ -14,7 +14,8 @@ object RootApiService {
   def handleCall(req:Req, reqType:RequestType):LiftResponse = {
     val input = req.request.inputStream
     val userRead = UserPBO.User.parseFrom(input)
-    val userWritten = UserPBO.User.newBuilder(userRead).setEmail("john@do.e").build
+
+    val userWritten = UserPBO.User.newBuilder(userRead).build
 
     var data: Array[Byte] = userWritten.toByteArray
     val headers = List(

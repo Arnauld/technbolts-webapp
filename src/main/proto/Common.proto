@@ -16,20 +16,37 @@ message Label {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //   misc
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+message Ref {
+    // can be user:<id>, group:<id>, request:<id>, template:<id> ...
+    required string path = 1;
+}
+
 message Paging {
     optional int32 offset = 1;
     optional int32 limit = 2;
 }
 
-message KeyValueString {
+message KeyValue {
     optional string key = 1;
-    optional string value = 2;
+    optional TypedValue value = 2;
 }
 
 message Error {
     optional string code = 1;
-    repeated KeyValueString argument = 2;
+    repeated KeyValue argument = 2;
     repeated Error nested = 3;
+}
+
+message ValueType {
+    // one of:
+    //  int, long, float, double, string, text, timestamp, entity:<entity_id>, ...
+    optional string type = 4;
+}
+
+message TypedValue {
+    optional ValueType type = 1;
+    optional bytes value = 2;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,9 +58,7 @@ message PropertyDescriptor {
     optional string name = 2;
     repeated Label label = 3;
 
-    // one of:
-    //  int, long, float, double, string, text, date, entity:<id>, ...
-    optional string type = 4;
+    optional ValueType type = 4;
     optional bool multi = 5;
 }
 
@@ -51,6 +66,8 @@ message PropertyValue {
     required uint32 id = 1;
     repeated bytes value = 2;
 }
+
+// ~~ Create
 
 message CreateProperty {
     repeated PropertyDescriptor descriptor = 1;
@@ -62,12 +79,7 @@ message CreatePropertyResponse {
     repeated PropertyDescriptor descriptor = 3;
 }
 
-message DeleteProperty {
-    repeated uint32 descriptor_id = 2;
-}
-message DeletePropertyResponse {
-    repeated Error error = 1;
-}
+// ~~ Search
 
 message SearchProperty {
     optional PropertyDescriptor sample = 1;
@@ -80,40 +92,62 @@ message SearchPropertyResponse {
     repeated PropertyDescriptor descriptor = 3;
 }
 
+// ~~ Delete
+
+message DeleteProperty {
+    repeated uint32 descriptor_id = 2;
+}
+message DeletePropertyResponse {
+    repeated Error error = 1;
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //   entity
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 message EntityDescriptor {
     optional uint32 id = 1;
     optional string name = 2;
-    repeated Label label = 3;
-    repeated PropertyDescriptor property_descriptor = 4;
+    optional string type = 3; // request, request_event, customer, user, user_group... 
+    repeated Label label = 4;
+    repeated PropertyDescriptor property_descriptor = 5;
 }
 
-message CreateEntity {
+message Entity {
+    optional uint32 id = 1;
+    optional uint32 descriptor_id = 2;
+    repeated PropertyValue property = 3;
+}
+
+// ~~ Create
+
+message CreateEntityDescriptor {
     repeated EntityDescriptor descriptor = 1;
     optional bool id_only = 2 [default=false];
 }
-message CreateEntityResponse {
+message CreateEntityDescriptorResponse {
     repeated Error error = 1;
     repeated uint32 descriptor_id = 2;
     repeated EntityDescriptor descriptor = 3;
 }
 
-message DeleteEntity {
-    repeated uint32 descriptor_id = 2;
-}
-message DeleteEntityResponse {
-    repeated Error error = 1;
-}
+// ~~ Search
 
-message SearchEntity {
+message SearchEntityDescriptor {
     optional EntityDescriptor sample = 1;
     optional Paging paging = 2;
     optional bool id_only = 3 [default=false];
 }
-message SearchEntityResponse {
+message SearchEntityDescriptorResponse {
     repeated Error error = 1;
     repeated uint32 descriptor_id = 2;
     repeated EntityDescriptor descriptor = 3;
+}
+
+// ~~ Delete
+
+message DeleteEntityDescriptor {
+    repeated uint32 descriptor_id = 2;
+}
+message DeleteEntityDescriptorResponse {
+    repeated Error error = 1;
 }

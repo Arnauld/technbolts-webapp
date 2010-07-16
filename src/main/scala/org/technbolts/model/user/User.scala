@@ -1,4 +1,4 @@
-package org.technbolts.model
+package org.technbolts.model.user
 
 // Import all of the mapper classes
 import _root_.net.liftweb.mapper._

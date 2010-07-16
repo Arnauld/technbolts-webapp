@@ -11,11 +11,13 @@ import org.technbolts.service.api.ApiService
 class SimpleIT {
   private val logger = LoggerFactory.getLogger(classOf[SimpleIT])
 
+  var details:UserDetails = _
   var user:User = _
 
   @Before
   def setUp: Unit = {
-    user = User.newBuilder.setId(1).setNickname("nabu").setEmail("nabu@kodono.zor").build
+    details = UserDetails.newBuilder.setNickname("nabu").setEmail("nabu@kodono.zor").build
+    user = User.newBuilder.setId(1).setDetails(details).build
   }
 
   @Test

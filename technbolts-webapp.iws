@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ddc30583-131e-40a6-8389-560d918b153e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/proto/cluster.proto" afterPath="$PROJECT_DIR$/src/main/proto/cluster.proto" />
-      <change type="MOVED" beforePath="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\service\api\EntityApiService.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/entity/EntityApiService.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" />
-      <change type="MOVED" beforePath="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\service\api\ClusterApiService.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/cluster/ClusterApiService.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserApiService.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/model/cluster/Node.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/util/ProtectedSeq.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" />
+      <change type="MOVED" beforePath="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\model\User.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/model/user/User.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iws" afterPath="$PROJECT_DIR$/technbolts-webapp.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/model/system/Feature.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/model/common/Label.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/proto/common.proto" afterPath="$PROJECT_DIR$/src/main/proto/common.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/util/Command.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/CommonPBO.java" afterPath="$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/CommonPBO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/request.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserService.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/UserPBO.java" afterPath="$PROJECT_DIR$/src/main/generated-java/org/technbolts/protobuf/UserPBO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserPBOService.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/proto/user.proto" afterPath="$PROJECT_DIR$/src/main/proto/user.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" afterPath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
     </list>
     <ignored path="technbolts-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,19 +77,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EntityApiService.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/entity/EntityApiService.scala">
+      <file leaf-file-name="common.proto" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/common.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="106" selection-start="511" selection-end="613" vertical-scroll-proportion="0.0">
+            <state line="121" column="0" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiService.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala">
+      <file leaf-file-name="UserPBOService.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserPBOService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="18" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+            <state line="7" column="8" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserService.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="60" selection-start="238" selection-end="244" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,70 +107,52 @@
       <file leaf-file-name="UserApiService.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserApiService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="63" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+            <state line="8" column="109" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resource.proto" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/proto/resource.proto">
+      <file leaf-file-name="Command.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/util/Command.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="159" selection-end="181" vertical-scroll-proportion="0.0">
+            <state line="49" column="1" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.32415903">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClusterApiService.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/cluster/ClusterApiService.scala">
+      <file leaf-file-name="ProtectedSeq.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/util/ProtectedSeq.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="3" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
+            <state line="24" column="29" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/cluster/Node.scala">
+      <file leaf-file-name="Boot.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="33" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
+            <state line="37" column="66" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Feature.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/system/Feature.scala">
+      <file leaf-file-name="LiftRules.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-webkit/2.0-scala280-SNAPSHOT/lift-webkit-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/http/LiftRules.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
+            <state line="1488" column="3" selection-start="51950" selection-end="52486" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Label.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/common/Label.scala">
+      <file leaf-file-name="user.proto" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/user.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="19" selection-start="504" selection-end="504" vertical-scroll-proportion="0.44189602">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Option.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.8.0.RC6/scala-library-2.8.0.RC6-sources.jar!/scala/Option.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="17" selection-start="6062" selection-end="6062" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cluster.proto" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/proto/cluster.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="22" selection-start="302" selection-end="316" vertical-scroll-proportion="0.0">
+            <state line="34" column="33" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,22 +168,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/proto/common.proto" />
-        <option value="$PROJECT_DIR$/src/main/proto/resource.proto" />
-        <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/HttpClientHelper.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/api/EntityApiServiceIT.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/OrchesterApiService.scala" />
-        <option value="$PROJECT_DIR$/src/main/proto/cluster.proto" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ClusterApiService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/cluster/Node.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/model/system/Feature.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/model/cluster/Node.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/cluster/ClusterApiService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/cluster/ClusterApiService.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/entity/EntityApiService.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserApiService.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/model/common/Label.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/model/user/User.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/snippet/HelloWorld.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/proto/request.proto" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserPBOService.scala" />
+        <option value="$PROJECT_DIR$/src/main/proto/user.proto" />
+        <option value="$PROJECT_DIR$/src/main/proto/common.proto" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserService.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/util/ProtectedSeq.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/org/technbolts/util/Command.scala" />
       </list>
     </option>
   </component>
@@ -283,6 +281,102 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -310,6 +404,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="technbolts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="technbolts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,142 +500,6 @@
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cluster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cluster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -536,28 +524,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="liftweb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="technbolts-webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,11 +552,11 @@
       <recent name="D:\data\wk\technbolts-webapp\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\model\user" />
       <recent name="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\service\entity" />
       <recent name="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\service\cluster" />
       <recent name="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\service\api\cluster" />
       <recent name="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\model\system" />
-      <recent name="D:\data\wk\technbolts-webapp\src\main\scala\org\technbolts\model\cluster" />
     </key>
   </component>
   <component name="RunManager">
@@ -809,20 +775,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2390524" sideWeight="0.6609442" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2390524" sideWeight="0.6623748" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904148" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -863,114 +829,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/SimpleIT.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/org/apache/commons/httpclient/HttpStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="7" selection-start="8389" selection-end="8389" vertical-scroll-proportion="0.9571865">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/api/EntityApiServiceIT.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/HttpClientHelper.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="3" selection-start="741" selection-end="741" vertical-scroll-proportion="0.42813456">
+        <state line="18" column="90" selection-start="565" selection-end="651" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/RootApiService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+        <state line="17" column="61" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/protobuf/UserPBOTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="65" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/request.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="31" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="66" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-webkit/2.0-scala280-SNAPSHOT/lift-webkit-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/http/LiftRules.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1488" column="3" selection-start="51950" selection-end="52486" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/user.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="33" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/proto/common.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="45" selection-start="2709" selection-end="2819" vertical-scroll-proportion="3.162162">
+        <state line="121" column="0" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/resource.proto">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbedded.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="159" selection-end="181" vertical-scroll-proportion="0.0">
+        <state line="8" column="70" selection-start="216" selection-end="284" vertical-scroll-proportion="0.20795107">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/cluster.proto">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="22" selection-start="302" selection-end="316" vertical-scroll-proportion="0.0">
+        <state line="11" column="7" selection-start="296" selection-end="296" vertical-scroll-proportion="0.28593272">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/api/ApiService.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserPBOService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+        <state line="7" column="8" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/cluster/ClusterApiService.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="3" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
+        <state line="10" column="60" selection-start="238" selection-end="244" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/entity/EntityApiService.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/net/liftweb/lift-common/2.0-scala280-SNAPSHOT/lift-common-2.0-scala280-SNAPSHOT-sources.jar!/net/liftweb/common/Box.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="106" selection-start="511" selection-end="613" vertical-scroll-proportion="0.0">
+        <state line="39" column="3" selection-start="1227" selection-end="1227" vertical-scroll-proportion="-12.824176">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserApiService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="63" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0">
+        <state line="8" column="109" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.8.0.RC6/scala-library-2.8.0.RC6-sources.jar!/scala/Option.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/util/ProtectedSeq.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="17" selection-start="6062" selection-end="6062" vertical-scroll-proportion="0.0">
+        <state line="24" column="29" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/cluster/Node.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/util/Command.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/system/Feature.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/model/common/Label.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="504" selection-end="504" vertical-scroll-proportion="0.44189602">
+        <state line="49" column="1" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.32415903">
           <folding />
         </state>
       </provider>

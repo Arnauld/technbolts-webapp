@@ -11,7 +11,8 @@ class UserPBOTest {
   @Test
   def simpleCase:Unit = {
     val outstream = new ByteArrayOutputStream
-    val userWritten:User = User.newBuilder().setId(1).setNickname("John").setEmail("john@doe.nowhere").build
+    val details:UserDetails = UserDetails.newBuilder.setNickname("nabu").setEmail("nabu@kodono.zor").build
+    val userWritten:User = User.newBuilder().setId(1).setDetails(details).build
 
     userWritten.writeTo(outstream)
 
@@ -22,7 +23,7 @@ class UserPBOTest {
     val instream = new ByteArrayInputStream(outstream.toByteArray)
     val user:User = User.parseFrom(instream)
     assertThat(user.getId, equalTo(1))
-    assertThat(user.getNickname, equalTo("John"))
-    assertThat(user.getEmail(), equalTo("john@doe.nowhere"))
+    assertThat(user.getDetails.getNickname, equalTo("nabu"))
+    assertThat(user.getDetails.getEmail, equalTo("nabu@kodono.zor"))
   }
 }

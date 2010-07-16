@@ -337,6 +337,294 @@ public final class CommonPBO {
     // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.Label)
   }
   
+  public static final class Ref extends
+      com.google.protobuf.GeneratedMessage {
+    // Use Ref.newBuilder() to construct.
+    private Ref() {
+      initFields();
+    }
+    private Ref(boolean noInit) {}
+    
+    private static final Ref defaultInstance;
+    public static Ref getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public Ref getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_Ref_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_Ref_fieldAccessorTable;
+    }
+    
+    // required string path = 1;
+    public static final int PATH_FIELD_NUMBER = 1;
+    private boolean hasPath;
+    private java.lang.String path_ = "";
+    public boolean hasPath() { return hasPath; }
+    public java.lang.String getPath() { return path_; }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      if (!hasPath) return false;
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (hasPath()) {
+        output.writeString(1, getPath());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (hasPath()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(1, getPath());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Ref parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.Ref prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.Ref result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.Ref.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.Ref();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.Ref internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.Ref();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.Ref.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.Ref getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.Ref.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.Ref build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.Ref buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.Ref buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        org.technbolts.protobuf.CommonPBO.Ref returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.Ref) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.Ref)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.Ref other) {
+        if (other == org.technbolts.protobuf.CommonPBO.Ref.getDefaultInstance()) return this;
+        if (other.hasPath()) {
+          setPath(other.getPath());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              setPath(input.readString());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // required string path = 1;
+      public boolean hasPath() {
+        return result.hasPath();
+      }
+      public java.lang.String getPath() {
+        return result.getPath();
+      }
+      public Builder setPath(java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  result.hasPath = true;
+        result.path_ = value;
+        return this;
+      }
+      public Builder clearPath() {
+        result.hasPath = false;
+        result.path_ = getDefaultInstance().getPath();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.Ref)
+    }
+    
+    static {
+      defaultInstance = new Ref(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.Ref)
+  }
+  
   public static final class Paging extends
       com.google.protobuf.GeneratedMessage {
     // Use Paging.newBuilder() to construct.
@@ -660,31 +948,31 @@ public final class CommonPBO {
     // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.Paging)
   }
   
-  public static final class KeyValueString extends
+  public static final class KeyValue extends
       com.google.protobuf.GeneratedMessage {
-    // Use KeyValueString.newBuilder() to construct.
-    private KeyValueString() {
+    // Use KeyValue.newBuilder() to construct.
+    private KeyValue() {
       initFields();
     }
-    private KeyValueString(boolean noInit) {}
+    private KeyValue(boolean noInit) {}
     
-    private static final KeyValueString defaultInstance;
-    public static KeyValueString getDefaultInstance() {
+    private static final KeyValue defaultInstance;
+    public static KeyValue getDefaultInstance() {
       return defaultInstance;
     }
     
-    public KeyValueString getDefaultInstanceForType() {
+    public KeyValue getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_KeyValueString_descriptor;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_KeyValue_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_KeyValueString_fieldAccessorTable;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_KeyValue_fieldAccessorTable;
     }
     
     // optional string key = 1;
@@ -694,14 +982,15 @@ public final class CommonPBO {
     public boolean hasKey() { return hasKey; }
     public java.lang.String getKey() { return key_; }
     
-    // optional string value = 2;
+    // optional .org.technbolts.protobuf.TypedValue value = 2;
     public static final int VALUE_FIELD_NUMBER = 2;
     private boolean hasValue;
-    private java.lang.String value_ = "";
+    private org.technbolts.protobuf.CommonPBO.TypedValue value_;
     public boolean hasValue() { return hasValue; }
-    public java.lang.String getValue() { return value_; }
+    public org.technbolts.protobuf.CommonPBO.TypedValue getValue() { return value_; }
     
     private void initFields() {
+      value_ = org.technbolts.protobuf.CommonPBO.TypedValue.getDefaultInstance();
     }
     public final boolean isInitialized() {
       return true;
@@ -714,7 +1003,7 @@ public final class CommonPBO {
         output.writeString(1, getKey());
       }
       if (hasValue()) {
-        output.writeString(2, getValue());
+        output.writeMessage(2, getValue());
       }
       getUnknownFields().writeTo(output);
     }
@@ -731,48 +1020,48 @@ public final class CommonPBO {
       }
       if (hasValue()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(2, getValue());
+          .computeMessageSize(2, getValue());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
     }
     
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(byte[] data)
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseDelimitedFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -781,7 +1070,7 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseDelimitedFrom(
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -792,12 +1081,12 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.KeyValueString parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.KeyValue parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -807,25 +1096,25 @@ public final class CommonPBO {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.KeyValueString prototype) {
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.KeyValue prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.KeyValueString result;
+      private org.technbolts.protobuf.CommonPBO.KeyValue result;
       
-      // Construct using org.technbolts.protobuf.CommonPBO.KeyValueString.newBuilder()
+      // Construct using org.technbolts.protobuf.CommonPBO.KeyValue.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.KeyValueString();
+        builder.result = new org.technbolts.protobuf.CommonPBO.KeyValue();
         return builder;
       }
       
-      protected org.technbolts.protobuf.CommonPBO.KeyValueString internalGetResult() {
+      protected org.technbolts.protobuf.CommonPBO.KeyValue internalGetResult() {
         return result;
       }
       
@@ -834,7 +1123,7 @@ public final class CommonPBO {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new org.technbolts.protobuf.CommonPBO.KeyValueString();
+        result = new org.technbolts.protobuf.CommonPBO.KeyValue();
         return this;
       }
       
@@ -844,24 +1133,24 @@ public final class CommonPBO {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.KeyValueString.getDescriptor();
+        return org.technbolts.protobuf.CommonPBO.KeyValue.getDescriptor();
       }
       
-      public org.technbolts.protobuf.CommonPBO.KeyValueString getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.KeyValueString.getDefaultInstance();
+      public org.technbolts.protobuf.CommonPBO.KeyValue getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.KeyValue.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public org.technbolts.protobuf.CommonPBO.KeyValueString build() {
+      public org.technbolts.protobuf.CommonPBO.KeyValue build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private org.technbolts.protobuf.CommonPBO.KeyValueString buildParsed()
+      private org.technbolts.protobuf.CommonPBO.KeyValue buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -870,32 +1159,32 @@ public final class CommonPBO {
         return buildPartial();
       }
       
-      public org.technbolts.protobuf.CommonPBO.KeyValueString buildPartial() {
+      public org.technbolts.protobuf.CommonPBO.KeyValue buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
         }
-        org.technbolts.protobuf.CommonPBO.KeyValueString returnMe = result;
+        org.technbolts.protobuf.CommonPBO.KeyValue returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.KeyValueString) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.KeyValueString)other);
+        if (other instanceof org.technbolts.protobuf.CommonPBO.KeyValue) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.KeyValue)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.KeyValueString other) {
-        if (other == org.technbolts.protobuf.CommonPBO.KeyValueString.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.KeyValue other) {
+        if (other == org.technbolts.protobuf.CommonPBO.KeyValue.getDefaultInstance()) return this;
         if (other.hasKey()) {
           setKey(other.getKey());
         }
         if (other.hasValue()) {
-          setValue(other.getValue());
+          mergeValue(other.getValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -927,7 +1216,12 @@ public final class CommonPBO {
               break;
             }
             case 18: {
-              setValue(input.readString());
+              org.technbolts.protobuf.CommonPBO.TypedValue.Builder subBuilder = org.technbolts.protobuf.CommonPBO.TypedValue.newBuilder();
+              if (hasValue()) {
+                subBuilder.mergeFrom(getValue());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setValue(subBuilder.buildPartial());
               break;
             }
           }
@@ -956,37 +1250,53 @@ public final class CommonPBO {
         return this;
       }
       
-      // optional string value = 2;
+      // optional .org.technbolts.protobuf.TypedValue value = 2;
       public boolean hasValue() {
         return result.hasValue();
       }
-      public java.lang.String getValue() {
+      public org.technbolts.protobuf.CommonPBO.TypedValue getValue() {
         return result.getValue();
       }
-      public Builder setValue(java.lang.String value) {
+      public Builder setValue(org.technbolts.protobuf.CommonPBO.TypedValue value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  result.hasValue = true;
+          throw new NullPointerException();
+        }
+        result.hasValue = true;
         result.value_ = value;
+        return this;
+      }
+      public Builder setValue(org.technbolts.protobuf.CommonPBO.TypedValue.Builder builderForValue) {
+        result.hasValue = true;
+        result.value_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeValue(org.technbolts.protobuf.CommonPBO.TypedValue value) {
+        if (result.hasValue() &&
+            result.value_ != org.technbolts.protobuf.CommonPBO.TypedValue.getDefaultInstance()) {
+          result.value_ =
+            org.technbolts.protobuf.CommonPBO.TypedValue.newBuilder(result.value_).mergeFrom(value).buildPartial();
+        } else {
+          result.value_ = value;
+        }
+        result.hasValue = true;
         return this;
       }
       public Builder clearValue() {
         result.hasValue = false;
-        result.value_ = getDefaultInstance().getValue();
+        result.value_ = org.technbolts.protobuf.CommonPBO.TypedValue.getDefaultInstance();
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.KeyValueString)
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.KeyValue)
     }
     
     static {
-      defaultInstance = new KeyValueString(true);
+      defaultInstance = new KeyValue(true);
       org.technbolts.protobuf.CommonPBO.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.KeyValueString)
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.KeyValue)
   }
   
   public static final class Error extends
@@ -1023,15 +1333,15 @@ public final class CommonPBO {
     public boolean hasCode() { return hasCode; }
     public java.lang.String getCode() { return code_; }
     
-    // repeated .org.technbolts.protobuf.KeyValueString argument = 2;
+    // repeated .org.technbolts.protobuf.KeyValue argument = 2;
     public static final int ARGUMENT_FIELD_NUMBER = 2;
-    private java.util.List<org.technbolts.protobuf.CommonPBO.KeyValueString> argument_ =
+    private java.util.List<org.technbolts.protobuf.CommonPBO.KeyValue> argument_ =
       java.util.Collections.emptyList();
-    public java.util.List<org.technbolts.protobuf.CommonPBO.KeyValueString> getArgumentList() {
+    public java.util.List<org.technbolts.protobuf.CommonPBO.KeyValue> getArgumentList() {
       return argument_;
     }
     public int getArgumentCount() { return argument_.size(); }
-    public org.technbolts.protobuf.CommonPBO.KeyValueString getArgument(int index) {
+    public org.technbolts.protobuf.CommonPBO.KeyValue getArgument(int index) {
       return argument_.get(index);
     }
     
@@ -1059,7 +1369,7 @@ public final class CommonPBO {
       if (hasCode()) {
         output.writeString(1, getCode());
       }
-      for (org.technbolts.protobuf.CommonPBO.KeyValueString element : getArgumentList()) {
+      for (org.technbolts.protobuf.CommonPBO.KeyValue element : getArgumentList()) {
         output.writeMessage(2, element);
       }
       for (org.technbolts.protobuf.CommonPBO.Error element : getNestedList()) {
@@ -1078,7 +1388,7 @@ public final class CommonPBO {
         size += com.google.protobuf.CodedOutputStream
           .computeStringSize(1, getCode());
       }
-      for (org.technbolts.protobuf.CommonPBO.KeyValueString element : getArgumentList()) {
+      for (org.technbolts.protobuf.CommonPBO.KeyValue element : getArgumentList()) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, element);
       }
@@ -1257,7 +1567,7 @@ public final class CommonPBO {
         }
         if (!other.argument_.isEmpty()) {
           if (result.argument_.isEmpty()) {
-            result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValueString>();
+            result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValue>();
           }
           result.argument_.addAll(other.argument_);
         }
@@ -1297,7 +1607,7 @@ public final class CommonPBO {
               break;
             }
             case 18: {
-              org.technbolts.protobuf.CommonPBO.KeyValueString.Builder subBuilder = org.technbolts.protobuf.CommonPBO.KeyValueString.newBuilder();
+              org.technbolts.protobuf.CommonPBO.KeyValue.Builder subBuilder = org.technbolts.protobuf.CommonPBO.KeyValue.newBuilder();
               input.readMessage(subBuilder, extensionRegistry);
               addArgument(subBuilder.buildPartial());
               break;
@@ -1334,48 +1644,48 @@ public final class CommonPBO {
         return this;
       }
       
-      // repeated .org.technbolts.protobuf.KeyValueString argument = 2;
-      public java.util.List<org.technbolts.protobuf.CommonPBO.KeyValueString> getArgumentList() {
+      // repeated .org.technbolts.protobuf.KeyValue argument = 2;
+      public java.util.List<org.technbolts.protobuf.CommonPBO.KeyValue> getArgumentList() {
         return java.util.Collections.unmodifiableList(result.argument_);
       }
       public int getArgumentCount() {
         return result.getArgumentCount();
       }
-      public org.technbolts.protobuf.CommonPBO.KeyValueString getArgument(int index) {
+      public org.technbolts.protobuf.CommonPBO.KeyValue getArgument(int index) {
         return result.getArgument(index);
       }
-      public Builder setArgument(int index, org.technbolts.protobuf.CommonPBO.KeyValueString value) {
+      public Builder setArgument(int index, org.technbolts.protobuf.CommonPBO.KeyValue value) {
         if (value == null) {
           throw new NullPointerException();
         }
         result.argument_.set(index, value);
         return this;
       }
-      public Builder setArgument(int index, org.technbolts.protobuf.CommonPBO.KeyValueString.Builder builderForValue) {
+      public Builder setArgument(int index, org.technbolts.protobuf.CommonPBO.KeyValue.Builder builderForValue) {
         result.argument_.set(index, builderForValue.build());
         return this;
       }
-      public Builder addArgument(org.technbolts.protobuf.CommonPBO.KeyValueString value) {
+      public Builder addArgument(org.technbolts.protobuf.CommonPBO.KeyValue value) {
         if (value == null) {
           throw new NullPointerException();
         }
         if (result.argument_.isEmpty()) {
-          result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValueString>();
+          result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValue>();
         }
         result.argument_.add(value);
         return this;
       }
-      public Builder addArgument(org.technbolts.protobuf.CommonPBO.KeyValueString.Builder builderForValue) {
+      public Builder addArgument(org.technbolts.protobuf.CommonPBO.KeyValue.Builder builderForValue) {
         if (result.argument_.isEmpty()) {
-          result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValueString>();
+          result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValue>();
         }
         result.argument_.add(builderForValue.build());
         return this;
       }
       public Builder addAllArgument(
-          java.lang.Iterable<? extends org.technbolts.protobuf.CommonPBO.KeyValueString> values) {
+          java.lang.Iterable<? extends org.technbolts.protobuf.CommonPBO.KeyValue> values) {
         if (result.argument_.isEmpty()) {
-          result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValueString>();
+          result.argument_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.KeyValue>();
         }
         super.addAll(values, result.argument_);
         return this;
@@ -1448,6 +1758,644 @@ public final class CommonPBO {
     // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.Error)
   }
   
+  public static final class ValueType extends
+      com.google.protobuf.GeneratedMessage {
+    // Use ValueType.newBuilder() to construct.
+    private ValueType() {
+      initFields();
+    }
+    private ValueType(boolean noInit) {}
+    
+    private static final ValueType defaultInstance;
+    public static ValueType getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public ValueType getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_ValueType_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_ValueType_fieldAccessorTable;
+    }
+    
+    // optional string type = 4;
+    public static final int TYPE_FIELD_NUMBER = 4;
+    private boolean hasType;
+    private java.lang.String type_ = "";
+    public boolean hasType() { return hasType; }
+    public java.lang.String getType() { return type_; }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (hasType()) {
+        output.writeString(4, getType());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (hasType()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(4, getType());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.ValueType parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.ValueType prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.ValueType result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.ValueType.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.ValueType();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.ValueType internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.ValueType();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.ValueType.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.ValueType getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.ValueType build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.ValueType buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.ValueType buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        org.technbolts.protobuf.CommonPBO.ValueType returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.ValueType) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.ValueType)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.ValueType other) {
+        if (other == org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 34: {
+              setType(input.readString());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // optional string type = 4;
+      public boolean hasType() {
+        return result.hasType();
+      }
+      public java.lang.String getType() {
+        return result.getType();
+      }
+      public Builder setType(java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  result.hasType = true;
+        result.type_ = value;
+        return this;
+      }
+      public Builder clearType() {
+        result.hasType = false;
+        result.type_ = getDefaultInstance().getType();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.ValueType)
+    }
+    
+    static {
+      defaultInstance = new ValueType(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.ValueType)
+  }
+  
+  public static final class TypedValue extends
+      com.google.protobuf.GeneratedMessage {
+    // Use TypedValue.newBuilder() to construct.
+    private TypedValue() {
+      initFields();
+    }
+    private TypedValue(boolean noInit) {}
+    
+    private static final TypedValue defaultInstance;
+    public static TypedValue getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public TypedValue getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_TypedValue_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_TypedValue_fieldAccessorTable;
+    }
+    
+    // optional .org.technbolts.protobuf.ValueType type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private boolean hasType;
+    private org.technbolts.protobuf.CommonPBO.ValueType type_;
+    public boolean hasType() { return hasType; }
+    public org.technbolts.protobuf.CommonPBO.ValueType getType() { return type_; }
+    
+    // optional bytes value = 2;
+    public static final int VALUE_FIELD_NUMBER = 2;
+    private boolean hasValue;
+    private com.google.protobuf.ByteString value_ = com.google.protobuf.ByteString.EMPTY;
+    public boolean hasValue() { return hasValue; }
+    public com.google.protobuf.ByteString getValue() { return value_; }
+    
+    private void initFields() {
+      type_ = org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance();
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (hasType()) {
+        output.writeMessage(1, getType());
+      }
+      if (hasValue()) {
+        output.writeBytes(2, getValue());
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (hasType()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getType());
+      }
+      if (hasValue()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getValue());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.TypedValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.TypedValue prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.TypedValue result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.TypedValue.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.TypedValue();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.TypedValue internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.TypedValue();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.TypedValue.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.TypedValue getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.TypedValue.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.TypedValue build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.TypedValue buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.TypedValue buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        org.technbolts.protobuf.CommonPBO.TypedValue returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.TypedValue) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.TypedValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.TypedValue other) {
+        if (other == org.technbolts.protobuf.CommonPBO.TypedValue.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          mergeType(other.getType());
+        }
+        if (other.hasValue()) {
+          setValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              org.technbolts.protobuf.CommonPBO.ValueType.Builder subBuilder = org.technbolts.protobuf.CommonPBO.ValueType.newBuilder();
+              if (hasType()) {
+                subBuilder.mergeFrom(getType());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setType(subBuilder.buildPartial());
+              break;
+            }
+            case 18: {
+              setValue(input.readBytes());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // optional .org.technbolts.protobuf.ValueType type = 1;
+      public boolean hasType() {
+        return result.hasType();
+      }
+      public org.technbolts.protobuf.CommonPBO.ValueType getType() {
+        return result.getType();
+      }
+      public Builder setType(org.technbolts.protobuf.CommonPBO.ValueType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.hasType = true;
+        result.type_ = value;
+        return this;
+      }
+      public Builder setType(org.technbolts.protobuf.CommonPBO.ValueType.Builder builderForValue) {
+        result.hasType = true;
+        result.type_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeType(org.technbolts.protobuf.CommonPBO.ValueType value) {
+        if (result.hasType() &&
+            result.type_ != org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance()) {
+          result.type_ =
+            org.technbolts.protobuf.CommonPBO.ValueType.newBuilder(result.type_).mergeFrom(value).buildPartial();
+        } else {
+          result.type_ = value;
+        }
+        result.hasType = true;
+        return this;
+      }
+      public Builder clearType() {
+        result.hasType = false;
+        result.type_ = org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance();
+        return this;
+      }
+      
+      // optional bytes value = 2;
+      public boolean hasValue() {
+        return result.hasValue();
+      }
+      public com.google.protobuf.ByteString getValue() {
+        return result.getValue();
+      }
+      public Builder setValue(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  result.hasValue = true;
+        result.value_ = value;
+        return this;
+      }
+      public Builder clearValue() {
+        result.hasValue = false;
+        result.value_ = getDefaultInstance().getValue();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.TypedValue)
+    }
+    
+    static {
+      defaultInstance = new TypedValue(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.TypedValue)
+  }
+  
   public static final class PropertyDescriptor extends
       com.google.protobuf.GeneratedMessage {
     // Use PropertyDescriptor.newBuilder() to construct.
@@ -1501,12 +2449,12 @@ public final class CommonPBO {
       return label_.get(index);
     }
     
-    // optional string type = 4;
+    // optional .org.technbolts.protobuf.ValueType type = 4;
     public static final int TYPE_FIELD_NUMBER = 4;
     private boolean hasType;
-    private java.lang.String type_ = "";
+    private org.technbolts.protobuf.CommonPBO.ValueType type_;
     public boolean hasType() { return hasType; }
-    public java.lang.String getType() { return type_; }
+    public org.technbolts.protobuf.CommonPBO.ValueType getType() { return type_; }
     
     // optional bool multi = 5;
     public static final int MULTI_FIELD_NUMBER = 5;
@@ -1516,6 +2464,7 @@ public final class CommonPBO {
     public boolean getMulti() { return multi_; }
     
     private void initFields() {
+      type_ = org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance();
     }
     public final boolean isInitialized() {
       return true;
@@ -1534,7 +2483,7 @@ public final class CommonPBO {
         output.writeMessage(3, element);
       }
       if (hasType()) {
-        output.writeString(4, getType());
+        output.writeMessage(4, getType());
       }
       if (hasMulti()) {
         output.writeBool(5, getMulti());
@@ -1562,7 +2511,7 @@ public final class CommonPBO {
       }
       if (hasType()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeStringSize(4, getType());
+          .computeMessageSize(4, getType());
       }
       if (hasMulti()) {
         size += com.google.protobuf.CodedOutputStream
@@ -1743,7 +2692,7 @@ public final class CommonPBO {
           result.label_.addAll(other.label_);
         }
         if (other.hasType()) {
-          setType(other.getType());
+          mergeType(other.getType());
         }
         if (other.hasMulti()) {
           setMulti(other.getMulti());
@@ -1788,7 +2737,12 @@ public final class CommonPBO {
               break;
             }
             case 34: {
-              setType(input.readString());
+              org.technbolts.protobuf.CommonPBO.ValueType.Builder subBuilder = org.technbolts.protobuf.CommonPBO.ValueType.newBuilder();
+              if (hasType()) {
+                subBuilder.mergeFrom(getType());
+              }
+              input.readMessage(subBuilder, extensionRegistry);
+              setType(subBuilder.buildPartial());
               break;
             }
             case 40: {
@@ -1890,24 +2844,40 @@ public final class CommonPBO {
         return this;
       }
       
-      // optional string type = 4;
+      // optional .org.technbolts.protobuf.ValueType type = 4;
       public boolean hasType() {
         return result.hasType();
       }
-      public java.lang.String getType() {
+      public org.technbolts.protobuf.CommonPBO.ValueType getType() {
         return result.getType();
       }
-      public Builder setType(java.lang.String value) {
+      public Builder setType(org.technbolts.protobuf.CommonPBO.ValueType value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  result.hasType = true;
+          throw new NullPointerException();
+        }
+        result.hasType = true;
         result.type_ = value;
+        return this;
+      }
+      public Builder setType(org.technbolts.protobuf.CommonPBO.ValueType.Builder builderForValue) {
+        result.hasType = true;
+        result.type_ = builderForValue.build();
+        return this;
+      }
+      public Builder mergeType(org.technbolts.protobuf.CommonPBO.ValueType value) {
+        if (result.hasType() &&
+            result.type_ != org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance()) {
+          result.type_ =
+            org.technbolts.protobuf.CommonPBO.ValueType.newBuilder(result.type_).mergeFrom(value).buildPartial();
+        } else {
+          result.type_ = value;
+        }
+        result.hasType = true;
         return this;
       }
       public Builder clearType() {
         result.hasType = false;
-        result.type_ = getDefaultInstance().getType();
+        result.type_ = org.technbolts.protobuf.CommonPBO.ValueType.getDefaultInstance();
         return this;
       }
       
@@ -3172,663 +4142,6 @@ public final class CommonPBO {
     // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.CreatePropertyResponse)
   }
   
-  public static final class DeleteProperty extends
-      com.google.protobuf.GeneratedMessage {
-    // Use DeleteProperty.newBuilder() to construct.
-    private DeleteProperty() {
-      initFields();
-    }
-    private DeleteProperty(boolean noInit) {}
-    
-    private static final DeleteProperty defaultInstance;
-    public static DeleteProperty getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public DeleteProperty getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteProperty_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteProperty_fieldAccessorTable;
-    }
-    
-    // repeated uint32 descriptor_id = 2;
-    public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
-      java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
-      return descriptorId_;
-    }
-    public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
-      return descriptorId_.get(index);
-    }
-    
-    private void initFields() {
-    }
-    public final boolean isInitialized() {
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
-        }
-        size += dataSize;
-        size += 1 * getDescriptorIdList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeleteProperty prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.DeleteProperty result;
-      
-      // Construct using org.technbolts.protobuf.CommonPBO.DeleteProperty.newBuilder()
-      private Builder() {}
-      
-      private static Builder create() {
-        Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.DeleteProperty();
-        return builder;
-      }
-      
-      protected org.technbolts.protobuf.CommonPBO.DeleteProperty internalGetResult() {
-        return result;
-      }
-      
-      public Builder clear() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "Cannot call clear() after build().");
-        }
-        result = new org.technbolts.protobuf.CommonPBO.DeleteProperty();
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(result);
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.DeleteProperty.getDescriptor();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeleteProperty getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.DeleteProperty.getDefaultInstance();
-      }
-      
-      public boolean isInitialized() {
-        return result.isInitialized();
-      }
-      public org.technbolts.protobuf.CommonPBO.DeleteProperty build() {
-        if (result != null && !isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return buildPartial();
-      }
-      
-      private org.technbolts.protobuf.CommonPBO.DeleteProperty buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        if (!isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return buildPartial();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeleteProperty buildPartial() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "build() has already been called on this Builder.");
-        }
-        if (result.descriptorId_ != java.util.Collections.EMPTY_LIST) {
-          result.descriptorId_ =
-            java.util.Collections.unmodifiableList(result.descriptorId_);
-        }
-        org.technbolts.protobuf.CommonPBO.DeleteProperty returnMe = result;
-        result = null;
-        return returnMe;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.DeleteProperty) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeleteProperty)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeleteProperty other) {
-        if (other == org.technbolts.protobuf.CommonPBO.DeleteProperty.getDefaultInstance()) return this;
-        if (!other.descriptorId_.isEmpty()) {
-          if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
-          }
-          result.descriptorId_.addAll(other.descriptorId_);
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                return this;
-              }
-              break;
-            }
-            case 16: {
-              addDescriptorId(input.readUInt32());
-              break;
-            }
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-          }
-        }
-      }
-      
-      
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
-        return java.util.Collections.unmodifiableList(result.descriptorId_);
-      }
-      public int getDescriptorIdCount() {
-        return result.getDescriptorIdCount();
-      }
-      public int getDescriptorId(int index) {
-        return result.getDescriptorId(index);
-      }
-      public Builder setDescriptorId(int index, int value) {
-        result.descriptorId_.set(index, value);
-        return this;
-      }
-      public Builder addDescriptorId(int value) {
-        if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
-        }
-        result.descriptorId_.add(value);
-        return this;
-      }
-      public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
-        }
-        super.addAll(values, result.descriptorId_);
-        return this;
-      }
-      public Builder clearDescriptorId() {
-        result.descriptorId_ = java.util.Collections.emptyList();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeleteProperty)
-    }
-    
-    static {
-      defaultInstance = new DeleteProperty(true);
-      org.technbolts.protobuf.CommonPBO.internalForceInit();
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeleteProperty)
-  }
-  
-  public static final class DeletePropertyResponse extends
-      com.google.protobuf.GeneratedMessage {
-    // Use DeletePropertyResponse.newBuilder() to construct.
-    private DeletePropertyResponse() {
-      initFields();
-    }
-    private DeletePropertyResponse(boolean noInit) {}
-    
-    private static final DeletePropertyResponse defaultInstance;
-    public static DeletePropertyResponse getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public DeletePropertyResponse getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeletePropertyResponse_fieldAccessorTable;
-    }
-    
-    // repeated .org.technbolts.protobuf.Error error = 1;
-    public static final int ERROR_FIELD_NUMBER = 1;
-    private java.util.List<org.technbolts.protobuf.CommonPBO.Error> error_ =
-      java.util.Collections.emptyList();
-    public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
-      return error_;
-    }
-    public int getErrorCount() { return error_.size(); }
-    public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
-      return error_.get(index);
-    }
-    
-    private void initFields() {
-    }
-    public final boolean isInitialized() {
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
-        output.writeMessage(1, element);
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, element);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeletePropertyResponse prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.DeletePropertyResponse result;
-      
-      // Construct using org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.newBuilder()
-      private Builder() {}
-      
-      private static Builder create() {
-        Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.DeletePropertyResponse();
-        return builder;
-      }
-      
-      protected org.technbolts.protobuf.CommonPBO.DeletePropertyResponse internalGetResult() {
-        return result;
-      }
-      
-      public Builder clear() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "Cannot call clear() after build().");
-        }
-        result = new org.technbolts.protobuf.CommonPBO.DeletePropertyResponse();
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(result);
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.getDescriptor();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeletePropertyResponse getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.getDefaultInstance();
-      }
-      
-      public boolean isInitialized() {
-        return result.isInitialized();
-      }
-      public org.technbolts.protobuf.CommonPBO.DeletePropertyResponse build() {
-        if (result != null && !isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return buildPartial();
-      }
-      
-      private org.technbolts.protobuf.CommonPBO.DeletePropertyResponse buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        if (!isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return buildPartial();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeletePropertyResponse buildPartial() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "build() has already been called on this Builder.");
-        }
-        if (result.error_ != java.util.Collections.EMPTY_LIST) {
-          result.error_ =
-            java.util.Collections.unmodifiableList(result.error_);
-        }
-        org.technbolts.protobuf.CommonPBO.DeletePropertyResponse returnMe = result;
-        result = null;
-        return returnMe;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.DeletePropertyResponse) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeletePropertyResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeletePropertyResponse other) {
-        if (other == org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.getDefaultInstance()) return this;
-        if (!other.error_.isEmpty()) {
-          if (result.error_.isEmpty()) {
-            result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-          }
-          result.error_.addAll(other.error_);
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              org.technbolts.protobuf.CommonPBO.Error.Builder subBuilder = org.technbolts.protobuf.CommonPBO.Error.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addError(subBuilder.buildPartial());
-              break;
-            }
-          }
-        }
-      }
-      
-      
-      // repeated .org.technbolts.protobuf.Error error = 1;
-      public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
-        return java.util.Collections.unmodifiableList(result.error_);
-      }
-      public int getErrorCount() {
-        return result.getErrorCount();
-      }
-      public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
-        return result.getError(index);
-      }
-      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        result.error_.set(index, value);
-        return this;
-      }
-      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
-        result.error_.set(index, builderForValue.build());
-        return this;
-      }
-      public Builder addError(org.technbolts.protobuf.CommonPBO.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        if (result.error_.isEmpty()) {
-          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-        }
-        result.error_.add(value);
-        return this;
-      }
-      public Builder addError(org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
-        if (result.error_.isEmpty()) {
-          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-        }
-        result.error_.add(builderForValue.build());
-        return this;
-      }
-      public Builder addAllError(
-          java.lang.Iterable<? extends org.technbolts.protobuf.CommonPBO.Error> values) {
-        if (result.error_.isEmpty()) {
-          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-        }
-        super.addAll(values, result.error_);
-        return this;
-      }
-      public Builder clearError() {
-        result.error_ = java.util.Collections.emptyList();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeletePropertyResponse)
-    }
-    
-    static {
-      defaultInstance = new DeletePropertyResponse(true);
-      org.technbolts.protobuf.CommonPBO.internalForceInit();
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeletePropertyResponse)
-  }
-  
   public static final class SearchProperty extends
       com.google.protobuf.GeneratedMessage {
     // Use SearchProperty.newBuilder() to construct.
@@ -4739,6 +5052,663 @@ public final class CommonPBO {
     // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.SearchPropertyResponse)
   }
   
+  public static final class DeleteProperty extends
+      com.google.protobuf.GeneratedMessage {
+    // Use DeleteProperty.newBuilder() to construct.
+    private DeleteProperty() {
+      initFields();
+    }
+    private DeleteProperty(boolean noInit) {}
+    
+    private static final DeleteProperty defaultInstance;
+    public static DeleteProperty getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public DeleteProperty getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteProperty_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteProperty_fieldAccessorTable;
+    }
+    
+    // repeated uint32 descriptor_id = 2;
+    public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> descriptorId_ =
+      java.util.Collections.emptyList();
+    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      return descriptorId_;
+    }
+    public int getDescriptorIdCount() { return descriptorId_.size(); }
+    public int getDescriptorId(int index) {
+      return descriptorId_.get(index);
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int element : getDescriptorIdList()) {
+        output.writeUInt32(2, element);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int element : getDescriptorIdList()) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(element);
+        }
+        size += dataSize;
+        size += 1 * getDescriptorIdList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteProperty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeleteProperty prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.DeleteProperty result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.DeleteProperty.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.DeleteProperty();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.DeleteProperty internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.DeleteProperty();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.DeleteProperty.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeleteProperty getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.DeleteProperty.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.DeleteProperty build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.DeleteProperty buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeleteProperty buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        if (result.descriptorId_ != java.util.Collections.EMPTY_LIST) {
+          result.descriptorId_ =
+            java.util.Collections.unmodifiableList(result.descriptorId_);
+        }
+        org.technbolts.protobuf.CommonPBO.DeleteProperty returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.DeleteProperty) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeleteProperty)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeleteProperty other) {
+        if (other == org.technbolts.protobuf.CommonPBO.DeleteProperty.getDefaultInstance()) return this;
+        if (!other.descriptorId_.isEmpty()) {
+          if (result.descriptorId_.isEmpty()) {
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          }
+          result.descriptorId_.addAll(other.descriptorId_);
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 16: {
+              addDescriptorId(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              while (input.getBytesUntilLimit() > 0) {
+                addDescriptorId(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // repeated uint32 descriptor_id = 2;
+      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+        return java.util.Collections.unmodifiableList(result.descriptorId_);
+      }
+      public int getDescriptorIdCount() {
+        return result.getDescriptorIdCount();
+      }
+      public int getDescriptorId(int index) {
+        return result.getDescriptorId(index);
+      }
+      public Builder setDescriptorId(int index, int value) {
+        result.descriptorId_.set(index, value);
+        return this;
+      }
+      public Builder addDescriptorId(int value) {
+        if (result.descriptorId_.isEmpty()) {
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+        }
+        result.descriptorId_.add(value);
+        return this;
+      }
+      public Builder addAllDescriptorId(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        if (result.descriptorId_.isEmpty()) {
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+        }
+        super.addAll(values, result.descriptorId_);
+        return this;
+      }
+      public Builder clearDescriptorId() {
+        result.descriptorId_ = java.util.Collections.emptyList();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeleteProperty)
+    }
+    
+    static {
+      defaultInstance = new DeleteProperty(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeleteProperty)
+  }
+  
+  public static final class DeletePropertyResponse extends
+      com.google.protobuf.GeneratedMessage {
+    // Use DeletePropertyResponse.newBuilder() to construct.
+    private DeletePropertyResponse() {
+      initFields();
+    }
+    private DeletePropertyResponse(boolean noInit) {}
+    
+    private static final DeletePropertyResponse defaultInstance;
+    public static DeletePropertyResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public DeletePropertyResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeletePropertyResponse_fieldAccessorTable;
+    }
+    
+    // repeated .org.technbolts.protobuf.Error error = 1;
+    public static final int ERROR_FIELD_NUMBER = 1;
+    private java.util.List<org.technbolts.protobuf.CommonPBO.Error> error_ =
+      java.util.Collections.emptyList();
+    public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
+      return error_;
+    }
+    public int getErrorCount() { return error_.size(); }
+    public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
+      return error_.get(index);
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
+        output.writeMessage(1, element);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, element);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeletePropertyResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeletePropertyResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.DeletePropertyResponse result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.DeletePropertyResponse();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.DeletePropertyResponse internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.DeletePropertyResponse();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeletePropertyResponse getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.DeletePropertyResponse build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.DeletePropertyResponse buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeletePropertyResponse buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        if (result.error_ != java.util.Collections.EMPTY_LIST) {
+          result.error_ =
+            java.util.Collections.unmodifiableList(result.error_);
+        }
+        org.technbolts.protobuf.CommonPBO.DeletePropertyResponse returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.DeletePropertyResponse) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeletePropertyResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeletePropertyResponse other) {
+        if (other == org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.getDefaultInstance()) return this;
+        if (!other.error_.isEmpty()) {
+          if (result.error_.isEmpty()) {
+            result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+          }
+          result.error_.addAll(other.error_);
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              org.technbolts.protobuf.CommonPBO.Error.Builder subBuilder = org.technbolts.protobuf.CommonPBO.Error.newBuilder();
+              input.readMessage(subBuilder, extensionRegistry);
+              addError(subBuilder.buildPartial());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // repeated .org.technbolts.protobuf.Error error = 1;
+      public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
+        return java.util.Collections.unmodifiableList(result.error_);
+      }
+      public int getErrorCount() {
+        return result.getErrorCount();
+      }
+      public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
+        return result.getError(index);
+      }
+      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.error_.set(index, value);
+        return this;
+      }
+      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
+        result.error_.set(index, builderForValue.build());
+        return this;
+      }
+      public Builder addError(org.technbolts.protobuf.CommonPBO.Error value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        if (result.error_.isEmpty()) {
+          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+        }
+        result.error_.add(value);
+        return this;
+      }
+      public Builder addError(org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
+        if (result.error_.isEmpty()) {
+          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+        }
+        result.error_.add(builderForValue.build());
+        return this;
+      }
+      public Builder addAllError(
+          java.lang.Iterable<? extends org.technbolts.protobuf.CommonPBO.Error> values) {
+        if (result.error_.isEmpty()) {
+          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+        }
+        super.addAll(values, result.error_);
+        return this;
+      }
+      public Builder clearError() {
+        result.error_ = java.util.Collections.emptyList();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeletePropertyResponse)
+    }
+    
+    static {
+      defaultInstance = new DeletePropertyResponse(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeletePropertyResponse)
+  }
+  
   public static final class EntityDescriptor extends
       com.google.protobuf.GeneratedMessage {
     // Use EntityDescriptor.newBuilder() to construct.
@@ -4780,8 +5750,15 @@ public final class CommonPBO {
     public boolean hasName() { return hasName; }
     public java.lang.String getName() { return name_; }
     
-    // repeated .org.technbolts.protobuf.Label label = 3;
-    public static final int LABEL_FIELD_NUMBER = 3;
+    // optional string type = 3;
+    public static final int TYPE_FIELD_NUMBER = 3;
+    private boolean hasType;
+    private java.lang.String type_ = "";
+    public boolean hasType() { return hasType; }
+    public java.lang.String getType() { return type_; }
+    
+    // repeated .org.technbolts.protobuf.Label label = 4;
+    public static final int LABEL_FIELD_NUMBER = 4;
     private java.util.List<org.technbolts.protobuf.CommonPBO.Label> label_ =
       java.util.Collections.emptyList();
     public java.util.List<org.technbolts.protobuf.CommonPBO.Label> getLabelList() {
@@ -4792,8 +5769,8 @@ public final class CommonPBO {
       return label_.get(index);
     }
     
-    // repeated .org.technbolts.protobuf.PropertyDescriptor property_descriptor = 4;
-    public static final int PROPERTY_DESCRIPTOR_FIELD_NUMBER = 4;
+    // repeated .org.technbolts.protobuf.PropertyDescriptor property_descriptor = 5;
+    public static final int PROPERTY_DESCRIPTOR_FIELD_NUMBER = 5;
     private java.util.List<org.technbolts.protobuf.CommonPBO.PropertyDescriptor> propertyDescriptor_ =
       java.util.Collections.emptyList();
     public java.util.List<org.technbolts.protobuf.CommonPBO.PropertyDescriptor> getPropertyDescriptorList() {
@@ -4819,11 +5796,14 @@ public final class CommonPBO {
       if (hasName()) {
         output.writeString(2, getName());
       }
+      if (hasType()) {
+        output.writeString(3, getType());
+      }
       for (org.technbolts.protobuf.CommonPBO.Label element : getLabelList()) {
-        output.writeMessage(3, element);
+        output.writeMessage(4, element);
       }
       for (org.technbolts.protobuf.CommonPBO.PropertyDescriptor element : getPropertyDescriptorList()) {
-        output.writeMessage(4, element);
+        output.writeMessage(5, element);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4842,13 +5822,17 @@ public final class CommonPBO {
         size += com.google.protobuf.CodedOutputStream
           .computeStringSize(2, getName());
       }
+      if (hasType()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeStringSize(3, getType());
+      }
       for (org.technbolts.protobuf.CommonPBO.Label element : getLabelList()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, element);
+          .computeMessageSize(4, element);
       }
       for (org.technbolts.protobuf.CommonPBO.PropertyDescriptor element : getPropertyDescriptorList()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, element);
+          .computeMessageSize(5, element);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5022,6 +6006,9 @@ public final class CommonPBO {
         if (other.hasName()) {
           setName(other.getName());
         }
+        if (other.hasType()) {
+          setType(other.getType());
+        }
         if (!other.label_.isEmpty()) {
           if (result.label_.isEmpty()) {
             result.label_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Label>();
@@ -5068,12 +6055,16 @@ public final class CommonPBO {
               break;
             }
             case 26: {
+              setType(input.readString());
+              break;
+            }
+            case 34: {
               org.technbolts.protobuf.CommonPBO.Label.Builder subBuilder = org.technbolts.protobuf.CommonPBO.Label.newBuilder();
               input.readMessage(subBuilder, extensionRegistry);
               addLabel(subBuilder.buildPartial());
               break;
             }
-            case 34: {
+            case 42: {
               org.technbolts.protobuf.CommonPBO.PropertyDescriptor.Builder subBuilder = org.technbolts.protobuf.CommonPBO.PropertyDescriptor.newBuilder();
               input.readMessage(subBuilder, extensionRegistry);
               addPropertyDescriptor(subBuilder.buildPartial());
@@ -5123,7 +6114,28 @@ public final class CommonPBO {
         return this;
       }
       
-      // repeated .org.technbolts.protobuf.Label label = 3;
+      // optional string type = 3;
+      public boolean hasType() {
+        return result.hasType();
+      }
+      public java.lang.String getType() {
+        return result.getType();
+      }
+      public Builder setType(java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  result.hasType = true;
+        result.type_ = value;
+        return this;
+      }
+      public Builder clearType() {
+        result.hasType = false;
+        result.type_ = getDefaultInstance().getType();
+        return this;
+      }
+      
+      // repeated .org.technbolts.protobuf.Label label = 4;
       public java.util.List<org.technbolts.protobuf.CommonPBO.Label> getLabelList() {
         return java.util.Collections.unmodifiableList(result.label_);
       }
@@ -5174,7 +6186,7 @@ public final class CommonPBO {
         return this;
       }
       
-      // repeated .org.technbolts.protobuf.PropertyDescriptor property_descriptor = 4;
+      // repeated .org.technbolts.protobuf.PropertyDescriptor property_descriptor = 5;
       public java.util.List<org.technbolts.protobuf.CommonPBO.PropertyDescriptor> getPropertyDescriptorList() {
         return java.util.Collections.unmodifiableList(result.propertyDescriptor_);
       }
@@ -5237,31 +6249,443 @@ public final class CommonPBO {
     // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.EntityDescriptor)
   }
   
-  public static final class CreateEntity extends
+  public static final class Entity extends
       com.google.protobuf.GeneratedMessage {
-    // Use CreateEntity.newBuilder() to construct.
-    private CreateEntity() {
+    // Use Entity.newBuilder() to construct.
+    private Entity() {
       initFields();
     }
-    private CreateEntity(boolean noInit) {}
+    private Entity(boolean noInit) {}
     
-    private static final CreateEntity defaultInstance;
-    public static CreateEntity getDefaultInstance() {
+    private static final Entity defaultInstance;
+    public static Entity getDefaultInstance() {
       return defaultInstance;
     }
     
-    public CreateEntity getDefaultInstanceForType() {
+    public Entity getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntity_descriptor;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_Entity_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntity_fieldAccessorTable;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_Entity_fieldAccessorTable;
+    }
+    
+    // optional uint32 id = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private boolean hasId;
+    private int id_ = 0;
+    public boolean hasId() { return hasId; }
+    public int getId() { return id_; }
+    
+    // optional uint32 descriptor_id = 2;
+    public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
+    private boolean hasDescriptorId;
+    private int descriptorId_ = 0;
+    public boolean hasDescriptorId() { return hasDescriptorId; }
+    public int getDescriptorId() { return descriptorId_; }
+    
+    // repeated .org.technbolts.protobuf.PropertyValue property = 3;
+    public static final int PROPERTY_FIELD_NUMBER = 3;
+    private java.util.List<org.technbolts.protobuf.CommonPBO.PropertyValue> property_ =
+      java.util.Collections.emptyList();
+    public java.util.List<org.technbolts.protobuf.CommonPBO.PropertyValue> getPropertyList() {
+      return property_;
+    }
+    public int getPropertyCount() { return property_.size(); }
+    public org.technbolts.protobuf.CommonPBO.PropertyValue getProperty(int index) {
+      return property_.get(index);
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      for (org.technbolts.protobuf.CommonPBO.PropertyValue element : getPropertyList()) {
+        if (!element.isInitialized()) return false;
+      }
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (hasId()) {
+        output.writeUInt32(1, getId());
+      }
+      if (hasDescriptorId()) {
+        output.writeUInt32(2, getDescriptorId());
+      }
+      for (org.technbolts.protobuf.CommonPBO.PropertyValue element : getPropertyList()) {
+        output.writeMessage(3, element);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      if (hasId()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, getId());
+      }
+      if (hasDescriptorId()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, getDescriptorId());
+      }
+      for (org.technbolts.protobuf.CommonPBO.PropertyValue element : getPropertyList()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, element);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.Entity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.Entity prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.Entity result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.Entity.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.Entity();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.Entity internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.Entity();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.Entity.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.Entity getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.Entity.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.Entity build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.Entity buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.Entity buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        if (result.property_ != java.util.Collections.EMPTY_LIST) {
+          result.property_ =
+            java.util.Collections.unmodifiableList(result.property_);
+        }
+        org.technbolts.protobuf.CommonPBO.Entity returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.Entity) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.Entity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.Entity other) {
+        if (other == org.technbolts.protobuf.CommonPBO.Entity.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasDescriptorId()) {
+          setDescriptorId(other.getDescriptorId());
+        }
+        if (!other.property_.isEmpty()) {
+          if (result.property_.isEmpty()) {
+            result.property_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.PropertyValue>();
+          }
+          result.property_.addAll(other.property_);
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 8: {
+              setId(input.readUInt32());
+              break;
+            }
+            case 16: {
+              setDescriptorId(input.readUInt32());
+              break;
+            }
+            case 26: {
+              org.technbolts.protobuf.CommonPBO.PropertyValue.Builder subBuilder = org.technbolts.protobuf.CommonPBO.PropertyValue.newBuilder();
+              input.readMessage(subBuilder, extensionRegistry);
+              addProperty(subBuilder.buildPartial());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // optional uint32 id = 1;
+      public boolean hasId() {
+        return result.hasId();
+      }
+      public int getId() {
+        return result.getId();
+      }
+      public Builder setId(int value) {
+        result.hasId = true;
+        result.id_ = value;
+        return this;
+      }
+      public Builder clearId() {
+        result.hasId = false;
+        result.id_ = 0;
+        return this;
+      }
+      
+      // optional uint32 descriptor_id = 2;
+      public boolean hasDescriptorId() {
+        return result.hasDescriptorId();
+      }
+      public int getDescriptorId() {
+        return result.getDescriptorId();
+      }
+      public Builder setDescriptorId(int value) {
+        result.hasDescriptorId = true;
+        result.descriptorId_ = value;
+        return this;
+      }
+      public Builder clearDescriptorId() {
+        result.hasDescriptorId = false;
+        result.descriptorId_ = 0;
+        return this;
+      }
+      
+      // repeated .org.technbolts.protobuf.PropertyValue property = 3;
+      public java.util.List<org.technbolts.protobuf.CommonPBO.PropertyValue> getPropertyList() {
+        return java.util.Collections.unmodifiableList(result.property_);
+      }
+      public int getPropertyCount() {
+        return result.getPropertyCount();
+      }
+      public org.technbolts.protobuf.CommonPBO.PropertyValue getProperty(int index) {
+        return result.getProperty(index);
+      }
+      public Builder setProperty(int index, org.technbolts.protobuf.CommonPBO.PropertyValue value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.property_.set(index, value);
+        return this;
+      }
+      public Builder setProperty(int index, org.technbolts.protobuf.CommonPBO.PropertyValue.Builder builderForValue) {
+        result.property_.set(index, builderForValue.build());
+        return this;
+      }
+      public Builder addProperty(org.technbolts.protobuf.CommonPBO.PropertyValue value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        if (result.property_.isEmpty()) {
+          result.property_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.PropertyValue>();
+        }
+        result.property_.add(value);
+        return this;
+      }
+      public Builder addProperty(org.technbolts.protobuf.CommonPBO.PropertyValue.Builder builderForValue) {
+        if (result.property_.isEmpty()) {
+          result.property_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.PropertyValue>();
+        }
+        result.property_.add(builderForValue.build());
+        return this;
+      }
+      public Builder addAllProperty(
+          java.lang.Iterable<? extends org.technbolts.protobuf.CommonPBO.PropertyValue> values) {
+        if (result.property_.isEmpty()) {
+          result.property_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.PropertyValue>();
+        }
+        super.addAll(values, result.property_);
+        return this;
+      }
+      public Builder clearProperty() {
+        result.property_ = java.util.Collections.emptyList();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.Entity)
+    }
+    
+    static {
+      defaultInstance = new Entity(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.Entity)
+  }
+  
+  public static final class CreateEntityDescriptor extends
+      com.google.protobuf.GeneratedMessage {
+    // Use CreateEntityDescriptor.newBuilder() to construct.
+    private CreateEntityDescriptor() {
+      initFields();
+    }
+    private CreateEntityDescriptor(boolean noInit) {}
+    
+    private static final CreateEntityDescriptor defaultInstance;
+    public static CreateEntityDescriptor getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public CreateEntityDescriptor getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntityDescriptor_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntityDescriptor_fieldAccessorTable;
     }
     
     // repeated .org.technbolts.protobuf.EntityDescriptor descriptor = 1;
@@ -5320,41 +6744,41 @@ public final class CommonPBO {
       return size;
     }
     
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(byte[] data)
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseDelimitedFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -5363,7 +6787,7 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseDelimitedFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5374,12 +6798,12 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5389,25 +6813,25 @@ public final class CommonPBO {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.CreateEntity prototype) {
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.CreateEntity result;
+      private org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor result;
       
-      // Construct using org.technbolts.protobuf.CommonPBO.CreateEntity.newBuilder()
+      // Construct using org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.CreateEntity();
+        builder.result = new org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor();
         return builder;
       }
       
-      protected org.technbolts.protobuf.CommonPBO.CreateEntity internalGetResult() {
+      protected org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor internalGetResult() {
         return result;
       }
       
@@ -5416,7 +6840,7 @@ public final class CommonPBO {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new org.technbolts.protobuf.CommonPBO.CreateEntity();
+        result = new org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor();
         return this;
       }
       
@@ -5426,24 +6850,24 @@ public final class CommonPBO {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.CreateEntity.getDescriptor();
+        return org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor.getDescriptor();
       }
       
-      public org.technbolts.protobuf.CommonPBO.CreateEntity getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.CreateEntity.getDefaultInstance();
+      public org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public org.technbolts.protobuf.CommonPBO.CreateEntity build() {
+      public org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private org.technbolts.protobuf.CommonPBO.CreateEntity buildParsed()
+      private org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -5452,7 +6876,7 @@ public final class CommonPBO {
         return buildPartial();
       }
       
-      public org.technbolts.protobuf.CommonPBO.CreateEntity buildPartial() {
+      public org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
@@ -5461,22 +6885,22 @@ public final class CommonPBO {
           result.descriptor_ =
             java.util.Collections.unmodifiableList(result.descriptor_);
         }
-        org.technbolts.protobuf.CommonPBO.CreateEntity returnMe = result;
+        org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.CreateEntity) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.CreateEntity)other);
+        if (other instanceof org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.CreateEntity other) {
-        if (other == org.technbolts.protobuf.CommonPBO.CreateEntity.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor other) {
+        if (other == org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor.getDefaultInstance()) return this;
         if (!other.descriptor_.isEmpty()) {
           if (result.descriptor_.isEmpty()) {
             result.descriptor_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.EntityDescriptor>();
@@ -5595,43 +7019,43 @@ public final class CommonPBO {
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.CreateEntity)
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.CreateEntityDescriptor)
     }
     
     static {
-      defaultInstance = new CreateEntity(true);
+      defaultInstance = new CreateEntityDescriptor(true);
       org.technbolts.protobuf.CommonPBO.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.CreateEntity)
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.CreateEntityDescriptor)
   }
   
-  public static final class CreateEntityResponse extends
+  public static final class CreateEntityDescriptorResponse extends
       com.google.protobuf.GeneratedMessage {
-    // Use CreateEntityResponse.newBuilder() to construct.
-    private CreateEntityResponse() {
+    // Use CreateEntityDescriptorResponse.newBuilder() to construct.
+    private CreateEntityDescriptorResponse() {
       initFields();
     }
-    private CreateEntityResponse(boolean noInit) {}
+    private CreateEntityDescriptorResponse(boolean noInit) {}
     
-    private static final CreateEntityResponse defaultInstance;
-    public static CreateEntityResponse getDefaultInstance() {
+    private static final CreateEntityDescriptorResponse defaultInstance;
+    public static CreateEntityDescriptorResponse getDefaultInstance() {
       return defaultInstance;
     }
     
-    public CreateEntityResponse getDefaultInstanceForType() {
+    public CreateEntityDescriptorResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntityResponse_descriptor;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntityDescriptorResponse_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntityResponse_fieldAccessorTable;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_CreateEntityDescriptorResponse_fieldAccessorTable;
     }
     
     // repeated .org.technbolts.protobuf.Error error = 1;
@@ -5719,41 +7143,41 @@ public final class CommonPBO {
       return size;
     }
     
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(byte[] data)
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseDelimitedFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -5762,7 +7186,7 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseDelimitedFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5773,12 +7197,12 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.CreateEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5788,25 +7212,25 @@ public final class CommonPBO {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.CreateEntityResponse prototype) {
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.CreateEntityResponse result;
+      private org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse result;
       
-      // Construct using org.technbolts.protobuf.CommonPBO.CreateEntityResponse.newBuilder()
+      // Construct using org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.CreateEntityResponse();
+        builder.result = new org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse();
         return builder;
       }
       
-      protected org.technbolts.protobuf.CommonPBO.CreateEntityResponse internalGetResult() {
+      protected org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse internalGetResult() {
         return result;
       }
       
@@ -5815,7 +7239,7 @@ public final class CommonPBO {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new org.technbolts.protobuf.CommonPBO.CreateEntityResponse();
+        result = new org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse();
         return this;
       }
       
@@ -5825,24 +7249,24 @@ public final class CommonPBO {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.CreateEntityResponse.getDescriptor();
+        return org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse.getDescriptor();
       }
       
-      public org.technbolts.protobuf.CommonPBO.CreateEntityResponse getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.CreateEntityResponse.getDefaultInstance();
+      public org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public org.technbolts.protobuf.CommonPBO.CreateEntityResponse build() {
+      public org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private org.technbolts.protobuf.CommonPBO.CreateEntityResponse buildParsed()
+      private org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -5851,7 +7275,7 @@ public final class CommonPBO {
         return buildPartial();
       }
       
-      public org.technbolts.protobuf.CommonPBO.CreateEntityResponse buildPartial() {
+      public org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
@@ -5868,22 +7292,22 @@ public final class CommonPBO {
           result.descriptor_ =
             java.util.Collections.unmodifiableList(result.descriptor_);
         }
-        org.technbolts.protobuf.CommonPBO.CreateEntityResponse returnMe = result;
+        org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.CreateEntityResponse) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.CreateEntityResponse)other);
+        if (other instanceof org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.CreateEntityResponse other) {
-        if (other == org.technbolts.protobuf.CommonPBO.CreateEntityResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse other) {
+        if (other == org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse.getDefaultInstance()) return this;
         if (!other.error_.isEmpty()) {
           if (result.error_.isEmpty()) {
             result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
@@ -6093,700 +7517,43 @@ public final class CommonPBO {
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.CreateEntityResponse)
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.CreateEntityDescriptorResponse)
     }
     
     static {
-      defaultInstance = new CreateEntityResponse(true);
+      defaultInstance = new CreateEntityDescriptorResponse(true);
       org.technbolts.protobuf.CommonPBO.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.CreateEntityResponse)
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.CreateEntityDescriptorResponse)
   }
   
-  public static final class DeleteEntity extends
+  public static final class SearchEntityDescriptor extends
       com.google.protobuf.GeneratedMessage {
-    // Use DeleteEntity.newBuilder() to construct.
-    private DeleteEntity() {
+    // Use SearchEntityDescriptor.newBuilder() to construct.
+    private SearchEntityDescriptor() {
       initFields();
     }
-    private DeleteEntity(boolean noInit) {}
+    private SearchEntityDescriptor(boolean noInit) {}
     
-    private static final DeleteEntity defaultInstance;
-    public static DeleteEntity getDefaultInstance() {
+    private static final SearchEntityDescriptor defaultInstance;
+    public static SearchEntityDescriptor getDefaultInstance() {
       return defaultInstance;
     }
     
-    public DeleteEntity getDefaultInstanceForType() {
+    public SearchEntityDescriptor getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntity_descriptor;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntityDescriptor_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntity_fieldAccessorTable;
-    }
-    
-    // repeated uint32 descriptor_id = 2;
-    public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
-      java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
-      return descriptorId_;
-    }
-    public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
-      return descriptorId_.get(index);
-    }
-    
-    private void initFields() {
-    }
-    public final boolean isInitialized() {
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
-        }
-        size += dataSize;
-        size += 1 * getDescriptorIdList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntity parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeleteEntity prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.DeleteEntity result;
-      
-      // Construct using org.technbolts.protobuf.CommonPBO.DeleteEntity.newBuilder()
-      private Builder() {}
-      
-      private static Builder create() {
-        Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.DeleteEntity();
-        return builder;
-      }
-      
-      protected org.technbolts.protobuf.CommonPBO.DeleteEntity internalGetResult() {
-        return result;
-      }
-      
-      public Builder clear() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "Cannot call clear() after build().");
-        }
-        result = new org.technbolts.protobuf.CommonPBO.DeleteEntity();
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(result);
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.DeleteEntity.getDescriptor();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeleteEntity getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.DeleteEntity.getDefaultInstance();
-      }
-      
-      public boolean isInitialized() {
-        return result.isInitialized();
-      }
-      public org.technbolts.protobuf.CommonPBO.DeleteEntity build() {
-        if (result != null && !isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return buildPartial();
-      }
-      
-      private org.technbolts.protobuf.CommonPBO.DeleteEntity buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        if (!isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return buildPartial();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeleteEntity buildPartial() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "build() has already been called on this Builder.");
-        }
-        if (result.descriptorId_ != java.util.Collections.EMPTY_LIST) {
-          result.descriptorId_ =
-            java.util.Collections.unmodifiableList(result.descriptorId_);
-        }
-        org.technbolts.protobuf.CommonPBO.DeleteEntity returnMe = result;
-        result = null;
-        return returnMe;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.DeleteEntity) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeleteEntity)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeleteEntity other) {
-        if (other == org.technbolts.protobuf.CommonPBO.DeleteEntity.getDefaultInstance()) return this;
-        if (!other.descriptorId_.isEmpty()) {
-          if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
-          }
-          result.descriptorId_.addAll(other.descriptorId_);
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                return this;
-              }
-              break;
-            }
-            case 16: {
-              addDescriptorId(input.readUInt32());
-              break;
-            }
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-          }
-        }
-      }
-      
-      
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
-        return java.util.Collections.unmodifiableList(result.descriptorId_);
-      }
-      public int getDescriptorIdCount() {
-        return result.getDescriptorIdCount();
-      }
-      public int getDescriptorId(int index) {
-        return result.getDescriptorId(index);
-      }
-      public Builder setDescriptorId(int index, int value) {
-        result.descriptorId_.set(index, value);
-        return this;
-      }
-      public Builder addDescriptorId(int value) {
-        if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
-        }
-        result.descriptorId_.add(value);
-        return this;
-      }
-      public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
-        }
-        super.addAll(values, result.descriptorId_);
-        return this;
-      }
-      public Builder clearDescriptorId() {
-        result.descriptorId_ = java.util.Collections.emptyList();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeleteEntity)
-    }
-    
-    static {
-      defaultInstance = new DeleteEntity(true);
-      org.technbolts.protobuf.CommonPBO.internalForceInit();
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeleteEntity)
-  }
-  
-  public static final class DeleteEntityResponse extends
-      com.google.protobuf.GeneratedMessage {
-    // Use DeleteEntityResponse.newBuilder() to construct.
-    private DeleteEntityResponse() {
-      initFields();
-    }
-    private DeleteEntityResponse(boolean noInit) {}
-    
-    private static final DeleteEntityResponse defaultInstance;
-    public static DeleteEntityResponse getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public DeleteEntityResponse getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntityResponse_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntityResponse_fieldAccessorTable;
-    }
-    
-    // repeated .org.technbolts.protobuf.Error error = 1;
-    public static final int ERROR_FIELD_NUMBER = 1;
-    private java.util.List<org.technbolts.protobuf.CommonPBO.Error> error_ =
-      java.util.Collections.emptyList();
-    public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
-      return error_;
-    }
-    public int getErrorCount() { return error_.size(); }
-    public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
-      return error_.get(index);
-    }
-    
-    private void initFields() {
-    }
-    public final boolean isInitialized() {
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
-        output.writeMessage(1, element);
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, element);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static org.technbolts.protobuf.CommonPBO.DeleteEntityResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeleteEntityResponse prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.DeleteEntityResponse result;
-      
-      // Construct using org.technbolts.protobuf.CommonPBO.DeleteEntityResponse.newBuilder()
-      private Builder() {}
-      
-      private static Builder create() {
-        Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.DeleteEntityResponse();
-        return builder;
-      }
-      
-      protected org.technbolts.protobuf.CommonPBO.DeleteEntityResponse internalGetResult() {
-        return result;
-      }
-      
-      public Builder clear() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "Cannot call clear() after build().");
-        }
-        result = new org.technbolts.protobuf.CommonPBO.DeleteEntityResponse();
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(result);
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.DeleteEntityResponse.getDescriptor();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeleteEntityResponse getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.DeleteEntityResponse.getDefaultInstance();
-      }
-      
-      public boolean isInitialized() {
-        return result.isInitialized();
-      }
-      public org.technbolts.protobuf.CommonPBO.DeleteEntityResponse build() {
-        if (result != null && !isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return buildPartial();
-      }
-      
-      private org.technbolts.protobuf.CommonPBO.DeleteEntityResponse buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        if (!isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return buildPartial();
-      }
-      
-      public org.technbolts.protobuf.CommonPBO.DeleteEntityResponse buildPartial() {
-        if (result == null) {
-          throw new IllegalStateException(
-            "build() has already been called on this Builder.");
-        }
-        if (result.error_ != java.util.Collections.EMPTY_LIST) {
-          result.error_ =
-            java.util.Collections.unmodifiableList(result.error_);
-        }
-        org.technbolts.protobuf.CommonPBO.DeleteEntityResponse returnMe = result;
-        result = null;
-        return returnMe;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.DeleteEntityResponse) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeleteEntityResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeleteEntityResponse other) {
-        if (other == org.technbolts.protobuf.CommonPBO.DeleteEntityResponse.getDefaultInstance()) return this;
-        if (!other.error_.isEmpty()) {
-          if (result.error_.isEmpty()) {
-            result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-          }
-          result.error_.addAll(other.error_);
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              org.technbolts.protobuf.CommonPBO.Error.Builder subBuilder = org.technbolts.protobuf.CommonPBO.Error.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addError(subBuilder.buildPartial());
-              break;
-            }
-          }
-        }
-      }
-      
-      
-      // repeated .org.technbolts.protobuf.Error error = 1;
-      public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
-        return java.util.Collections.unmodifiableList(result.error_);
-      }
-      public int getErrorCount() {
-        return result.getErrorCount();
-      }
-      public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
-        return result.getError(index);
-      }
-      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        result.error_.set(index, value);
-        return this;
-      }
-      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
-        result.error_.set(index, builderForValue.build());
-        return this;
-      }
-      public Builder addError(org.technbolts.protobuf.CommonPBO.Error value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        if (result.error_.isEmpty()) {
-          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-        }
-        result.error_.add(value);
-        return this;
-      }
-      public Builder addError(org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
-        if (result.error_.isEmpty()) {
-          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-        }
-        result.error_.add(builderForValue.build());
-        return this;
-      }
-      public Builder addAllError(
-          java.lang.Iterable<? extends org.technbolts.protobuf.CommonPBO.Error> values) {
-        if (result.error_.isEmpty()) {
-          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
-        }
-        super.addAll(values, result.error_);
-        return this;
-      }
-      public Builder clearError() {
-        result.error_ = java.util.Collections.emptyList();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeleteEntityResponse)
-    }
-    
-    static {
-      defaultInstance = new DeleteEntityResponse(true);
-      org.technbolts.protobuf.CommonPBO.internalForceInit();
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeleteEntityResponse)
-  }
-  
-  public static final class SearchEntity extends
-      com.google.protobuf.GeneratedMessage {
-    // Use SearchEntity.newBuilder() to construct.
-    private SearchEntity() {
-      initFields();
-    }
-    private SearchEntity(boolean noInit) {}
-    
-    private static final SearchEntity defaultInstance;
-    public static SearchEntity getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public SearchEntity getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntity_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntity_fieldAccessorTable;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntityDescriptor_fieldAccessorTable;
     }
     
     // optional .org.technbolts.protobuf.EntityDescriptor sample = 1;
@@ -6856,41 +7623,41 @@ public final class CommonPBO {
       return size;
     }
     
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(byte[] data)
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseDelimitedFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -6899,7 +7666,7 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseDelimitedFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6910,12 +7677,12 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntity parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6925,25 +7692,25 @@ public final class CommonPBO {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.SearchEntity prototype) {
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.SearchEntity result;
+      private org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor result;
       
-      // Construct using org.technbolts.protobuf.CommonPBO.SearchEntity.newBuilder()
+      // Construct using org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.SearchEntity();
+        builder.result = new org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor();
         return builder;
       }
       
-      protected org.technbolts.protobuf.CommonPBO.SearchEntity internalGetResult() {
+      protected org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor internalGetResult() {
         return result;
       }
       
@@ -6952,7 +7719,7 @@ public final class CommonPBO {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new org.technbolts.protobuf.CommonPBO.SearchEntity();
+        result = new org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor();
         return this;
       }
       
@@ -6962,24 +7729,24 @@ public final class CommonPBO {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.SearchEntity.getDescriptor();
+        return org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor.getDescriptor();
       }
       
-      public org.technbolts.protobuf.CommonPBO.SearchEntity getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.SearchEntity.getDefaultInstance();
+      public org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public org.technbolts.protobuf.CommonPBO.SearchEntity build() {
+      public org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private org.technbolts.protobuf.CommonPBO.SearchEntity buildParsed()
+      private org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -6988,27 +7755,27 @@ public final class CommonPBO {
         return buildPartial();
       }
       
-      public org.technbolts.protobuf.CommonPBO.SearchEntity buildPartial() {
+      public org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
         }
-        org.technbolts.protobuf.CommonPBO.SearchEntity returnMe = result;
+        org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.SearchEntity) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.SearchEntity)other);
+        if (other instanceof org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.SearchEntity other) {
-        if (other == org.technbolts.protobuf.CommonPBO.SearchEntity.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor other) {
+        if (other == org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor.getDefaultInstance()) return this;
         if (other.hasSample()) {
           mergeSample(other.getSample());
         }
@@ -7162,43 +7929,43 @@ public final class CommonPBO {
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.SearchEntity)
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.SearchEntityDescriptor)
     }
     
     static {
-      defaultInstance = new SearchEntity(true);
+      defaultInstance = new SearchEntityDescriptor(true);
       org.technbolts.protobuf.CommonPBO.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.SearchEntity)
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.SearchEntityDescriptor)
   }
   
-  public static final class SearchEntityResponse extends
+  public static final class SearchEntityDescriptorResponse extends
       com.google.protobuf.GeneratedMessage {
-    // Use SearchEntityResponse.newBuilder() to construct.
-    private SearchEntityResponse() {
+    // Use SearchEntityDescriptorResponse.newBuilder() to construct.
+    private SearchEntityDescriptorResponse() {
       initFields();
     }
-    private SearchEntityResponse(boolean noInit) {}
+    private SearchEntityDescriptorResponse(boolean noInit) {}
     
-    private static final SearchEntityResponse defaultInstance;
-    public static SearchEntityResponse getDefaultInstance() {
+    private static final SearchEntityDescriptorResponse defaultInstance;
+    public static SearchEntityDescriptorResponse getDefaultInstance() {
       return defaultInstance;
     }
     
-    public SearchEntityResponse getDefaultInstanceForType() {
+    public SearchEntityDescriptorResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntityResponse_descriptor;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntityDescriptorResponse_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntityResponse_fieldAccessorTable;
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_SearchEntityDescriptorResponse_fieldAccessorTable;
     }
     
     // repeated .org.technbolts.protobuf.Error error = 1;
@@ -7286,41 +8053,41 @@ public final class CommonPBO {
       return size;
     }
     
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(byte[] data)
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseDelimitedFrom(java.io.InputStream input)
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -7329,7 +8096,7 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseDelimitedFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7340,12 +8107,12 @@ public final class CommonPBO {
         return null;
       }
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static org.technbolts.protobuf.CommonPBO.SearchEntityResponse parseFrom(
+    public static org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7355,25 +8122,25 @@ public final class CommonPBO {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.SearchEntityResponse prototype) {
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
     
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> {
-      private org.technbolts.protobuf.CommonPBO.SearchEntityResponse result;
+      private org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse result;
       
-      // Construct using org.technbolts.protobuf.CommonPBO.SearchEntityResponse.newBuilder()
+      // Construct using org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse.newBuilder()
       private Builder() {}
       
       private static Builder create() {
         Builder builder = new Builder();
-        builder.result = new org.technbolts.protobuf.CommonPBO.SearchEntityResponse();
+        builder.result = new org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse();
         return builder;
       }
       
-      protected org.technbolts.protobuf.CommonPBO.SearchEntityResponse internalGetResult() {
+      protected org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse internalGetResult() {
         return result;
       }
       
@@ -7382,7 +8149,7 @@ public final class CommonPBO {
           throw new IllegalStateException(
             "Cannot call clear() after build().");
         }
-        result = new org.technbolts.protobuf.CommonPBO.SearchEntityResponse();
+        result = new org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse();
         return this;
       }
       
@@ -7392,24 +8159,24 @@ public final class CommonPBO {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.technbolts.protobuf.CommonPBO.SearchEntityResponse.getDescriptor();
+        return org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse.getDescriptor();
       }
       
-      public org.technbolts.protobuf.CommonPBO.SearchEntityResponse getDefaultInstanceForType() {
-        return org.technbolts.protobuf.CommonPBO.SearchEntityResponse.getDefaultInstance();
+      public org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse.getDefaultInstance();
       }
       
       public boolean isInitialized() {
         return result.isInitialized();
       }
-      public org.technbolts.protobuf.CommonPBO.SearchEntityResponse build() {
+      public org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse build() {
         if (result != null && !isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return buildPartial();
       }
       
-      private org.technbolts.protobuf.CommonPBO.SearchEntityResponse buildParsed()
+      private org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
         if (!isInitialized()) {
           throw newUninitializedMessageException(
@@ -7418,7 +8185,7 @@ public final class CommonPBO {
         return buildPartial();
       }
       
-      public org.technbolts.protobuf.CommonPBO.SearchEntityResponse buildPartial() {
+      public org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse buildPartial() {
         if (result == null) {
           throw new IllegalStateException(
             "build() has already been called on this Builder.");
@@ -7435,22 +8202,22 @@ public final class CommonPBO {
           result.descriptor_ =
             java.util.Collections.unmodifiableList(result.descriptor_);
         }
-        org.technbolts.protobuf.CommonPBO.SearchEntityResponse returnMe = result;
+        org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse returnMe = result;
         result = null;
         return returnMe;
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.technbolts.protobuf.CommonPBO.SearchEntityResponse) {
-          return mergeFrom((org.technbolts.protobuf.CommonPBO.SearchEntityResponse)other);
+        if (other instanceof org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.SearchEntityResponse other) {
-        if (other == org.technbolts.protobuf.CommonPBO.SearchEntityResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse other) {
+        if (other == org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse.getDefaultInstance()) return this;
         if (!other.error_.isEmpty()) {
           if (result.error_.isEmpty()) {
             result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
@@ -7660,16 +8427,673 @@ public final class CommonPBO {
         return this;
       }
       
-      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.SearchEntityResponse)
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.SearchEntityDescriptorResponse)
     }
     
     static {
-      defaultInstance = new SearchEntityResponse(true);
+      defaultInstance = new SearchEntityDescriptorResponse(true);
       org.technbolts.protobuf.CommonPBO.internalForceInit();
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.SearchEntityResponse)
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.SearchEntityDescriptorResponse)
+  }
+  
+  public static final class DeleteEntityDescriptor extends
+      com.google.protobuf.GeneratedMessage {
+    // Use DeleteEntityDescriptor.newBuilder() to construct.
+    private DeleteEntityDescriptor() {
+      initFields();
+    }
+    private DeleteEntityDescriptor(boolean noInit) {}
+    
+    private static final DeleteEntityDescriptor defaultInstance;
+    public static DeleteEntityDescriptor getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public DeleteEntityDescriptor getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_fieldAccessorTable;
+    }
+    
+    // repeated uint32 descriptor_id = 2;
+    public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> descriptorId_ =
+      java.util.Collections.emptyList();
+    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      return descriptorId_;
+    }
+    public int getDescriptorIdCount() { return descriptorId_.size(); }
+    public int getDescriptorId(int index) {
+      return descriptorId_.get(index);
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int element : getDescriptorIdList()) {
+        output.writeUInt32(2, element);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int element : getDescriptorIdList()) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(element);
+        }
+        size += dataSize;
+        size += 1 * getDescriptorIdList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        if (result.descriptorId_ != java.util.Collections.EMPTY_LIST) {
+          result.descriptorId_ =
+            java.util.Collections.unmodifiableList(result.descriptorId_);
+        }
+        org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor other) {
+        if (other == org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor.getDefaultInstance()) return this;
+        if (!other.descriptorId_.isEmpty()) {
+          if (result.descriptorId_.isEmpty()) {
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          }
+          result.descriptorId_.addAll(other.descriptorId_);
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 16: {
+              addDescriptorId(input.readUInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              while (input.getBytesUntilLimit() > 0) {
+                addDescriptorId(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // repeated uint32 descriptor_id = 2;
+      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+        return java.util.Collections.unmodifiableList(result.descriptorId_);
+      }
+      public int getDescriptorIdCount() {
+        return result.getDescriptorIdCount();
+      }
+      public int getDescriptorId(int index) {
+        return result.getDescriptorId(index);
+      }
+      public Builder setDescriptorId(int index, int value) {
+        result.descriptorId_.set(index, value);
+        return this;
+      }
+      public Builder addDescriptorId(int value) {
+        if (result.descriptorId_.isEmpty()) {
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+        }
+        result.descriptorId_.add(value);
+        return this;
+      }
+      public Builder addAllDescriptorId(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        if (result.descriptorId_.isEmpty()) {
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+        }
+        super.addAll(values, result.descriptorId_);
+        return this;
+      }
+      public Builder clearDescriptorId() {
+        result.descriptorId_ = java.util.Collections.emptyList();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeleteEntityDescriptor)
+    }
+    
+    static {
+      defaultInstance = new DeleteEntityDescriptor(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeleteEntityDescriptor)
+  }
+  
+  public static final class DeleteEntityDescriptorResponse extends
+      com.google.protobuf.GeneratedMessage {
+    // Use DeleteEntityDescriptorResponse.newBuilder() to construct.
+    private DeleteEntityDescriptorResponse() {
+      initFields();
+    }
+    private DeleteEntityDescriptorResponse(boolean noInit) {}
+    
+    private static final DeleteEntityDescriptorResponse defaultInstance;
+    public static DeleteEntityDescriptorResponse getDefaultInstance() {
+      return defaultInstance;
+    }
+    
+    public DeleteEntityDescriptorResponse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+    
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntityDescriptorResponse_descriptor;
+    }
+    
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntityDescriptorResponse_fieldAccessorTable;
+    }
+    
+    // repeated .org.technbolts.protobuf.Error error = 1;
+    public static final int ERROR_FIELD_NUMBER = 1;
+    private java.util.List<org.technbolts.protobuf.CommonPBO.Error> error_ =
+      java.util.Collections.emptyList();
+    public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
+      return error_;
+    }
+    public int getErrorCount() { return error_.size(); }
+    public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
+      return error_.get(index);
+    }
+    
+    private void initFields() {
+    }
+    public final boolean isInitialized() {
+      return true;
+    }
+    
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
+        output.writeMessage(1, element);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+    
+      size = 0;
+      for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, element);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+    
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return newBuilder().mergeFrom(data, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      Builder builder = newBuilder();
+      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+        return builder.buildParsed();
+      } else {
+        return null;
+      }
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input).buildParsed();
+    }
+    public static org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return newBuilder().mergeFrom(input, extensionRegistry)
+               .buildParsed();
+    }
+    
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+    
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> {
+      private org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse result;
+      
+      // Construct using org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse.newBuilder()
+      private Builder() {}
+      
+      private static Builder create() {
+        Builder builder = new Builder();
+        builder.result = new org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse();
+        return builder;
+      }
+      
+      protected org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse internalGetResult() {
+        return result;
+      }
+      
+      public Builder clear() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "Cannot call clear() after build().");
+        }
+        result = new org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse();
+        return this;
+      }
+      
+      public Builder clone() {
+        return create().mergeFrom(result);
+      }
+      
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse.getDescriptor();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse getDefaultInstanceForType() {
+        return org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse.getDefaultInstance();
+      }
+      
+      public boolean isInitialized() {
+        return result.isInitialized();
+      }
+      public org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse build() {
+        if (result != null && !isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return buildPartial();
+      }
+      
+      private org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse buildParsed()
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        if (!isInitialized()) {
+          throw newUninitializedMessageException(
+            result).asInvalidProtocolBufferException();
+        }
+        return buildPartial();
+      }
+      
+      public org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse buildPartial() {
+        if (result == null) {
+          throw new IllegalStateException(
+            "build() has already been called on this Builder.");
+        }
+        if (result.error_ != java.util.Collections.EMPTY_LIST) {
+          result.error_ =
+            java.util.Collections.unmodifiableList(result.error_);
+        }
+        org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse returnMe = result;
+        result = null;
+        return returnMe;
+      }
+      
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse) {
+          return mergeFrom((org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+      
+      public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse other) {
+        if (other == org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse.getDefaultInstance()) return this;
+        if (!other.error_.isEmpty()) {
+          if (result.error_.isEmpty()) {
+            result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+          }
+          result.error_.addAll(other.error_);
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+      
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder(
+            this.getUnknownFields());
+        while (true) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              this.setUnknownFields(unknownFields.build());
+              return this;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                this.setUnknownFields(unknownFields.build());
+                return this;
+              }
+              break;
+            }
+            case 10: {
+              org.technbolts.protobuf.CommonPBO.Error.Builder subBuilder = org.technbolts.protobuf.CommonPBO.Error.newBuilder();
+              input.readMessage(subBuilder, extensionRegistry);
+              addError(subBuilder.buildPartial());
+              break;
+            }
+          }
+        }
+      }
+      
+      
+      // repeated .org.technbolts.protobuf.Error error = 1;
+      public java.util.List<org.technbolts.protobuf.CommonPBO.Error> getErrorList() {
+        return java.util.Collections.unmodifiableList(result.error_);
+      }
+      public int getErrorCount() {
+        return result.getErrorCount();
+      }
+      public org.technbolts.protobuf.CommonPBO.Error getError(int index) {
+        return result.getError(index);
+      }
+      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        result.error_.set(index, value);
+        return this;
+      }
+      public Builder setError(int index, org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
+        result.error_.set(index, builderForValue.build());
+        return this;
+      }
+      public Builder addError(org.technbolts.protobuf.CommonPBO.Error value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        if (result.error_.isEmpty()) {
+          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+        }
+        result.error_.add(value);
+        return this;
+      }
+      public Builder addError(org.technbolts.protobuf.CommonPBO.Error.Builder builderForValue) {
+        if (result.error_.isEmpty()) {
+          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+        }
+        result.error_.add(builderForValue.build());
+        return this;
+      }
+      public Builder addAllError(
+          java.lang.Iterable<? extends org.technbolts.protobuf.CommonPBO.Error> values) {
+        if (result.error_.isEmpty()) {
+          result.error_ = new java.util.ArrayList<org.technbolts.protobuf.CommonPBO.Error>();
+        }
+        super.addAll(values, result.error_);
+        return this;
+      }
+      public Builder clearError() {
+        result.error_ = java.util.Collections.emptyList();
+        return this;
+      }
+      
+      // @@protoc_insertion_point(builder_scope:org.technbolts.protobuf.DeleteEntityDescriptorResponse)
+    }
+    
+    static {
+      defaultInstance = new DeleteEntityDescriptorResponse(true);
+      org.technbolts.protobuf.CommonPBO.internalForceInit();
+      defaultInstance.initFields();
+    }
+    
+    // @@protoc_insertion_point(class_scope:org.technbolts.protobuf.DeleteEntityDescriptorResponse)
   }
   
   private static com.google.protobuf.Descriptors.Descriptor
@@ -7678,20 +9102,35 @@ public final class CommonPBO {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_org_technbolts_protobuf_Label_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_technbolts_protobuf_Ref_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_technbolts_protobuf_Ref_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_org_technbolts_protobuf_Paging_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_org_technbolts_protobuf_Paging_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_KeyValueString_descriptor;
+    internal_static_org_technbolts_protobuf_KeyValue_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_KeyValueString_fieldAccessorTable;
+      internal_static_org_technbolts_protobuf_KeyValue_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_org_technbolts_protobuf_Error_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_org_technbolts_protobuf_Error_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_technbolts_protobuf_ValueType_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_technbolts_protobuf_ValueType_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_technbolts_protobuf_TypedValue_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_technbolts_protobuf_TypedValue_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_org_technbolts_protobuf_PropertyDescriptor_descriptor;
   private static
@@ -7713,16 +9152,6 @@ public final class CommonPBO {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_org_technbolts_protobuf_CreatePropertyResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_DeleteProperty_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_DeleteProperty_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_DeletePropertyResponse_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_org_technbolts_protobuf_SearchProperty_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -7733,40 +9162,55 @@ public final class CommonPBO {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_org_technbolts_protobuf_SearchPropertyResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_technbolts_protobuf_DeleteProperty_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_technbolts_protobuf_DeleteProperty_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_technbolts_protobuf_DeletePropertyResponse_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_org_technbolts_protobuf_EntityDescriptor_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_org_technbolts_protobuf_EntityDescriptor_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_CreateEntity_descriptor;
+    internal_static_org_technbolts_protobuf_Entity_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_CreateEntity_fieldAccessorTable;
+      internal_static_org_technbolts_protobuf_Entity_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_CreateEntityResponse_descriptor;
+    internal_static_org_technbolts_protobuf_CreateEntityDescriptor_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_CreateEntityResponse_fieldAccessorTable;
+      internal_static_org_technbolts_protobuf_CreateEntityDescriptor_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_DeleteEntity_descriptor;
+    internal_static_org_technbolts_protobuf_CreateEntityDescriptorResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_DeleteEntity_fieldAccessorTable;
+      internal_static_org_technbolts_protobuf_CreateEntityDescriptorResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_DeleteEntityResponse_descriptor;
+    internal_static_org_technbolts_protobuf_SearchEntityDescriptor_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_DeleteEntityResponse_fieldAccessorTable;
+      internal_static_org_technbolts_protobuf_SearchEntityDescriptor_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_SearchEntity_descriptor;
+    internal_static_org_technbolts_protobuf_SearchEntityDescriptorResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_SearchEntity_fieldAccessorTable;
+      internal_static_org_technbolts_protobuf_SearchEntityDescriptorResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_technbolts_protobuf_SearchEntityResponse_descriptor;
+    internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_technbolts_protobuf_SearchEntityResponse_fieldAccessorTable;
+      internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_technbolts_protobuf_DeleteEntityDescriptorResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_technbolts_protobuf_DeleteEntityDescriptorResponse_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7778,56 +9222,65 @@ public final class CommonPBO {
     java.lang.String[] descriptorData = {
       "\n\014common.proto\022\027org.technbolts.protobuf\"" +
       "&\n\005Label\022\016\n\006locale\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"" +
-      "\'\n\006Paging\022\016\n\006offset\030\001 \001(\005\022\r\n\005limit\030\002 \001(\005" +
-      "\",\n\016KeyValueString\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t\"\200\001\n\005Error\022\014\n\004code\030\001 \001(\t\0229\n\010argume" +
-      "nt\030\002 \003(\0132\'.org.technbolts.protobuf.KeyVa" +
-      "lueString\022.\n\006nested\030\003 \003(\0132\036.org.technbol" +
-      "ts.protobuf.Error\"z\n\022PropertyDescriptor\022" +
-      "\n\n\002id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022-\n\005label\030\003 \003(\013" +
-      "2\036.org.technbolts.protobuf.Label\022\014\n\004type",
-      "\030\004 \001(\t\022\r\n\005multi\030\005 \001(\010\"*\n\rPropertyValue\022\n" +
-      "\n\002id\030\001 \002(\r\022\r\n\005value\030\002 \003(\014\"i\n\016CreatePrope" +
-      "rty\022?\n\ndescriptor\030\001 \003(\0132+.org.technbolts" +
-      ".protobuf.PropertyDescriptor\022\026\n\007id_only\030" +
-      "\002 \001(\010:\005false\"\237\001\n\026CreatePropertyResponse\022" +
-      "-\n\005error\030\001 \003(\0132\036.org.technbolts.protobuf" +
-      ".Error\022\025\n\rdescriptor_id\030\002 \003(\r\022?\n\ndescrip" +
-      "tor\030\003 \003(\0132+.org.technbolts.protobuf.Prop" +
-      "ertyDescriptor\"\'\n\016DeleteProperty\022\025\n\rdesc" +
-      "riptor_id\030\002 \003(\r\"G\n\026DeletePropertyRespons",
-      "e\022-\n\005error\030\001 \003(\0132\036.org.technbolts.protob" +
-      "uf.Error\"\226\001\n\016SearchProperty\022;\n\006sample\030\001 " +
-      "\001(\0132+.org.technbolts.protobuf.PropertyDe" +
-      "scriptor\022/\n\006paging\030\002 \001(\0132\037.org.technbolt" +
-      "s.protobuf.Paging\022\026\n\007id_only\030\003 \001(\010:\005fals" +
-      "e\"\237\001\n\026SearchPropertyResponse\022-\n\005error\030\001 " +
-      "\003(\0132\036.org.technbolts.protobuf.Error\022\025\n\rd" +
-      "escriptor_id\030\002 \003(\r\022?\n\ndescriptor\030\003 \003(\0132+" +
-      ".org.technbolts.protobuf.PropertyDescrip" +
-      "tor\"\245\001\n\020EntityDescriptor\022\n\n\002id\030\001 \001(\r\022\014\n\004",
-      "name\030\002 \001(\t\022-\n\005label\030\003 \003(\0132\036.org.technbol" +
-      "ts.protobuf.Label\022H\n\023property_descriptor" +
-      "\030\004 \003(\0132+.org.technbolts.protobuf.Propert" +
-      "yDescriptor\"e\n\014CreateEntity\022=\n\ndescripto" +
-      "r\030\001 \003(\0132).org.technbolts.protobuf.Entity" +
-      "Descriptor\022\026\n\007id_only\030\002 \001(\010:\005false\"\233\001\n\024C" +
-      "reateEntityResponse\022-\n\005error\030\001 \003(\0132\036.org" +
-      ".technbolts.protobuf.Error\022\025\n\rdescriptor" +
-      "_id\030\002 \003(\r\022=\n\ndescriptor\030\003 \003(\0132).org.tech" +
-      "nbolts.protobuf.EntityDescriptor\"%\n\014Dele",
-      "teEntity\022\025\n\rdescriptor_id\030\002 \003(\r\"E\n\024Delet" +
-      "eEntityResponse\022-\n\005error\030\001 \003(\0132\036.org.tec" +
-      "hnbolts.protobuf.Error\"\222\001\n\014SearchEntity\022" +
-      "9\n\006sample\030\001 \001(\0132).org.technbolts.protobu" +
-      "f.EntityDescriptor\022/\n\006paging\030\002 \001(\0132\037.org" +
-      ".technbolts.protobuf.Paging\022\026\n\007id_only\030\003" +
-      " \001(\010:\005false\"\233\001\n\024SearchEntityResponse\022-\n\005" +
-      "error\030\001 \003(\0132\036.org.technbolts.protobuf.Er" +
-      "ror\022\025\n\rdescriptor_id\030\002 \003(\r\022=\n\ndescriptor" +
-      "\030\003 \003(\0132).org.technbolts.protobuf.EntityD",
-      "escriptorB&\n\027org.technbolts.protobufB\tCo" +
-      "mmonPBOH\001"
+      "\023\n\003Ref\022\014\n\004path\030\001 \002(\t\"\'\n\006Paging\022\016\n\006offset" +
+      "\030\001 \001(\005\022\r\n\005limit\030\002 \001(\005\"K\n\010KeyValue\022\013\n\003key" +
+      "\030\001 \001(\t\0222\n\005value\030\002 \001(\0132#.org.technbolts.p" +
+      "rotobuf.TypedValue\"z\n\005Error\022\014\n\004code\030\001 \001(" +
+      "\t\0223\n\010argument\030\002 \003(\0132!.org.technbolts.pro" +
+      "tobuf.KeyValue\022.\n\006nested\030\003 \003(\0132\036.org.tec" +
+      "hnbolts.protobuf.Error\"\031\n\tValueType\022\014\n\004t" +
+      "ype\030\004 \001(\t\"M\n\nTypedValue\0220\n\004type\030\001 \001(\0132\".",
+      "org.technbolts.protobuf.ValueType\022\r\n\005val" +
+      "ue\030\002 \001(\014\"\236\001\n\022PropertyDescriptor\022\n\n\002id\030\001 " +
+      "\001(\r\022\014\n\004name\030\002 \001(\t\022-\n\005label\030\003 \003(\0132\036.org.t" +
+      "echnbolts.protobuf.Label\0220\n\004type\030\004 \001(\0132\"" +
+      ".org.technbolts.protobuf.ValueType\022\r\n\005mu" +
+      "lti\030\005 \001(\010\"*\n\rPropertyValue\022\n\n\002id\030\001 \002(\r\022\r" +
+      "\n\005value\030\002 \003(\014\"i\n\016CreateProperty\022?\n\ndescr" +
+      "iptor\030\001 \003(\0132+.org.technbolts.protobuf.Pr" +
+      "opertyDescriptor\022\026\n\007id_only\030\002 \001(\010:\005false" +
+      "\"\237\001\n\026CreatePropertyResponse\022-\n\005error\030\001 \003",
+      "(\0132\036.org.technbolts.protobuf.Error\022\025\n\rde" +
+      "scriptor_id\030\002 \003(\r\022?\n\ndescriptor\030\003 \003(\0132+." +
+      "org.technbolts.protobuf.PropertyDescript" +
+      "or\"\226\001\n\016SearchProperty\022;\n\006sample\030\001 \001(\0132+." +
+      "org.technbolts.protobuf.PropertyDescript" +
+      "or\022/\n\006paging\030\002 \001(\0132\037.org.technbolts.prot" +
+      "obuf.Paging\022\026\n\007id_only\030\003 \001(\010:\005false\"\237\001\n\026" +
+      "SearchPropertyResponse\022-\n\005error\030\001 \003(\0132\036." +
+      "org.technbolts.protobuf.Error\022\025\n\rdescrip" +
+      "tor_id\030\002 \003(\r\022?\n\ndescriptor\030\003 \003(\0132+.org.t",
+      "echnbolts.protobuf.PropertyDescriptor\"\'\n" +
+      "\016DeleteProperty\022\025\n\rdescriptor_id\030\002 \003(\r\"G" +
+      "\n\026DeletePropertyResponse\022-\n\005error\030\001 \003(\0132" +
+      "\036.org.technbolts.protobuf.Error\"\263\001\n\020Enti" +
+      "tyDescriptor\022\n\n\002id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\014" +
+      "\n\004type\030\003 \001(\t\022-\n\005label\030\004 \003(\0132\036.org.technb" +
+      "olts.protobuf.Label\022H\n\023property_descript" +
+      "or\030\005 \003(\0132+.org.technbolts.protobuf.Prope" +
+      "rtyDescriptor\"e\n\006Entity\022\n\n\002id\030\001 \001(\r\022\025\n\rd" +
+      "escriptor_id\030\002 \001(\r\0228\n\010property\030\003 \003(\0132&.o",
+      "rg.technbolts.protobuf.PropertyValue\"o\n\026" +
+      "CreateEntityDescriptor\022=\n\ndescriptor\030\001 \003" +
+      "(\0132).org.technbolts.protobuf.EntityDescr" +
+      "iptor\022\026\n\007id_only\030\002 \001(\010:\005false\"\245\001\n\036Create" +
+      "EntityDescriptorResponse\022-\n\005error\030\001 \003(\0132" +
+      "\036.org.technbolts.protobuf.Error\022\025\n\rdescr" +
+      "iptor_id\030\002 \003(\r\022=\n\ndescriptor\030\003 \003(\0132).org" +
+      ".technbolts.protobuf.EntityDescriptor\"\234\001" +
+      "\n\026SearchEntityDescriptor\0229\n\006sample\030\001 \001(\013" +
+      "2).org.technbolts.protobuf.EntityDescrip",
+      "tor\022/\n\006paging\030\002 \001(\0132\037.org.technbolts.pro" +
+      "tobuf.Paging\022\026\n\007id_only\030\003 \001(\010:\005false\"\245\001\n" +
+      "\036SearchEntityDescriptorResponse\022-\n\005error" +
+      "\030\001 \003(\0132\036.org.technbolts.protobuf.Error\022\025" +
+      "\n\rdescriptor_id\030\002 \003(\r\022=\n\ndescriptor\030\003 \003(" +
+      "\0132).org.technbolts.protobuf.EntityDescri" +
+      "ptor\"/\n\026DeleteEntityDescriptor\022\025\n\rdescri" +
+      "ptor_id\030\002 \003(\r\"O\n\036DeleteEntityDescriptorR" +
+      "esponse\022-\n\005error\030\001 \003(\0132\036.org.technbolts." +
+      "protobuf.ErrorB&\n\027org.technbolts.protobu",
+      "fB\tCommonPBOH\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -7842,32 +9295,56 @@ public final class CommonPBO {
               new java.lang.String[] { "Locale", "Value", },
               org.technbolts.protobuf.CommonPBO.Label.class,
               org.technbolts.protobuf.CommonPBO.Label.Builder.class);
-          internal_static_org_technbolts_protobuf_Paging_descriptor =
+          internal_static_org_technbolts_protobuf_Ref_descriptor =
             getDescriptor().getMessageTypes().get(1);
+          internal_static_org_technbolts_protobuf_Ref_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_Ref_descriptor,
+              new java.lang.String[] { "Path", },
+              org.technbolts.protobuf.CommonPBO.Ref.class,
+              org.technbolts.protobuf.CommonPBO.Ref.Builder.class);
+          internal_static_org_technbolts_protobuf_Paging_descriptor =
+            getDescriptor().getMessageTypes().get(2);
           internal_static_org_technbolts_protobuf_Paging_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_Paging_descriptor,
               new java.lang.String[] { "Offset", "Limit", },
               org.technbolts.protobuf.CommonPBO.Paging.class,
               org.technbolts.protobuf.CommonPBO.Paging.Builder.class);
-          internal_static_org_technbolts_protobuf_KeyValueString_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_org_technbolts_protobuf_KeyValueString_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_KeyValueString_descriptor,
-              new java.lang.String[] { "Key", "Value", },
-              org.technbolts.protobuf.CommonPBO.KeyValueString.class,
-              org.technbolts.protobuf.CommonPBO.KeyValueString.Builder.class);
-          internal_static_org_technbolts_protobuf_Error_descriptor =
+          internal_static_org_technbolts_protobuf_KeyValue_descriptor =
             getDescriptor().getMessageTypes().get(3);
+          internal_static_org_technbolts_protobuf_KeyValue_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_KeyValue_descriptor,
+              new java.lang.String[] { "Key", "Value", },
+              org.technbolts.protobuf.CommonPBO.KeyValue.class,
+              org.technbolts.protobuf.CommonPBO.KeyValue.Builder.class);
+          internal_static_org_technbolts_protobuf_Error_descriptor =
+            getDescriptor().getMessageTypes().get(4);
           internal_static_org_technbolts_protobuf_Error_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_Error_descriptor,
               new java.lang.String[] { "Code", "Argument", "Nested", },
               org.technbolts.protobuf.CommonPBO.Error.class,
               org.technbolts.protobuf.CommonPBO.Error.Builder.class);
+          internal_static_org_technbolts_protobuf_ValueType_descriptor =
+            getDescriptor().getMessageTypes().get(5);
+          internal_static_org_technbolts_protobuf_ValueType_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_ValueType_descriptor,
+              new java.lang.String[] { "Type", },
+              org.technbolts.protobuf.CommonPBO.ValueType.class,
+              org.technbolts.protobuf.CommonPBO.ValueType.Builder.class);
+          internal_static_org_technbolts_protobuf_TypedValue_descriptor =
+            getDescriptor().getMessageTypes().get(6);
+          internal_static_org_technbolts_protobuf_TypedValue_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_TypedValue_descriptor,
+              new java.lang.String[] { "Type", "Value", },
+              org.technbolts.protobuf.CommonPBO.TypedValue.class,
+              org.technbolts.protobuf.CommonPBO.TypedValue.Builder.class);
           internal_static_org_technbolts_protobuf_PropertyDescriptor_descriptor =
-            getDescriptor().getMessageTypes().get(4);
+            getDescriptor().getMessageTypes().get(7);
           internal_static_org_technbolts_protobuf_PropertyDescriptor_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_PropertyDescriptor_descriptor,
@@ -7875,7 +9352,7 @@ public final class CommonPBO {
               org.technbolts.protobuf.CommonPBO.PropertyDescriptor.class,
               org.technbolts.protobuf.CommonPBO.PropertyDescriptor.Builder.class);
           internal_static_org_technbolts_protobuf_PropertyValue_descriptor =
-            getDescriptor().getMessageTypes().get(5);
+            getDescriptor().getMessageTypes().get(8);
           internal_static_org_technbolts_protobuf_PropertyValue_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_PropertyValue_descriptor,
@@ -7883,7 +9360,7 @@ public final class CommonPBO {
               org.technbolts.protobuf.CommonPBO.PropertyValue.class,
               org.technbolts.protobuf.CommonPBO.PropertyValue.Builder.class);
           internal_static_org_technbolts_protobuf_CreateProperty_descriptor =
-            getDescriptor().getMessageTypes().get(6);
+            getDescriptor().getMessageTypes().get(9);
           internal_static_org_technbolts_protobuf_CreateProperty_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_CreateProperty_descriptor,
@@ -7891,31 +9368,15 @@ public final class CommonPBO {
               org.technbolts.protobuf.CommonPBO.CreateProperty.class,
               org.technbolts.protobuf.CommonPBO.CreateProperty.Builder.class);
           internal_static_org_technbolts_protobuf_CreatePropertyResponse_descriptor =
-            getDescriptor().getMessageTypes().get(7);
+            getDescriptor().getMessageTypes().get(10);
           internal_static_org_technbolts_protobuf_CreatePropertyResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_CreatePropertyResponse_descriptor,
               new java.lang.String[] { "Error", "DescriptorId", "Descriptor", },
               org.technbolts.protobuf.CommonPBO.CreatePropertyResponse.class,
               org.technbolts.protobuf.CommonPBO.CreatePropertyResponse.Builder.class);
-          internal_static_org_technbolts_protobuf_DeleteProperty_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_org_technbolts_protobuf_DeleteProperty_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_DeleteProperty_descriptor,
-              new java.lang.String[] { "DescriptorId", },
-              org.technbolts.protobuf.CommonPBO.DeleteProperty.class,
-              org.technbolts.protobuf.CommonPBO.DeleteProperty.Builder.class);
-          internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_org_technbolts_protobuf_DeletePropertyResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor,
-              new java.lang.String[] { "Error", },
-              org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.class,
-              org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.Builder.class);
           internal_static_org_technbolts_protobuf_SearchProperty_descriptor =
-            getDescriptor().getMessageTypes().get(10);
+            getDescriptor().getMessageTypes().get(11);
           internal_static_org_technbolts_protobuf_SearchProperty_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_SearchProperty_descriptor,
@@ -7923,69 +9384,93 @@ public final class CommonPBO {
               org.technbolts.protobuf.CommonPBO.SearchProperty.class,
               org.technbolts.protobuf.CommonPBO.SearchProperty.Builder.class);
           internal_static_org_technbolts_protobuf_SearchPropertyResponse_descriptor =
-            getDescriptor().getMessageTypes().get(11);
+            getDescriptor().getMessageTypes().get(12);
           internal_static_org_technbolts_protobuf_SearchPropertyResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_SearchPropertyResponse_descriptor,
               new java.lang.String[] { "Error", "DescriptorId", "Descriptor", },
               org.technbolts.protobuf.CommonPBO.SearchPropertyResponse.class,
               org.technbolts.protobuf.CommonPBO.SearchPropertyResponse.Builder.class);
+          internal_static_org_technbolts_protobuf_DeleteProperty_descriptor =
+            getDescriptor().getMessageTypes().get(13);
+          internal_static_org_technbolts_protobuf_DeleteProperty_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_DeleteProperty_descriptor,
+              new java.lang.String[] { "DescriptorId", },
+              org.technbolts.protobuf.CommonPBO.DeleteProperty.class,
+              org.technbolts.protobuf.CommonPBO.DeleteProperty.Builder.class);
+          internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor =
+            getDescriptor().getMessageTypes().get(14);
+          internal_static_org_technbolts_protobuf_DeletePropertyResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_DeletePropertyResponse_descriptor,
+              new java.lang.String[] { "Error", },
+              org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.class,
+              org.technbolts.protobuf.CommonPBO.DeletePropertyResponse.Builder.class);
           internal_static_org_technbolts_protobuf_EntityDescriptor_descriptor =
-            getDescriptor().getMessageTypes().get(12);
+            getDescriptor().getMessageTypes().get(15);
           internal_static_org_technbolts_protobuf_EntityDescriptor_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_EntityDescriptor_descriptor,
-              new java.lang.String[] { "Id", "Name", "Label", "PropertyDescriptor", },
+              new java.lang.String[] { "Id", "Name", "Type", "Label", "PropertyDescriptor", },
               org.technbolts.protobuf.CommonPBO.EntityDescriptor.class,
               org.technbolts.protobuf.CommonPBO.EntityDescriptor.Builder.class);
-          internal_static_org_technbolts_protobuf_CreateEntity_descriptor =
-            getDescriptor().getMessageTypes().get(13);
-          internal_static_org_technbolts_protobuf_CreateEntity_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_CreateEntity_descriptor,
-              new java.lang.String[] { "Descriptor", "IdOnly", },
-              org.technbolts.protobuf.CommonPBO.CreateEntity.class,
-              org.technbolts.protobuf.CommonPBO.CreateEntity.Builder.class);
-          internal_static_org_technbolts_protobuf_CreateEntityResponse_descriptor =
-            getDescriptor().getMessageTypes().get(14);
-          internal_static_org_technbolts_protobuf_CreateEntityResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_CreateEntityResponse_descriptor,
-              new java.lang.String[] { "Error", "DescriptorId", "Descriptor", },
-              org.technbolts.protobuf.CommonPBO.CreateEntityResponse.class,
-              org.technbolts.protobuf.CommonPBO.CreateEntityResponse.Builder.class);
-          internal_static_org_technbolts_protobuf_DeleteEntity_descriptor =
-            getDescriptor().getMessageTypes().get(15);
-          internal_static_org_technbolts_protobuf_DeleteEntity_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_DeleteEntity_descriptor,
-              new java.lang.String[] { "DescriptorId", },
-              org.technbolts.protobuf.CommonPBO.DeleteEntity.class,
-              org.technbolts.protobuf.CommonPBO.DeleteEntity.Builder.class);
-          internal_static_org_technbolts_protobuf_DeleteEntityResponse_descriptor =
+          internal_static_org_technbolts_protobuf_Entity_descriptor =
             getDescriptor().getMessageTypes().get(16);
-          internal_static_org_technbolts_protobuf_DeleteEntityResponse_fieldAccessorTable = new
+          internal_static_org_technbolts_protobuf_Entity_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_DeleteEntityResponse_descriptor,
-              new java.lang.String[] { "Error", },
-              org.technbolts.protobuf.CommonPBO.DeleteEntityResponse.class,
-              org.technbolts.protobuf.CommonPBO.DeleteEntityResponse.Builder.class);
-          internal_static_org_technbolts_protobuf_SearchEntity_descriptor =
+              internal_static_org_technbolts_protobuf_Entity_descriptor,
+              new java.lang.String[] { "Id", "DescriptorId", "Property", },
+              org.technbolts.protobuf.CommonPBO.Entity.class,
+              org.technbolts.protobuf.CommonPBO.Entity.Builder.class);
+          internal_static_org_technbolts_protobuf_CreateEntityDescriptor_descriptor =
             getDescriptor().getMessageTypes().get(17);
-          internal_static_org_technbolts_protobuf_SearchEntity_fieldAccessorTable = new
+          internal_static_org_technbolts_protobuf_CreateEntityDescriptor_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_SearchEntity_descriptor,
-              new java.lang.String[] { "Sample", "Paging", "IdOnly", },
-              org.technbolts.protobuf.CommonPBO.SearchEntity.class,
-              org.technbolts.protobuf.CommonPBO.SearchEntity.Builder.class);
-          internal_static_org_technbolts_protobuf_SearchEntityResponse_descriptor =
+              internal_static_org_technbolts_protobuf_CreateEntityDescriptor_descriptor,
+              new java.lang.String[] { "Descriptor", "IdOnly", },
+              org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor.class,
+              org.technbolts.protobuf.CommonPBO.CreateEntityDescriptor.Builder.class);
+          internal_static_org_technbolts_protobuf_CreateEntityDescriptorResponse_descriptor =
             getDescriptor().getMessageTypes().get(18);
-          internal_static_org_technbolts_protobuf_SearchEntityResponse_fieldAccessorTable = new
+          internal_static_org_technbolts_protobuf_CreateEntityDescriptorResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_org_technbolts_protobuf_SearchEntityResponse_descriptor,
+              internal_static_org_technbolts_protobuf_CreateEntityDescriptorResponse_descriptor,
               new java.lang.String[] { "Error", "DescriptorId", "Descriptor", },
-              org.technbolts.protobuf.CommonPBO.SearchEntityResponse.class,
-              org.technbolts.protobuf.CommonPBO.SearchEntityResponse.Builder.class);
+              org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse.class,
+              org.technbolts.protobuf.CommonPBO.CreateEntityDescriptorResponse.Builder.class);
+          internal_static_org_technbolts_protobuf_SearchEntityDescriptor_descriptor =
+            getDescriptor().getMessageTypes().get(19);
+          internal_static_org_technbolts_protobuf_SearchEntityDescriptor_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_SearchEntityDescriptor_descriptor,
+              new java.lang.String[] { "Sample", "Paging", "IdOnly", },
+              org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor.class,
+              org.technbolts.protobuf.CommonPBO.SearchEntityDescriptor.Builder.class);
+          internal_static_org_technbolts_protobuf_SearchEntityDescriptorResponse_descriptor =
+            getDescriptor().getMessageTypes().get(20);
+          internal_static_org_technbolts_protobuf_SearchEntityDescriptorResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_SearchEntityDescriptorResponse_descriptor,
+              new java.lang.String[] { "Error", "DescriptorId", "Descriptor", },
+              org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse.class,
+              org.technbolts.protobuf.CommonPBO.SearchEntityDescriptorResponse.Builder.class);
+          internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_descriptor =
+            getDescriptor().getMessageTypes().get(21);
+          internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_descriptor,
+              new java.lang.String[] { "DescriptorId", },
+              org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor.class,
+              org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor.Builder.class);
+          internal_static_org_technbolts_protobuf_DeleteEntityDescriptorResponse_descriptor =
+            getDescriptor().getMessageTypes().get(22);
+          internal_static_org_technbolts_protobuf_DeleteEntityDescriptorResponse_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_org_technbolts_protobuf_DeleteEntityDescriptorResponse_descriptor,
+              new java.lang.String[] { "Error", },
+              org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse.class,
+              org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptorResponse.Builder.class);
           return null;
         }
       };
