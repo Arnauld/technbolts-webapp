@@ -1,0 +1,47 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "RequestPBCommand";
+
+option optimize_for = SPEED;
+
+import "common.proto";
+import "request/models.proto";
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   request
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ~~ Create
+
+message CreateRequest {
+    repeated Request request = 1;
+    optional bool id_only = 2 [default=false];
+}
+
+message CreateRequestResponse {
+    repeated Error error = 1;
+    repeated Request request = 2;
+}
+
+// ~~ Search
+
+message SearchRequest {
+    optional Request sample = 1;
+    optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchRequestResponse {
+    repeated Error error = 1;
+    repeated uint32 request_id = 2;
+    repeated Request request = 3;
+}
+
+// ~~ Delete
+
+message DeleteRequest {
+    repeated uint32 request_id = 2;
+}
+message DeleteRequestResponse {
+    repeated Error error = 1;
+}

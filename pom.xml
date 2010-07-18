@@ -43,7 +43,7 @@
 
         <!-- protobuf -->
         <protobuf.version>2.3.0</protobuf.version>
-        <protoc.path>/usr/bin/protoc</protoc.path>
+        <protoc.path>/usr/local/bin/protoc</protoc.path> <!-- /usr/bin/protoc -->
         <generated-java.sourceDirectory>${project.basedir}/src/main/generated-java</generated-java.sourceDirectory>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

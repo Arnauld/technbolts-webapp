@@ -1,0 +1,47 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "GroupPBCommand";
+
+option optimize_for = SPEED;
+
+import "common.proto";
+import "user/models.proto";
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   group
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ~~ Create
+
+message CreateGroup {
+    repeated Group group = 1;
+    optional bool id_only = 2 [default=false];
+}
+
+message CreateGroupResponse {
+    repeated Error error = 1;
+    repeated Group group = 2;
+}
+
+// ~~ Search
+
+message SearchGroup {
+    optional Group sample = 1;
+    optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchGroupResponse {
+    repeated Error error = 1;
+    repeated uint32 group_id = 2;
+    repeated Group group = 3;
+}
+
+// ~~ Delete
+
+message DeleteGroup {
+    repeated uint32 group_id = 2;
+}
+message DeleteGroupResponse {
+    repeated Error error = 1;
+}
