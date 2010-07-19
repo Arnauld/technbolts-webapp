@@ -1,6 +1,6 @@
 package org.technbolts.itest
 
-import api.EntityApiServiceIT
+import api.{UserApiServiceIT, EntityApiServiceIT}
 import org.junit.runner.RunWith
 import org.junit.{AfterClass, BeforeClass}
 
@@ -8,7 +8,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(classOf[Suite])
-@SuiteClasses(Array(classOf[EntityApiServiceIT]))
+@SuiteClasses(Array(classOf[UserApiServiceIT], classOf[EntityApiServiceIT]))
 object JettyEmbeddedTest {
   val jetty = new JettyEmbeddedImpl
   

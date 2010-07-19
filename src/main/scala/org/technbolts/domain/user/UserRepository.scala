@@ -4,10 +4,12 @@ import org.technbolts.domain.user.User
 import org.technbolts.domain.{SearchTemplate, MemoryRepository, Repository}
 import org.slf4j.{LoggerFactory, Logger}
 import org.technbolts.util.UUIDGenerator
+import org.springframework.stereotype.Service
 
 trait UserRepository extends Repository[User] {
 }
 
+@Service("userRepository")
 class MemoryUserRepository extends UserRepository with MemoryRepository[String,User] {
 
   private val logger: Logger = LoggerFactory.getLogger(classOf[MemoryUserRepository])

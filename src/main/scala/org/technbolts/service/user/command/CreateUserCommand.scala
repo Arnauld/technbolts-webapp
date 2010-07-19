@@ -5,12 +5,14 @@ import org.technbolts.util.{CommandContext, Command}
 import org.technbolts.service.user.UserRepository
 import org.technbolts.domain.user.User
 import org.slf4j.LoggerFactory
+import org.technbolts.protobuf.UserPBModel
+import UserPBModel.{User => PBUser}
 
 @Configurable
-class CreateUserCommand(val user:User) extends Command[User] {
+class CreateUserCommand(val user:PBUser) extends Command[User] {
 
   private val logger = LoggerFactory.getLogger(classOf[CreateUserCommand])
-  
+
   var userRepository:UserRepository = _
   @Autowired
   @Qualifier("userRepository")
@@ -21,13 +23,17 @@ class CreateUserCommand(val user:User) extends Command[User] {
   def getCommandType = classOf[CreateUserCommand]
 
   def execute(context: CommandContext) = {
-    context.get(classOf[User]) match {
-      case Some(user:User) =>
-      case _ => logger.info("No user to create")
+    context.get(classOf[PBUser]) match {
+      case Some(pbUser:PBUser) => {
+        val user = User.fromPBUser(pbUser)
+        val saved = userRepository.save(user)
+        result = Some(saved)
+      }
+      case _ => logger.info("No user data defined")
     }
   }
 
   def initialize(context: CommandContext) = {
-    context.set(classOf[User], user)
+    context.set(classOf[PBUser], user)
   }
 }
