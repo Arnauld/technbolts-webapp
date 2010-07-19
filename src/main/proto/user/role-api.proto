@@ -1,0 +1,47 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "RolePBCommand";
+
+option optimize_for = SPEED;
+
+import "common.proto";
+import "user/models.proto";
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   role
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ~~ Create
+
+message CreateRole {
+    repeated Role role = 1;
+    optional bool id_only = 2 [default=false];
+}
+
+message CreateRoleResponse {
+    repeated Error error = 1;
+    repeated Role role = 2;
+}
+
+// ~~ Search
+
+message SearchRole {
+    optional Role sample = 1;
+    optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchRoleResponse {
+    repeated Error error = 1;
+    repeated uint32 role_id = 2;
+    repeated Role role = 3;
+}
+
+// ~~ Delete
+
+message DeleteRole {
+    repeated uint32 role_id = 2;
+}
+message DeleteRoleResponse {
+    repeated Error error = 1;
+}

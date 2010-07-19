@@ -1,0 +1,47 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "UserPBCommand";
+
+option optimize_for = SPEED;
+
+import "common.proto";
+import "user/models.proto";
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   user
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ~~ Create
+
+message CreateUser {
+    repeated User user = 1;
+    optional bool id_only = 2 [default=false];
+}
+
+message CreateUserResponse {
+    repeated Error error = 1;
+    repeated User user = 2;
+}
+
+// ~~ Search
+
+message SearchUser {
+    optional User sample = 1;
+    optional Paging paging = 2;
+    optional bool id_only = 3 [default=false];
+}
+message SearchUserResponse {
+    repeated Error error = 1;
+    repeated uint32 user_id = 2;
+    repeated User user = 3;
+}
+
+// ~~ Delete
+
+message DeleteUser {
+    repeated uint32 user_id = 2;
+}
+message DeleteUserResponse {
+    repeated Error error = 1;
+}

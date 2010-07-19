@@ -2423,12 +2423,12 @@ public final class CommonPBO {
       return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_PropertyDescriptor_fieldAccessorTable;
     }
     
-    // optional uint32 id = 1;
+    // optional uint64 id = 1;
     public static final int ID_FIELD_NUMBER = 1;
     private boolean hasId;
-    private int id_ = 0;
+    private long id_ = 0L;
     public boolean hasId() { return hasId; }
-    public int getId() { return id_; }
+    public long getId() { return id_; }
     
     // optional string name = 2;
     public static final int NAME_FIELD_NUMBER = 2;
@@ -2474,7 +2474,7 @@ public final class CommonPBO {
                         throws java.io.IOException {
       getSerializedSize();
       if (hasId()) {
-        output.writeUInt32(1, getId());
+        output.writeUInt64(1, getId());
       }
       if (hasName()) {
         output.writeString(2, getName());
@@ -2499,7 +2499,7 @@ public final class CommonPBO {
       size = 0;
       if (hasId()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, getId());
+          .computeUInt64Size(1, getId());
       }
       if (hasName()) {
         size += com.google.protobuf.CodedOutputStream
@@ -2723,7 +2723,7 @@ public final class CommonPBO {
               break;
             }
             case 8: {
-              setId(input.readUInt32());
+              setId(input.readUInt64());
               break;
             }
             case 18: {
@@ -2754,21 +2754,21 @@ public final class CommonPBO {
       }
       
       
-      // optional uint32 id = 1;
+      // optional uint64 id = 1;
       public boolean hasId() {
         return result.hasId();
       }
-      public int getId() {
+      public long getId() {
         return result.getId();
       }
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         result.hasId = true;
         result.id_ = value;
         return this;
       }
       public Builder clearId() {
         result.hasId = false;
-        result.id_ = 0;
+        result.id_ = 0L;
         return this;
       }
       
@@ -2938,12 +2938,12 @@ public final class CommonPBO {
       return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_PropertyValue_fieldAccessorTable;
     }
     
-    // required uint32 id = 1;
-    public static final int ID_FIELD_NUMBER = 1;
-    private boolean hasId;
-    private int id_ = 0;
-    public boolean hasId() { return hasId; }
-    public int getId() { return id_; }
+    // required uint64 descriptor_id = 1;
+    public static final int DESCRIPTOR_ID_FIELD_NUMBER = 1;
+    private boolean hasDescriptorId;
+    private long descriptorId_ = 0L;
+    public boolean hasDescriptorId() { return hasDescriptorId; }
+    public long getDescriptorId() { return descriptorId_; }
     
     // repeated bytes value = 2;
     public static final int VALUE_FIELD_NUMBER = 2;
@@ -2960,15 +2960,15 @@ public final class CommonPBO {
     private void initFields() {
     }
     public final boolean isInitialized() {
-      if (!hasId) return false;
+      if (!hasDescriptorId) return false;
       return true;
     }
     
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (hasId()) {
-        output.writeUInt32(1, getId());
+      if (hasDescriptorId()) {
+        output.writeUInt64(1, getDescriptorId());
       }
       for (com.google.protobuf.ByteString element : getValueList()) {
         output.writeBytes(2, element);
@@ -2982,9 +2982,9 @@ public final class CommonPBO {
       if (size != -1) return size;
     
       size = 0;
-      if (hasId()) {
+      if (hasDescriptorId()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, getId());
+          .computeUInt64Size(1, getDescriptorId());
       }
       {
         int dataSize = 0;
@@ -3157,8 +3157,8 @@ public final class CommonPBO {
       
       public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.PropertyValue other) {
         if (other == org.technbolts.protobuf.CommonPBO.PropertyValue.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          setId(other.getId());
+        if (other.hasDescriptorId()) {
+          setDescriptorId(other.getDescriptorId());
         }
         if (!other.value_.isEmpty()) {
           if (result.value_.isEmpty()) {
@@ -3192,7 +3192,7 @@ public final class CommonPBO {
               break;
             }
             case 8: {
-              setId(input.readUInt32());
+              setDescriptorId(input.readUInt64());
               break;
             }
             case 18: {
@@ -3204,21 +3204,21 @@ public final class CommonPBO {
       }
       
       
-      // required uint32 id = 1;
-      public boolean hasId() {
-        return result.hasId();
+      // required uint64 descriptor_id = 1;
+      public boolean hasDescriptorId() {
+        return result.hasDescriptorId();
       }
-      public int getId() {
-        return result.getId();
+      public long getDescriptorId() {
+        return result.getDescriptorId();
       }
-      public Builder setId(int value) {
-        result.hasId = true;
-        result.id_ = value;
+      public Builder setDescriptorId(long value) {
+        result.hasDescriptorId = true;
+        result.descriptorId_ = value;
         return this;
       }
-      public Builder clearId() {
-        result.hasId = false;
-        result.id_ = 0;
+      public Builder clearDescriptorId() {
+        result.hasDescriptorId = false;
+        result.descriptorId_ = 0L;
         return this;
       }
       
@@ -3683,15 +3683,15 @@ public final class CommonPBO {
       return error_.get(index);
     }
     
-    // repeated uint32 descriptor_id = 2;
+    // repeated uint64 descriptor_id = 2;
     public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
+    private java.util.List<java.lang.Long> descriptorId_ =
       java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+    public java.util.List<java.lang.Long> getDescriptorIdList() {
       return descriptorId_;
     }
     public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
+    public long getDescriptorId(int index) {
       return descriptorId_.get(index);
     }
     
@@ -3719,8 +3719,8 @@ public final class CommonPBO {
       for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
         output.writeMessage(1, element);
       }
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
+      for (long element : getDescriptorIdList()) {
+        output.writeUInt64(2, element);
       }
       for (org.technbolts.protobuf.CommonPBO.PropertyDescriptor element : getDescriptorList()) {
         output.writeMessage(3, element);
@@ -3740,9 +3740,9 @@ public final class CommonPBO {
       }
       {
         int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
+        for (long element : getDescriptorIdList()) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
+            .computeUInt64SizeNoTag(element);
         }
         size += dataSize;
         size += 1 * getDescriptorIdList().size();
@@ -3929,7 +3929,7 @@ public final class CommonPBO {
         }
         if (!other.descriptorId_.isEmpty()) {
           if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
           }
           result.descriptorId_.addAll(other.descriptorId_);
         }
@@ -3971,14 +3971,14 @@ public final class CommonPBO {
               break;
             }
             case 16: {
-              addDescriptorId(input.readUInt32());
+              addDescriptorId(input.readUInt64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
+                addDescriptorId(input.readUInt64());
               }
               input.popLimit(limit);
               break;
@@ -4045,31 +4045,31 @@ public final class CommonPBO {
         return this;
       }
       
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      // repeated uint64 descriptor_id = 2;
+      public java.util.List<java.lang.Long> getDescriptorIdList() {
         return java.util.Collections.unmodifiableList(result.descriptorId_);
       }
       public int getDescriptorIdCount() {
         return result.getDescriptorIdCount();
       }
-      public int getDescriptorId(int index) {
+      public long getDescriptorId(int index) {
         return result.getDescriptorId(index);
       }
-      public Builder setDescriptorId(int index, int value) {
+      public Builder setDescriptorId(int index, long value) {
         result.descriptorId_.set(index, value);
         return this;
       }
-      public Builder addDescriptorId(int value) {
+      public Builder addDescriptorId(long value) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         result.descriptorId_.add(value);
         return this;
       }
       public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         super.addAll(values, result.descriptorId_);
         return this;
@@ -4593,15 +4593,15 @@ public final class CommonPBO {
       return error_.get(index);
     }
     
-    // repeated uint32 descriptor_id = 2;
+    // repeated uint64 descriptor_id = 2;
     public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
+    private java.util.List<java.lang.Long> descriptorId_ =
       java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+    public java.util.List<java.lang.Long> getDescriptorIdList() {
       return descriptorId_;
     }
     public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
+    public long getDescriptorId(int index) {
       return descriptorId_.get(index);
     }
     
@@ -4629,8 +4629,8 @@ public final class CommonPBO {
       for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
         output.writeMessage(1, element);
       }
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
+      for (long element : getDescriptorIdList()) {
+        output.writeUInt64(2, element);
       }
       for (org.technbolts.protobuf.CommonPBO.PropertyDescriptor element : getDescriptorList()) {
         output.writeMessage(3, element);
@@ -4650,9 +4650,9 @@ public final class CommonPBO {
       }
       {
         int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
+        for (long element : getDescriptorIdList()) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
+            .computeUInt64SizeNoTag(element);
         }
         size += dataSize;
         size += 1 * getDescriptorIdList().size();
@@ -4839,7 +4839,7 @@ public final class CommonPBO {
         }
         if (!other.descriptorId_.isEmpty()) {
           if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
           }
           result.descriptorId_.addAll(other.descriptorId_);
         }
@@ -4881,14 +4881,14 @@ public final class CommonPBO {
               break;
             }
             case 16: {
-              addDescriptorId(input.readUInt32());
+              addDescriptorId(input.readUInt64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
+                addDescriptorId(input.readUInt64());
               }
               input.popLimit(limit);
               break;
@@ -4955,31 +4955,31 @@ public final class CommonPBO {
         return this;
       }
       
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      // repeated uint64 descriptor_id = 2;
+      public java.util.List<java.lang.Long> getDescriptorIdList() {
         return java.util.Collections.unmodifiableList(result.descriptorId_);
       }
       public int getDescriptorIdCount() {
         return result.getDescriptorIdCount();
       }
-      public int getDescriptorId(int index) {
+      public long getDescriptorId(int index) {
         return result.getDescriptorId(index);
       }
-      public Builder setDescriptorId(int index, int value) {
+      public Builder setDescriptorId(int index, long value) {
         result.descriptorId_.set(index, value);
         return this;
       }
-      public Builder addDescriptorId(int value) {
+      public Builder addDescriptorId(long value) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         result.descriptorId_.add(value);
         return this;
       }
       public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         super.addAll(values, result.descriptorId_);
         return this;
@@ -5079,15 +5079,15 @@ public final class CommonPBO {
       return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteProperty_fieldAccessorTable;
     }
     
-    // repeated uint32 descriptor_id = 2;
+    // repeated uint64 descriptor_id = 2;
     public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
+    private java.util.List<java.lang.Long> descriptorId_ =
       java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+    public java.util.List<java.lang.Long> getDescriptorIdList() {
       return descriptorId_;
     }
     public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
+    public long getDescriptorId(int index) {
       return descriptorId_.get(index);
     }
     
@@ -5100,8 +5100,8 @@ public final class CommonPBO {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
+      for (long element : getDescriptorIdList()) {
+        output.writeUInt64(2, element);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5114,9 +5114,9 @@ public final class CommonPBO {
       size = 0;
       {
         int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
+        for (long element : getDescriptorIdList()) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
+            .computeUInt64SizeNoTag(element);
         }
         size += dataSize;
         size += 1 * getDescriptorIdList().size();
@@ -5285,7 +5285,7 @@ public final class CommonPBO {
         if (other == org.technbolts.protobuf.CommonPBO.DeleteProperty.getDefaultInstance()) return this;
         if (!other.descriptorId_.isEmpty()) {
           if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
           }
           result.descriptorId_.addAll(other.descriptorId_);
         }
@@ -5315,14 +5315,14 @@ public final class CommonPBO {
               break;
             }
             case 16: {
-              addDescriptorId(input.readUInt32());
+              addDescriptorId(input.readUInt64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
+                addDescriptorId(input.readUInt64());
               }
               input.popLimit(limit);
               break;
@@ -5332,31 +5332,31 @@ public final class CommonPBO {
       }
       
       
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      // repeated uint64 descriptor_id = 2;
+      public java.util.List<java.lang.Long> getDescriptorIdList() {
         return java.util.Collections.unmodifiableList(result.descriptorId_);
       }
       public int getDescriptorIdCount() {
         return result.getDescriptorIdCount();
       }
-      public int getDescriptorId(int index) {
+      public long getDescriptorId(int index) {
         return result.getDescriptorId(index);
       }
-      public Builder setDescriptorId(int index, int value) {
+      public Builder setDescriptorId(int index, long value) {
         result.descriptorId_.set(index, value);
         return this;
       }
-      public Builder addDescriptorId(int value) {
+      public Builder addDescriptorId(long value) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         result.descriptorId_.add(value);
         return this;
       }
       public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         super.addAll(values, result.descriptorId_);
         return this;
@@ -5736,12 +5736,12 @@ public final class CommonPBO {
       return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_EntityDescriptor_fieldAccessorTable;
     }
     
-    // optional uint32 id = 1;
+    // optional uint64 id = 1;
     public static final int ID_FIELD_NUMBER = 1;
     private boolean hasId;
-    private int id_ = 0;
+    private long id_ = 0L;
     public boolean hasId() { return hasId; }
-    public int getId() { return id_; }
+    public long getId() { return id_; }
     
     // optional string name = 2;
     public static final int NAME_FIELD_NUMBER = 2;
@@ -5791,7 +5791,7 @@ public final class CommonPBO {
                         throws java.io.IOException {
       getSerializedSize();
       if (hasId()) {
-        output.writeUInt32(1, getId());
+        output.writeUInt64(1, getId());
       }
       if (hasName()) {
         output.writeString(2, getName());
@@ -5816,7 +5816,7 @@ public final class CommonPBO {
       size = 0;
       if (hasId()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, getId());
+          .computeUInt64Size(1, getId());
       }
       if (hasName()) {
         size += com.google.protobuf.CodedOutputStream
@@ -6047,7 +6047,7 @@ public final class CommonPBO {
               break;
             }
             case 8: {
-              setId(input.readUInt32());
+              setId(input.readUInt64());
               break;
             }
             case 18: {
@@ -6075,21 +6075,21 @@ public final class CommonPBO {
       }
       
       
-      // optional uint32 id = 1;
+      // optional uint64 id = 1;
       public boolean hasId() {
         return result.hasId();
       }
-      public int getId() {
+      public long getId() {
         return result.getId();
       }
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         result.hasId = true;
         result.id_ = value;
         return this;
       }
       public Builder clearId() {
         result.hasId = false;
-        result.id_ = 0;
+        result.id_ = 0L;
         return this;
       }
       
@@ -6276,19 +6276,19 @@ public final class CommonPBO {
       return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_Entity_fieldAccessorTable;
     }
     
-    // optional uint32 id = 1;
-    public static final int ID_FIELD_NUMBER = 1;
-    private boolean hasId;
-    private int id_ = 0;
-    public boolean hasId() { return hasId; }
-    public int getId() { return id_; }
+    // optional string uuid = 1;
+    public static final int UUID_FIELD_NUMBER = 1;
+    private boolean hasUuid;
+    private java.lang.String uuid_ = "";
+    public boolean hasUuid() { return hasUuid; }
+    public java.lang.String getUuid() { return uuid_; }
     
-    // optional uint32 descriptor_id = 2;
+    // optional uint64 descriptor_id = 2;
     public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
     private boolean hasDescriptorId;
-    private int descriptorId_ = 0;
+    private long descriptorId_ = 0L;
     public boolean hasDescriptorId() { return hasDescriptorId; }
-    public int getDescriptorId() { return descriptorId_; }
+    public long getDescriptorId() { return descriptorId_; }
     
     // repeated .org.technbolts.protobuf.PropertyValue property = 3;
     public static final int PROPERTY_FIELD_NUMBER = 3;
@@ -6314,11 +6314,11 @@ public final class CommonPBO {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (hasId()) {
-        output.writeUInt32(1, getId());
+      if (hasUuid()) {
+        output.writeString(1, getUuid());
       }
       if (hasDescriptorId()) {
-        output.writeUInt32(2, getDescriptorId());
+        output.writeUInt64(2, getDescriptorId());
       }
       for (org.technbolts.protobuf.CommonPBO.PropertyValue element : getPropertyList()) {
         output.writeMessage(3, element);
@@ -6332,13 +6332,13 @@ public final class CommonPBO {
       if (size != -1) return size;
     
       size = 0;
-      if (hasId()) {
+      if (hasUuid()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, getId());
+          .computeStringSize(1, getUuid());
       }
       if (hasDescriptorId()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, getDescriptorId());
+          .computeUInt64Size(2, getDescriptorId());
       }
       for (org.technbolts.protobuf.CommonPBO.PropertyValue element : getPropertyList()) {
         size += com.google.protobuf.CodedOutputStream
@@ -6506,8 +6506,8 @@ public final class CommonPBO {
       
       public Builder mergeFrom(org.technbolts.protobuf.CommonPBO.Entity other) {
         if (other == org.technbolts.protobuf.CommonPBO.Entity.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          setId(other.getId());
+        if (other.hasUuid()) {
+          setUuid(other.getUuid());
         }
         if (other.hasDescriptorId()) {
           setDescriptorId(other.getDescriptorId());
@@ -6543,12 +6543,12 @@ public final class CommonPBO {
               }
               break;
             }
-            case 8: {
-              setId(input.readUInt32());
+            case 10: {
+              setUuid(input.readString());
               break;
             }
             case 16: {
-              setDescriptorId(input.readUInt32());
+              setDescriptorId(input.readUInt64());
               break;
             }
             case 26: {
@@ -6562,39 +6562,42 @@ public final class CommonPBO {
       }
       
       
-      // optional uint32 id = 1;
-      public boolean hasId() {
-        return result.hasId();
+      // optional string uuid = 1;
+      public boolean hasUuid() {
+        return result.hasUuid();
       }
-      public int getId() {
-        return result.getId();
+      public java.lang.String getUuid() {
+        return result.getUuid();
       }
-      public Builder setId(int value) {
-        result.hasId = true;
-        result.id_ = value;
+      public Builder setUuid(java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  result.hasUuid = true;
+        result.uuid_ = value;
         return this;
       }
-      public Builder clearId() {
-        result.hasId = false;
-        result.id_ = 0;
+      public Builder clearUuid() {
+        result.hasUuid = false;
+        result.uuid_ = getDefaultInstance().getUuid();
         return this;
       }
       
-      // optional uint32 descriptor_id = 2;
+      // optional uint64 descriptor_id = 2;
       public boolean hasDescriptorId() {
         return result.hasDescriptorId();
       }
-      public int getDescriptorId() {
+      public long getDescriptorId() {
         return result.getDescriptorId();
       }
-      public Builder setDescriptorId(int value) {
+      public Builder setDescriptorId(long value) {
         result.hasDescriptorId = true;
         result.descriptorId_ = value;
         return this;
       }
       public Builder clearDescriptorId() {
         result.hasDescriptorId = false;
-        result.descriptorId_ = 0;
+        result.descriptorId_ = 0L;
         return this;
       }
       
@@ -7070,15 +7073,15 @@ public final class CommonPBO {
       return error_.get(index);
     }
     
-    // repeated uint32 descriptor_id = 2;
+    // repeated uint64 descriptor_id = 2;
     public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
+    private java.util.List<java.lang.Long> descriptorId_ =
       java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+    public java.util.List<java.lang.Long> getDescriptorIdList() {
       return descriptorId_;
     }
     public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
+    public long getDescriptorId(int index) {
       return descriptorId_.get(index);
     }
     
@@ -7106,8 +7109,8 @@ public final class CommonPBO {
       for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
         output.writeMessage(1, element);
       }
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
+      for (long element : getDescriptorIdList()) {
+        output.writeUInt64(2, element);
       }
       for (org.technbolts.protobuf.CommonPBO.EntityDescriptor element : getDescriptorList()) {
         output.writeMessage(3, element);
@@ -7127,9 +7130,9 @@ public final class CommonPBO {
       }
       {
         int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
+        for (long element : getDescriptorIdList()) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
+            .computeUInt64SizeNoTag(element);
         }
         size += dataSize;
         size += 1 * getDescriptorIdList().size();
@@ -7316,7 +7319,7 @@ public final class CommonPBO {
         }
         if (!other.descriptorId_.isEmpty()) {
           if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
           }
           result.descriptorId_.addAll(other.descriptorId_);
         }
@@ -7358,14 +7361,14 @@ public final class CommonPBO {
               break;
             }
             case 16: {
-              addDescriptorId(input.readUInt32());
+              addDescriptorId(input.readUInt64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
+                addDescriptorId(input.readUInt64());
               }
               input.popLimit(limit);
               break;
@@ -7432,31 +7435,31 @@ public final class CommonPBO {
         return this;
       }
       
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      // repeated uint64 descriptor_id = 2;
+      public java.util.List<java.lang.Long> getDescriptorIdList() {
         return java.util.Collections.unmodifiableList(result.descriptorId_);
       }
       public int getDescriptorIdCount() {
         return result.getDescriptorIdCount();
       }
-      public int getDescriptorId(int index) {
+      public long getDescriptorId(int index) {
         return result.getDescriptorId(index);
       }
-      public Builder setDescriptorId(int index, int value) {
+      public Builder setDescriptorId(int index, long value) {
         result.descriptorId_.set(index, value);
         return this;
       }
-      public Builder addDescriptorId(int value) {
+      public Builder addDescriptorId(long value) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         result.descriptorId_.add(value);
         return this;
       }
       public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         super.addAll(values, result.descriptorId_);
         return this;
@@ -7980,15 +7983,15 @@ public final class CommonPBO {
       return error_.get(index);
     }
     
-    // repeated uint32 descriptor_id = 2;
+    // repeated uint64 descriptor_id = 2;
     public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
+    private java.util.List<java.lang.Long> descriptorId_ =
       java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+    public java.util.List<java.lang.Long> getDescriptorIdList() {
       return descriptorId_;
     }
     public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
+    public long getDescriptorId(int index) {
       return descriptorId_.get(index);
     }
     
@@ -8016,8 +8019,8 @@ public final class CommonPBO {
       for (org.technbolts.protobuf.CommonPBO.Error element : getErrorList()) {
         output.writeMessage(1, element);
       }
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
+      for (long element : getDescriptorIdList()) {
+        output.writeUInt64(2, element);
       }
       for (org.technbolts.protobuf.CommonPBO.EntityDescriptor element : getDescriptorList()) {
         output.writeMessage(3, element);
@@ -8037,9 +8040,9 @@ public final class CommonPBO {
       }
       {
         int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
+        for (long element : getDescriptorIdList()) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
+            .computeUInt64SizeNoTag(element);
         }
         size += dataSize;
         size += 1 * getDescriptorIdList().size();
@@ -8226,7 +8229,7 @@ public final class CommonPBO {
         }
         if (!other.descriptorId_.isEmpty()) {
           if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
           }
           result.descriptorId_.addAll(other.descriptorId_);
         }
@@ -8268,14 +8271,14 @@ public final class CommonPBO {
               break;
             }
             case 16: {
-              addDescriptorId(input.readUInt32());
+              addDescriptorId(input.readUInt64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
+                addDescriptorId(input.readUInt64());
               }
               input.popLimit(limit);
               break;
@@ -8342,31 +8345,31 @@ public final class CommonPBO {
         return this;
       }
       
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      // repeated uint64 descriptor_id = 2;
+      public java.util.List<java.lang.Long> getDescriptorIdList() {
         return java.util.Collections.unmodifiableList(result.descriptorId_);
       }
       public int getDescriptorIdCount() {
         return result.getDescriptorIdCount();
       }
-      public int getDescriptorId(int index) {
+      public long getDescriptorId(int index) {
         return result.getDescriptorId(index);
       }
-      public Builder setDescriptorId(int index, int value) {
+      public Builder setDescriptorId(int index, long value) {
         result.descriptorId_.set(index, value);
         return this;
       }
-      public Builder addDescriptorId(int value) {
+      public Builder addDescriptorId(long value) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         result.descriptorId_.add(value);
         return this;
       }
       public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         super.addAll(values, result.descriptorId_);
         return this;
@@ -8466,15 +8469,15 @@ public final class CommonPBO {
       return org.technbolts.protobuf.CommonPBO.internal_static_org_technbolts_protobuf_DeleteEntityDescriptor_fieldAccessorTable;
     }
     
-    // repeated uint32 descriptor_id = 2;
+    // repeated uint64 descriptor_id = 2;
     public static final int DESCRIPTOR_ID_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> descriptorId_ =
+    private java.util.List<java.lang.Long> descriptorId_ =
       java.util.Collections.emptyList();
-    public java.util.List<java.lang.Integer> getDescriptorIdList() {
+    public java.util.List<java.lang.Long> getDescriptorIdList() {
       return descriptorId_;
     }
     public int getDescriptorIdCount() { return descriptorId_.size(); }
-    public int getDescriptorId(int index) {
+    public long getDescriptorId(int index) {
       return descriptorId_.get(index);
     }
     
@@ -8487,8 +8490,8 @@ public final class CommonPBO {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      for (int element : getDescriptorIdList()) {
-        output.writeUInt32(2, element);
+      for (long element : getDescriptorIdList()) {
+        output.writeUInt64(2, element);
       }
       getUnknownFields().writeTo(output);
     }
@@ -8501,9 +8504,9 @@ public final class CommonPBO {
       size = 0;
       {
         int dataSize = 0;
-        for (int element : getDescriptorIdList()) {
+        for (long element : getDescriptorIdList()) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(element);
+            .computeUInt64SizeNoTag(element);
         }
         size += dataSize;
         size += 1 * getDescriptorIdList().size();
@@ -8672,7 +8675,7 @@ public final class CommonPBO {
         if (other == org.technbolts.protobuf.CommonPBO.DeleteEntityDescriptor.getDefaultInstance()) return this;
         if (!other.descriptorId_.isEmpty()) {
           if (result.descriptorId_.isEmpty()) {
-            result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+            result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
           }
           result.descriptorId_.addAll(other.descriptorId_);
         }
@@ -8702,14 +8705,14 @@ public final class CommonPBO {
               break;
             }
             case 16: {
-              addDescriptorId(input.readUInt32());
+              addDescriptorId(input.readUInt64());
               break;
             }
             case 18: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               while (input.getBytesUntilLimit() > 0) {
-                addDescriptorId(input.readUInt32());
+                addDescriptorId(input.readUInt64());
               }
               input.popLimit(limit);
               break;
@@ -8719,31 +8722,31 @@ public final class CommonPBO {
       }
       
       
-      // repeated uint32 descriptor_id = 2;
-      public java.util.List<java.lang.Integer> getDescriptorIdList() {
+      // repeated uint64 descriptor_id = 2;
+      public java.util.List<java.lang.Long> getDescriptorIdList() {
         return java.util.Collections.unmodifiableList(result.descriptorId_);
       }
       public int getDescriptorIdCount() {
         return result.getDescriptorIdCount();
       }
-      public int getDescriptorId(int index) {
+      public long getDescriptorId(int index) {
         return result.getDescriptorId(index);
       }
-      public Builder setDescriptorId(int index, int value) {
+      public Builder setDescriptorId(int index, long value) {
         result.descriptorId_.set(index, value);
         return this;
       }
-      public Builder addDescriptorId(int value) {
+      public Builder addDescriptorId(long value) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         result.descriptorId_.add(value);
         return this;
       }
       public Builder addAllDescriptorId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         if (result.descriptorId_.isEmpty()) {
-          result.descriptorId_ = new java.util.ArrayList<java.lang.Integer>();
+          result.descriptorId_ = new java.util.ArrayList<java.lang.Long>();
         }
         super.addAll(values, result.descriptorId_);
         return this;
@@ -9232,55 +9235,55 @@ public final class CommonPBO {
       "ype\030\004 \001(\t\"M\n\nTypedValue\0220\n\004type\030\001 \001(\0132\".",
       "org.technbolts.protobuf.ValueType\022\r\n\005val" +
       "ue\030\002 \001(\014\"\236\001\n\022PropertyDescriptor\022\n\n\002id\030\001 " +
-      "\001(\r\022\014\n\004name\030\002 \001(\t\022-\n\005label\030\003 \003(\0132\036.org.t" +
+      "\001(\004\022\014\n\004name\030\002 \001(\t\022-\n\005label\030\003 \003(\0132\036.org.t" +
       "echnbolts.protobuf.Label\0220\n\004type\030\004 \001(\0132\"" +
       ".org.technbolts.protobuf.ValueType\022\r\n\005mu" +
-      "lti\030\005 \001(\010\"*\n\rPropertyValue\022\n\n\002id\030\001 \002(\r\022\r" +
-      "\n\005value\030\002 \003(\014\"i\n\016CreateProperty\022?\n\ndescr" +
-      "iptor\030\001 \003(\0132+.org.technbolts.protobuf.Pr" +
-      "opertyDescriptor\022\026\n\007id_only\030\002 \001(\010:\005false" +
-      "\"\237\001\n\026CreatePropertyResponse\022-\n\005error\030\001 \003",
-      "(\0132\036.org.technbolts.protobuf.Error\022\025\n\rde" +
-      "scriptor_id\030\002 \003(\r\022?\n\ndescriptor\030\003 \003(\0132+." +
-      "org.technbolts.protobuf.PropertyDescript" +
-      "or\"\226\001\n\016SearchProperty\022;\n\006sample\030\001 \001(\0132+." +
-      "org.technbolts.protobuf.PropertyDescript" +
-      "or\022/\n\006paging\030\002 \001(\0132\037.org.technbolts.prot" +
-      "obuf.Paging\022\026\n\007id_only\030\003 \001(\010:\005false\"\237\001\n\026" +
-      "SearchPropertyResponse\022-\n\005error\030\001 \003(\0132\036." +
-      "org.technbolts.protobuf.Error\022\025\n\rdescrip" +
-      "tor_id\030\002 \003(\r\022?\n\ndescriptor\030\003 \003(\0132+.org.t",
-      "echnbolts.protobuf.PropertyDescriptor\"\'\n" +
-      "\016DeleteProperty\022\025\n\rdescriptor_id\030\002 \003(\r\"G" +
-      "\n\026DeletePropertyResponse\022-\n\005error\030\001 \003(\0132" +
-      "\036.org.technbolts.protobuf.Error\"\263\001\n\020Enti" +
-      "tyDescriptor\022\n\n\002id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\022\014" +
-      "\n\004type\030\003 \001(\t\022-\n\005label\030\004 \003(\0132\036.org.technb" +
-      "olts.protobuf.Label\022H\n\023property_descript" +
-      "or\030\005 \003(\0132+.org.technbolts.protobuf.Prope" +
-      "rtyDescriptor\"e\n\006Entity\022\n\n\002id\030\001 \001(\r\022\025\n\rd" +
-      "escriptor_id\030\002 \001(\r\0228\n\010property\030\003 \003(\0132&.o",
-      "rg.technbolts.protobuf.PropertyValue\"o\n\026" +
-      "CreateEntityDescriptor\022=\n\ndescriptor\030\001 \003" +
-      "(\0132).org.technbolts.protobuf.EntityDescr" +
-      "iptor\022\026\n\007id_only\030\002 \001(\010:\005false\"\245\001\n\036Create" +
-      "EntityDescriptorResponse\022-\n\005error\030\001 \003(\0132" +
-      "\036.org.technbolts.protobuf.Error\022\025\n\rdescr" +
-      "iptor_id\030\002 \003(\r\022=\n\ndescriptor\030\003 \003(\0132).org" +
-      ".technbolts.protobuf.EntityDescriptor\"\234\001" +
-      "\n\026SearchEntityDescriptor\0229\n\006sample\030\001 \001(\013" +
-      "2).org.technbolts.protobuf.EntityDescrip",
-      "tor\022/\n\006paging\030\002 \001(\0132\037.org.technbolts.pro" +
-      "tobuf.Paging\022\026\n\007id_only\030\003 \001(\010:\005false\"\245\001\n" +
-      "\036SearchEntityDescriptorResponse\022-\n\005error" +
-      "\030\001 \003(\0132\036.org.technbolts.protobuf.Error\022\025" +
-      "\n\rdescriptor_id\030\002 \003(\r\022=\n\ndescriptor\030\003 \003(" +
-      "\0132).org.technbolts.protobuf.EntityDescri" +
-      "ptor\"/\n\026DeleteEntityDescriptor\022\025\n\rdescri" +
-      "ptor_id\030\002 \003(\r\"O\n\036DeleteEntityDescriptorR" +
-      "esponse\022-\n\005error\030\001 \003(\0132\036.org.technbolts." +
-      "protobuf.ErrorB&\n\027org.technbolts.protobu",
-      "fB\tCommonPBOH\001"
+      "lti\030\005 \001(\010\"5\n\rPropertyValue\022\025\n\rdescriptor" +
+      "_id\030\001 \002(\004\022\r\n\005value\030\002 \003(\014\"i\n\016CreateProper" +
+      "ty\022?\n\ndescriptor\030\001 \003(\0132+.org.technbolts." +
+      "protobuf.PropertyDescriptor\022\026\n\007id_only\030\002" +
+      " \001(\010:\005false\"\237\001\n\026CreatePropertyResponse\022-",
+      "\n\005error\030\001 \003(\0132\036.org.technbolts.protobuf." +
+      "Error\022\025\n\rdescriptor_id\030\002 \003(\004\022?\n\ndescript" +
+      "or\030\003 \003(\0132+.org.technbolts.protobuf.Prope" +
+      "rtyDescriptor\"\226\001\n\016SearchProperty\022;\n\006samp" +
+      "le\030\001 \001(\0132+.org.technbolts.protobuf.Prope" +
+      "rtyDescriptor\022/\n\006paging\030\002 \001(\0132\037.org.tech" +
+      "nbolts.protobuf.Paging\022\026\n\007id_only\030\003 \001(\010:" +
+      "\005false\"\237\001\n\026SearchPropertyResponse\022-\n\005err" +
+      "or\030\001 \003(\0132\036.org.technbolts.protobuf.Error" +
+      "\022\025\n\rdescriptor_id\030\002 \003(\004\022?\n\ndescriptor\030\003 ",
+      "\003(\0132+.org.technbolts.protobuf.PropertyDe" +
+      "scriptor\"\'\n\016DeleteProperty\022\025\n\rdescriptor" +
+      "_id\030\002 \003(\004\"G\n\026DeletePropertyResponse\022-\n\005e" +
+      "rror\030\001 \003(\0132\036.org.technbolts.protobuf.Err" +
+      "or\"\263\001\n\020EntityDescriptor\022\n\n\002id\030\001 \001(\004\022\014\n\004n" +
+      "ame\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022-\n\005label\030\004 \003(\0132\036" +
+      ".org.technbolts.protobuf.Label\022H\n\023proper" +
+      "ty_descriptor\030\005 \003(\0132+.org.technbolts.pro" +
+      "tobuf.PropertyDescriptor\"g\n\006Entity\022\014\n\004uu" +
+      "id\030\001 \001(\t\022\025\n\rdescriptor_id\030\002 \001(\004\0228\n\010prope",
+      "rty\030\003 \003(\0132&.org.technbolts.protobuf.Prop" +
+      "ertyValue\"o\n\026CreateEntityDescriptor\022=\n\nd" +
+      "escriptor\030\001 \003(\0132).org.technbolts.protobu" +
+      "f.EntityDescriptor\022\026\n\007id_only\030\002 \001(\010:\005fal" +
+      "se\"\245\001\n\036CreateEntityDescriptorResponse\022-\n" +
+      "\005error\030\001 \003(\0132\036.org.technbolts.protobuf.E" +
+      "rror\022\025\n\rdescriptor_id\030\002 \003(\004\022=\n\ndescripto" +
+      "r\030\003 \003(\0132).org.technbolts.protobuf.Entity" +
+      "Descriptor\"\234\001\n\026SearchEntityDescriptor\0229\n" +
+      "\006sample\030\001 \001(\0132).org.technbolts.protobuf.",
+      "EntityDescriptor\022/\n\006paging\030\002 \001(\0132\037.org.t" +
+      "echnbolts.protobuf.Paging\022\026\n\007id_only\030\003 \001" +
+      "(\010:\005false\"\245\001\n\036SearchEntityDescriptorResp" +
+      "onse\022-\n\005error\030\001 \003(\0132\036.org.technbolts.pro" +
+      "tobuf.Error\022\025\n\rdescriptor_id\030\002 \003(\004\022=\n\nde" +
+      "scriptor\030\003 \003(\0132).org.technbolts.protobuf" +
+      ".EntityDescriptor\"/\n\026DeleteEntityDescrip" +
+      "tor\022\025\n\rdescriptor_id\030\002 \003(\004\"O\n\036DeleteEnti" +
+      "tyDescriptorResponse\022-\n\005error\030\001 \003(\0132\036.or" +
+      "g.technbolts.protobuf.ErrorB&\n\027org.techn",
+      "bolts.protobufB\tCommonPBOH\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -9356,7 +9359,7 @@ public final class CommonPBO {
           internal_static_org_technbolts_protobuf_PropertyValue_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_PropertyValue_descriptor,
-              new java.lang.String[] { "Id", "Value", },
+              new java.lang.String[] { "DescriptorId", "Value", },
               org.technbolts.protobuf.CommonPBO.PropertyValue.class,
               org.technbolts.protobuf.CommonPBO.PropertyValue.Builder.class);
           internal_static_org_technbolts_protobuf_CreateProperty_descriptor =
@@ -9420,7 +9423,7 @@ public final class CommonPBO {
           internal_static_org_technbolts_protobuf_Entity_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_org_technbolts_protobuf_Entity_descriptor,
-              new java.lang.String[] { "Id", "DescriptorId", "Property", },
+              new java.lang.String[] { "Uuid", "DescriptorId", "Property", },
               org.technbolts.protobuf.CommonPBO.Entity.class,
               org.technbolts.protobuf.CommonPBO.Entity.Builder.class);
           internal_static_org_technbolts_protobuf_CreateEntityDescriptor_descriptor =

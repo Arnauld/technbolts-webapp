@@ -4,7 +4,7 @@ import org.apache.commons.httpclient.{HttpStatus, HttpClient}
 import org.apache.commons.httpclient.methods.{ByteArrayRequestEntity, RequestEntity, PutMethod, GetMethod}
 import org.slf4j.LoggerFactory
 import org.junit.{Before, Assert, Test}
-import org.technbolts.protobuf.UserPBO._
+import org.technbolts.protobuf.UserPBModel._
 import java.io.ByteArrayOutputStream
 import org.technbolts.service.api.ApiService
 
@@ -17,7 +17,7 @@ class SimpleIT {
   @Before
   def setUp: Unit = {
     details = UserDetails.newBuilder.setNickname("nabu").setEmail("nabu@kodono.zor").build
-    user = User.newBuilder.setId(1).setDetails(details).build
+    user = User.newBuilder.setUuid("uuid1").setDetails(details).build
   }
 
   @Test

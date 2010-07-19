@@ -35,6 +35,8 @@
       <facet-type id="Scala">
         <modules>
           <module name="technbolts-webapp" />
+          <module name="technbolts-generator" />
+          <module name="technbolts-mda" />
         </modules>
       </facet-type>
     </autodetection-disabled>
@@ -195,6 +197,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/technbolts-generator/technbolts-mda.iml" filepath="$PROJECT_DIR$/technbolts-generator/technbolts-mda.iml" />
       <module fileurl="file://$PROJECT_DIR$/technbolts-webapp.iml" filepath="$PROJECT_DIR$/technbolts-webapp.iml" />
     </modules>
   </component>

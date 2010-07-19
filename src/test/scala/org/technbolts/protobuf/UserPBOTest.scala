@@ -4,7 +4,7 @@ import org.junit.Test
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.CoreMatchers._
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
-import UserPBO._
+import UserPBModel._
 
 class UserPBOTest {
 
@@ -12,7 +12,7 @@ class UserPBOTest {
   def simpleCase:Unit = {
     val outstream = new ByteArrayOutputStream
     val details:UserDetails = UserDetails.newBuilder.setNickname("nabu").setEmail("nabu@kodono.zor").build
-    val userWritten:User = User.newBuilder().setId(1).setDetails(details).build
+    val userWritten:User = User.newBuilder().setUuid("uuid1").setDetails(details).build
 
     userWritten.writeTo(outstream)
 
@@ -22,7 +22,7 @@ class UserPBOTest {
 
     val instream = new ByteArrayInputStream(outstream.toByteArray)
     val user:User = User.parseFrom(instream)
-    assertThat(user.getId, equalTo(1))
+    assertThat(user.getUuid, equalTo("uuid1"))
     assertThat(user.getDetails.getNickname, equalTo("nabu"))
     assertThat(user.getDetails.getEmail, equalTo("nabu@kodono.zor"))
   }

@@ -1,6 +1,8 @@
 package org.technbolts.util
 
 import collection.mutable.{ListBuffer, HashMap}
+import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.{Qualifier, Autowired, Configurable}
 
 class CommandException extends Exception
 
@@ -9,9 +11,9 @@ object Message {
   val WARN  = 200;
   val ERROR = 300;
 
-  def apply(text:String) {
+  def apply(messageText:String) {
     new Message() {
-      override def text = text
+      override def text = messageText
     }
   }
 }
@@ -49,20 +51,36 @@ trait Interceptor {
   def intercept(chain:CommandInvoker[_]):Unit
 }
 
-class CommandInvoker[R](val command:Command[R]) extends ProtectedSeq[Interceptor] {
+trait InterceptorsProvider {
+  def getInterceptors(command:Command[_]):List[Interceptor]
+}
+
+@Configurable
+class CommandInvoker[R](val command:Command[R]) {
+
+  private val logger = LoggerFactory.getLogger(classOf[CommandInvoker])
+
+  var interceptorsProvider:InterceptorsProvider = _
+  @Autowired
+  @Qualifier("interceptorsProvider")
+  def setInterceptorsProvider(interceptorsProvider:InterceptorsProvider) = {
+    this.interceptorsProvider = interceptorsProvider
+  }
 
   val context = new CommandContext
-  private var interceptorIter: Iterator[Interceptor] = null
+  private var interceptors: Iterator[Interceptor] = null
 
   def invoke:Unit = {
-    if(interceptorIter==null) {
-      freeze
-      interceptorIter = toList.iterator
+    if(interceptors==null) {
+      interceptors =  if(interceptorsProvider!=null)
+                        interceptorsProvider.getInterceptors(command)
+                      else
+                        Iterator.empty
       command.initialize(context)
     }
 
-    if(interceptorIter.hasNext)
-      interceptorIter.next.intercept(this)
+    if(interceptors.hasNext)
+      interceptors.next.intercept(this)
     else
       // no more interceptor, call the command
       command.execute(context)

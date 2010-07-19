@@ -1,7 +1,7 @@
 package org.technbolts.protobuf;
 
 option java_package = "org.technbolts.protobuf";
-option java_outer_classname = "ResourcePBO";
+option java_outer_classname = "ResourcePBModel";
 
 option optimize_for = SPEED;
 

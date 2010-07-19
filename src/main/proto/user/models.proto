@@ -1,0 +1,67 @@
+package org.technbolts.protobuf;
+
+option java_package = "org.technbolts.protobuf";
+option java_outer_classname = "UserPBModel";
+
+option optimize_for = SPEED;
+
+import "common.proto";
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   role
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+message Role {
+    optional string uuid = 1;
+    optional string name = 2;
+    repeated Label label = 3;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   user
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+message User {
+    optional string uuid = 1;
+    optional string entity_descriptor_uuid = 2;
+    optional string group_uuid = 3;
+    optional uint32 status = 4;
+    repeated Role role = 5;
+    optional UserDetails details = 6;
+}
+
+message UserDetails {
+    optional string email = 1;
+    optional string nickname = 2;
+    optional string firstname = 3;
+    optional string lastname = 4;
+    optional Entity entity = 5;
+}
+
+message UserList {
+    repeated string user_uuid = 1;
+    repeated User user = 2;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   group
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+message Group {
+    optional string uuid = 1;
+    optional string entity_descriptor_uuid = 2;
+    optional uint32 status = 3;
+    optional string name = 4;
+
+    optional string parent_uuid = 5;
+    repeated string sub_group_uuid = 6;
+
+    optional GroupDetails details = 7;
+}
+
+message GroupDetails {
+    repeated Label label = 1;
+    optional Entity entity = 5;
+}
+
+message GroupList {
+    repeated string group_uuid = 1;
+    repeated Group group = 2;
+}

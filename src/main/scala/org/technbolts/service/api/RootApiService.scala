@@ -2,7 +2,7 @@ package org.technbolts.service.api
 
 import ApiService.ContentType
 import net.liftweb.common.Full
-import org.technbolts.protobuf.UserPBO
+import org.technbolts.protobuf.UserPBModel.{User => PBUser}
 import net.liftweb.http._
 
 object RootApiService {
@@ -13,9 +13,9 @@ object RootApiService {
 
   def handleCall(req:Req, reqType:RequestType):LiftResponse = {
     val input = req.request.inputStream
-    val userRead = UserPBO.User.parseFrom(input)
+    val userRead = PBUser.parseFrom(input)
 
-    val userWritten = UserPBO.User.newBuilder(userRead).build
+    val userWritten = PBUser.newBuilder(userRead).build
 
     var data: Array[Byte] = userWritten.toByteArray
     val headers = List(
