@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ddc30583-131e-40a6-8389-560d918b153e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/JettyEmbeddedTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/util/Command.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/util/Command.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/org/technbolts/itest/api/UserApiServiceIT.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/domain/user/UserRepository.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/domain/user/UserRepository.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserApiService.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/UserApiService.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iws" afterPath="$PROJECT_DIR$/technbolts-webapp.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/command/CreateUserCommand.scala" afterPath="$PROJECT_DIR$/src/main/scala/org/technbolts/service/user/command/CreateUserCommand.scala" />
     </list>
     <ignored path="technbolts-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
