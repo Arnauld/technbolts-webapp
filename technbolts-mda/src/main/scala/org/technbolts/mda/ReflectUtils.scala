@@ -5,66 +5,68 @@ import java.lang.{Class => JClass}
 import org.slf4j.{LoggerFactory, Logger}
 import java.lang.reflect.{Type, ParameterizedType, Field => JField}
 
-class ReflectFieldTypeSwitch
-trait ReflectFieldTypeSwitch {
+sealed abstract class FieldType {
+  def field: JField
+}
+case class FieldEnum(field: JField) extends FieldType
+case class FieldPrimitive(field: JField) extends FieldType
+case class FieldArray(field: JField, itemClass: Class[_]) extends FieldType
+case class FieldCollection(field: JField, itemClass: Class[_]) extends FieldType
+case class FieldCollectionUnknownType(field: JField) extends FieldType
+case class FieldIterable(field: JField, itemClass: Class[_]) extends FieldType
+case class FieldIterableUnknownType(field: JField) extends FieldType
+case class FieldRaw(field: JField, itemClass: Class[_]) extends FieldType
 
-  def caseFieldEnum(field:JField):Unit = {}
-  def caseFieldPrimitive(field:JField):Unit = {}
-  def caseFieldArray(field:JField,itemClass:Class[_]):Unit = {}
-  def caseFieldCollection(field:JField,itemClass:Class[_]):Unit = {}
-  def caseFieldCollectionUnknownType(field:JField,itemClass:Class[_]):Unit = {}
-  def caseFieldIterable(field:JField,itemClass:Class[_]):Unit = {}
-  def caseFieldIterableUnknownType(field:JField,itemClass:Class[_]):Unit = {}
-  def caseFieldRaw(field:JField,itemClass:Class[_]):Unit = {}
+class ReflectUtils
+object ReflectUtils {
+  val logger: Logger = LoggerFactory.getLogger(classOf[ReflectUtils])
 
-  val logger:Logger = LoggerFactory.getLogger(classOf[ReflectFieldTypeSwitch])
-
-  def fieldDescriptor(field:JField):Unit = {
+  def fieldType(field: JField): FieldType = {
     logger.debug("Examining field <{}>: {}", field.getName, field)
 
     val fieldType = field.getType
 
     // special cases
-    if(fieldType.isEnum) {
+    if (fieldType.isEnum) {
       logger.debug("Field <{}> considered as an enum of {}", field.getName, fieldType.getEnumConstants)
-      caseFieldEnum(field)
+      FieldEnum(field)
     }
-    else if(fieldType.isPrimitive) {
+    else if (fieldType.isPrimitive) {
       logger.debug("Field <{}> considered as a primitive {}", field.getName, fieldType)
-      caseFieldPrimitive(field)
+      FieldPrimitive(field)
     }
     else if (fieldType.isArray) {
       val itemClass = field.getType.getComponentType
       logger.debug("Field <{}> considered as Array of {}", field.getName, itemClass)
-      caseFieldArray(field, itemClass)
+      FieldArray(field, itemClass)
     }
     else if (classOf[java.util.Collection[_]].isAssignableFrom(field.getType)) {
       lookupItemType(field) match {
         case Some(itemClass: JClass[_]) =>
           logger.debug("Field <{}> considered as <java/Collection> of {}", field.getName, itemClass)
-          caseFieldCollection(field, itemClass)
-        case None =>
+          FieldCollection(field, itemClass)
+        case _ =>
           logger.warn("Field <{}> considered as <java/Collection> but no type could be retrieved, field will not be persisted. Field: {}", field.getName, field)
-          caseFieldCollectionUnknownType(field, itemClass)
+          FieldCollectionUnknownType(field)
       }
     }
     else if (classOf[scala.Iterable[_]].isAssignableFrom(fieldType)) {
       lookupItemType(field) match {
         case Some(itemClass: JClass[_]) =>
           logger.debug("Field <{}> considered as <scala/Iterable> of {}", field.getName, itemClass)
-          caseFieldIterable(field, itemClass)
-        case None =>
+          FieldIterable(field, itemClass)
+        case _ =>
           logger.warn("Field <{}> considered as <scala/Iterable> but no type could be retrieved. Field: {}", field.getName, field)
-          caseFieldIterableUnknownType(field, itemClass)
+          FieldIterableUnknownType(field)
       }
     }
     else {
       logger.debug("Field <{}> considered as direct value of {}", field.getName, fieldType)
-      caseFieldRaw(field, fieldType)
+      FieldRaw(field, fieldType)
     }
   }
 
-   def lookupItemType(field: JField): Option[JClass[_]] = field.getGenericType() match {
+  def lookupItemType(field: JField): Option[JClass[_]] = field.getGenericType() match {
     case t: ParameterizedType =>
       val typeArg = t.getActualTypeArguments()(0)
       Some(getJClass(typeArg))
