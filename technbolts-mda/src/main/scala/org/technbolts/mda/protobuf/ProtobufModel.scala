@@ -1,6 +1,8 @@
 package org.technbolts.mda.model
 
 import collection.mutable.ListBuffer
+import org.technbolts.mda.annotation.ProtobufField
+import java.lang.reflect.Field
 
 /*
 
@@ -63,16 +65,13 @@ class ProtobufMessageModel(val name:String, val partOf:String) {
   def sortFields:Unit = {
     fields.sortWith((f1,f2) => f1.ordinal < f2.ordinal)
   }
-}
 
-object ProtobufConstants {
-  val Optional = "optional"
-  val Repeated = "repeated"
-  val Required = "required"
+  var relatedClass:Option[Class[_]] = None
 }
 
 class ProtobufFieldModel(val name:String) {
   var ordinal:Int = -1
-  var mode:String = ProtobufConstants.Optional
-  var fieldType:String = "uint32"
+  var mode:String = ProtobufField.Mode.Optional.pbuf
+  var fieldType:Option[String] = None
+  var relatedField:Option[Field] = None
 }

@@ -46,9 +46,11 @@ trait GeneratorModel {
 trait Generator {
   def generate():Unit
 
+  def isEmpty(value:String):Boolean = (value==null || value.isEmpty)
+
   def defaultIfEmpty(value:String, default:String) = {
-    if(value==null || value.isEmpty)
-      default;
+    if(isEmpty(value))
+      default
     else
       value
   }
@@ -66,7 +68,9 @@ trait Generator {
   }
 
   def getFieldsWithAnnotation(clazz:Class[_], annotation:Class[_ <: JAnnotation]):List[Field] =
-    clazz.getFields.filter { field => field.isAnnotationPresent(annotation) } .toList
+    clazz.getDeclaredFields.filter { field =>
+      field.isAnnotationPresent(annotation)
+    } .toList
 
   def getModelsWithAnnotation(annotation:Class[_ <: JAnnotation]):List[Class[_]] =
     generatorModel.getModelsWithAnnotation(annotation)

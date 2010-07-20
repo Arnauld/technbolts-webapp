@@ -16,5 +16,5 @@ class TechnboltsModelTest {
 class Request {
 
   @ProtobufField
-  object id;
+  var uuid:Int = _;
 }
