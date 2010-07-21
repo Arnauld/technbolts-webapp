@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ddc30583-131e-40a6-8389-560d918b153e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.ipr" afterPath="$PROJECT_DIR$/technbolts-webapp.ipr" />
-      <change type="DELETED" beforePath="D:\data\wk\technbolts-webapp\technbolts-mda\src\test\scala\org\technbolts\mda\ProtobufGeneratorTest.scala" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/Generator.scala" afterPath="$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/Generator.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/ReflectFieldTypeSwitch.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-mda/src/test/scala/org/technbolts/mda/TechnboltsModel.scala" afterPath="$PROJECT_DIR$/technbolts-mda/src/test/scala/org/technbolts/mda/TechnboltsModel.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufModel.scala" afterPath="$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufModel.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-mda/technbolts-mda.iml" afterPath="$PROJECT_DIR$/technbolts-mda/technbolts-mda.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iws" afterPath="$PROJECT_DIR$/technbolts-webapp.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-mda/src/main/java/org/technbolts/mda/annotation/ProtobufField.java" afterPath="$PROJECT_DIR$/technbolts-mda/src/main/java/org/technbolts/mda/annotation/ProtobufField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-webapp.iml" afterPath="$PROJECT_DIR$/technbolts-webapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufGenerator.scala" afterPath="$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufGenerator.scala" />
     </list>
-    <ignored path=".idea/workspace.xml" />
     <ignored path="technbolts-webapp.iws" />
+    <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +74,7 @@
       <file leaf-file-name="ReflectFieldTypeSwitch.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/ReflectFieldTypeSwitch.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="-1.1852552">
+            <state line="18" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="0.026687598">
               <folding />
             </state>
           </provider>
@@ -236,6 +226,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -459,8 +451,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -704,9 +694,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1448" height="848" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14449213" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14449213" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -714,7 +704,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26346016" sideWeight="0.84549356" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26346016" sideWeight="0.6623748" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -787,6 +777,26 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/java/org/technbolts/mda/annotation/Protobuf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="15" selection-start="306" selection-end="310" vertical-scroll-proportion="0.21794872" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="40" selection-start="438" selection-end="479" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://D:/dev/java1.5/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2890" column="15" selection-start="115462" selection-end="115462" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/java/org/technbolts/mda/annotation/ProtobufField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="285" selection-end="298" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/org/technbolts/domain/Repository.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="6" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0" />
@@ -797,16 +807,14 @@
         <state line="14" column="85" selection-start="449" selection-end="532" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/java/org/technbolts/mda/annotation/Protobuf.java">
+    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufModel.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="15" selection-start="306" selection-end="310" vertical-scroll-proportion="0.21794872">
-          <folding />
-        </state>
+        <state line="74" column="11" selection-start="1767" selection-end="1776" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/Generator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="21" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0" />
+        <state line="52" column="13" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/technbolts-mda/src/test/scala/org/technbolts/mda/TechnboltsModel.scala">
@@ -814,44 +822,14 @@
         <state line="13" column="0" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufModel.scala">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="11" selection-start="1767" selection-end="1776" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/Generator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="13" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/java/org/technbolts/mda/annotation/ProtobufField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="285" selection-end="298" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/protobuf/ProtobufGenerator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="438" selection-end="479" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dev/java1.5/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2890" column="15" selection-start="115462" selection-end="115462" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="41" column="21" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/technbolts-mda/src/main/scala/org/technbolts/mda/ReflectFieldTypeSwitch.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="-1.1852552">
+        <state line="18" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="0.026687598">
           <folding />
         </state>
       </provider>
