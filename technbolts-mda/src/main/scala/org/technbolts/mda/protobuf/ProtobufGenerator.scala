@@ -1,6 +1,6 @@
 package org.technbolts.mda.protobuf
 
-import org.technbolts.mda.{GeneratorModel, Generator}
+import org.technbolts.mda._
 import collection.mutable.HashMap
 import org.technbolts.mda.annotation.{ProtobufField, ProtobufMessage, Protobuf}
 import _root_.java.lang.reflect.Field
@@ -92,8 +92,8 @@ class ProtobufGenerator extends Generator {
     logger.info(">Messages collected: " + count)
 
     // resolve dependencies if any and required import
-    resolveDependenciesAndFieldType();
-
+    resolveDependencies
+    
     // then generate proto file
     logger.info(">Generating #" + protobufModels.size + " proto file(s)")
     protobufModels.values.foreach {
@@ -104,7 +104,7 @@ class ProtobufGenerator extends Generator {
     }
   }
 
-  def resolveDependenciesAndFieldType: Unit = {
+  def resolveDependencies: Unit = {
     //    model.fieldType = aField.fieldType match {
     //    }
     protobufMessages.values.foreach {
@@ -112,52 +112,23 @@ class ProtobufGenerator extends Generator {
         logger.info(">Resolving dependencies for message: " + message.name)
         message.fields.foreach { field =>
           field.fieldType match {
-            case None => resolveDependenciesAndFieldType(message, field)
+            case None => resolveFieldType(message, field)
             case _ => //nothing special to do
           }
         }
     }
   }
 
-  private def resolveDependenciesAndFieldType(message:ProtobufMessageModel, fieldModel:ProtobufFieldModel):Unit = {
+  private def resolveFieldType(message:ProtobufMessageModel, fieldModel:ProtobufFieldModel):Unit = {
     fieldModel.relatedField match {
-      case None => throw new IllegalStateException("No java.lang.reflect.Field associated to field <"+field.name+"> to resolve type")
-      case field:Field => {
-        val rawType:Class[_] = field.getType
-        // test for system type first
-        rawType match {
-          case
-        }
-
-        // is is a collection or an array?
-        if(rawType.isArray
-                || classOf[IterableMutable]rawType.isAssignableFrom()
-                || rawType.isAssignableFrom(classOf[IterableImmutable])) {
-
+      case Some(f:Field) => {
+        ReflectUtils.fieldType(f) match {
+          case FieldArray(field,itemClass) =>
         }
       }
+      case _ => throw new IllegalStateException("No java.lang.reflect.Field associated to field <"+fieldModel.name+"> to resolve type")
     }
   }
-
-
-
-    final Type genericType = field.getGenericType();
-            if (genericType instanceof ParameterizedType) {
-                final Type typeArgument =
-                        ((ParameterizedType) genericType).getActualTypeArguments()[0];
-                Class<?> itemType = getClass(typeArgument);
-                recursivelyRetrieveAllTypes(itemType, fieldVersion, versionnedTypeMap);
-            }
-
-  private Class<?> getClass(final Type typeArgument) {
-        Class<?> type = null;
-        if (typeArgument instanceof ParameterizedType) {
-            type = (Class<?>) ((ParameterizedType) typeArgument).getRawType();
-        } else if (typeArgument instanceof Class) {
-            type = (Class<?>) typeArgument;
-        }
-        return type;
-    }
 
   /**
    *
