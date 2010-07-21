@@ -1,4 +1,4 @@
 package org.technbolts.mda.annotation;
 
-public @interface Data {
+public @interface Service {
 }

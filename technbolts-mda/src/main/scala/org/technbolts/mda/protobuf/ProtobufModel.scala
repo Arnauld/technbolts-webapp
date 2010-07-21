@@ -1,7 +1,6 @@
-package org.technbolts.mda.model
+package org.technbolts.mda.protobuf
 
 import collection.mutable.ListBuffer
-import org.technbolts.mda.annotation.ProtobufField
 import java.lang.reflect.Field
 
 /*
@@ -53,25 +52,34 @@ class ProtobufMessageModel(val name:String, val partOf:String) {
   var fields = new ListBuffer[ProtobufFieldModel]
 
   def generateFieldOrdinals:Unit = {
-    var max = fields.foldLeft(0) { (cur, field) => Math.max(cur, field.ordinal) }
+    var max = fields.foldLeft(0) { (cur, field) => Math.max(cur, field.ordinal.getOrElse(-1)) }
     fields.foreach { field =>
-      if(field.ordinal<=0) {
+      if(field.ordinal.isEmpty) {
         max = max+1;
-        field.ordinal = max
+        field.ordinal = Some(max)
       }
     }
   }
 
   def sortFields:Unit = {
-    fields.sortWith((f1,f2) => f1.ordinal < f2.ordinal)
+    fields.sortWith((f1,f2) => f1.ordinal.getOrElse(-1) < f2.ordinal.getOrElse(-1))
   }
 
   var relatedClass:Option[Class[_]] = None
 }
 
+sealed abstract class ProtobufTypeModel(val pbuf:String)
+case class ProtobufTypeInt32  extends ProtobufTypeModel("int32")
+case class ProtobufTypeInt64  extends ProtobufTypeModel("int64")
+case class ProtobufTypeFloat  extends ProtobufTypeModel("float")
+case class ProtobufTypeDouble extends ProtobufTypeModel("double")
+case class ProtobufTypeString extends ProtobufTypeModel("string")
+case class ProtobufTypeBytes  extends ProtobufTypeModel("bytes")
+case class ProtobufTypeMessage(val message:String) extends ProtobufTypeModel(message)
+
 class ProtobufFieldModel(val name:String) {
-  var ordinal:Int = -1
-  var mode:String = ProtobufField.Mode.Optional.pbuf
-  var fieldType:Option[String] = None
+  var ordinal:Option[Int] = None
+  var classifier:ProtobufFieldClassifier = ProtobufFieldClassifier.Auto
+  var fieldType:Option[ProtobufTypeModel] = None
   var relatedField:Option[Field] = None
 }

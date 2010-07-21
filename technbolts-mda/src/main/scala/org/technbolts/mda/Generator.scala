@@ -6,6 +6,7 @@ import protobuf.ProtobufGenerator
 import collection.mutable.{ListBuffer, HashMap}
 import _root_.java.lang.reflect.Field
 import _root_.java.lang.annotation.{Annotation => JAnnotation }
+import java.util.Date
 
 object GeneratorModel {
   def apply(root:String) = {
@@ -14,6 +15,17 @@ object GeneratorModel {
     }
     model
   }
+}
+
+object Classes {
+  //
+  val byteClass   = classOf[Byte]
+  val intClass    = classOf[Int]
+  val longClass   = classOf[Long]
+  val floatClass  = classOf[Float]
+  val doubleClass = classOf[Double]
+  val stringClass = classOf[String]
+  val dateClass   = classOf[Date]
 }
 
 trait GeneratorModel {
@@ -44,6 +56,7 @@ trait GeneratorModel {
 }
 
 trait Generator {
+
   def generate():Unit
 
   def isEmpty(value:String):Boolean = (value==null || value.isEmpty)
@@ -54,9 +67,6 @@ trait Generator {
     else
       value
   }
-
-  var NL = "\r\n"
-  var INDENT = "  ";
 
   var generatorModel: GeneratorModel = _
 

@@ -1,14 +1,13 @@
 package org.technbolts.mda.protobuf
 
 import org.technbolts.mda._
+import Classes._
 import collection.mutable.HashMap
-import org.technbolts.mda.annotation.{ProtobufField, ProtobufMessage, Protobuf}
 import _root_.java.lang.reflect.Field
-import org.technbolts.mda.model.{ProtobufFieldModel, ProtobufMessageModel, ProtobufModel}
-import ProtobufField.{Mode => FieldPBMode, Type => FieldPBType}
-import FieldPBMode._
-import FieldPBType._
+import ProtobufFieldClassifier._
+import ProtobufFieldType._
 import org.slf4j.{LoggerFactory, Logger}
+
 
 class ProtobufGenerator extends Generator {
   private val logger: Logger = LoggerFactory.getLogger(classOf[ProtobufGenerator])
@@ -83,7 +82,6 @@ class ProtobufGenerator extends Generator {
     getModelsWithAnnotation(classOf[ProtobufMessage]).foreach {
       clazz =>
       val model = processMessage(clazz)
-
     }
 
     val count = protobufModels.values.foldLeft(0) {
@@ -99,67 +97,77 @@ class ProtobufGenerator extends Generator {
     protobufModels.values.foreach {
       model =>
         logger.info(">Generating proto file for model: " + model.name)
-        val content = generateProtoFile(model)
+        val content = ProtobufTemplate.generateProtoFile(model)
         logger.debug(">Generated: " + model.protoFileName + "\n" + content)
     }
   }
 
   def resolveDependencies: Unit = {
-    //    model.fieldType = aField.fieldType match {
-    //    }
     protobufMessages.values.foreach {
       message =>
-        logger.info(">Resolving dependencies for message: " + message.name)
-        message.fields.foreach { field =>
-          field.fieldType match {
-            case None => resolveFieldType(message, field)
+        logger.info(">Resolving dependencies and field types for message: " + message.name)
+        message.fields.foreach { fieldModel =>
+          fieldModel.fieldType match {
+            case ProtobufFieldType.Auto => resolveFieldType(message, fieldModel)
             case _ => //nothing special to do
+          }
+          if(fieldModel.classifier==ProtobufFieldClassifier.Auto) {
+            logger.info("Field classifier " + fieldModel.name + " has been set automatically to Optional")
+            fieldModel.classifier = Optional
           }
         }
     }
   }
 
   private def resolveFieldType(message:ProtobufMessageModel, fieldModel:ProtobufFieldModel):Unit = {
+    logger.info(">Resolving type for field: " + message.name + "." + fieldModel.name)
     fieldModel.relatedField match {
-      case Some(f:Field) => {
-        ReflectUtils.fieldType(f) match {
-          case FieldArray(field,itemClass) =>
-        }
-      }
+      case Some(field:Field) => resolveTypeFromJField(fieldModel,field)
       case _ => throw new IllegalStateException("No java.lang.reflect.Field associated to field <"+fieldModel.name+"> to resolve type")
     }
   }
 
-  /**
-   *
-   */
-  def generateProtoFile(model: ProtobufModel): String = {
-
-    val builder = new StringBuilder
-    builder.append("package ").append(model.protoPackage).append(";").append(NL)
-    builder.append("option java_package = \"").append(model.javaPackage).append("\";").append(NL)
-    builder.append("option java_outer_classname = \"").append(model.javaOuterClassName).append("\";").append(NL)
-    if (model.optimizeForSpeed)
-      builder.append("option optimize_for = SPEED;").append(NL);
-    model.imports.foreach {imp => builder.append("import \"" + imp + "\";").append(NL)}
-    model.messages.foreach {message => generateMessage(builder, message)}
-    builder.toString
+  private def resolveTypeFromJField(fieldModel:ProtobufFieldModel, f:Field):Unit = {
+    ReflectUtils.fieldType(f) match {
+      case FieldPrimitive(field) => fieldModel.fieldType = protobufTypeMapping(field.getType)
+      case FieldRaw(field,klazz) => fieldModel.fieldType = protobufTypeMapping(klazz)
+      case FieldArray(field,itemClass) =>
+        itemClass match {
+          case `byteClass` => fieldModel.fieldType = ProtobufTypeBytes()
+          case _ =>
+            checkOrSetRepeated(fieldModel);
+            fieldModel.fieldType = protobufTypeMapping(itemClass)
+        }
+    }
   }
 
-  /**
-   *
-   */
-  def generateMessage(builder: StringBuilder, message: ProtobufMessageModel): Unit = {
-    builder.append("message ").append(message.name).append(" {").append(NL);
-    message.fields.foreach {field => generateField(builder, field)}
-    builder.append("}").append(NL);
+  private def protobufTypeMapping(klazz:Class[_]):ProtobufType = {
+    protobufMessages.get(klazz) match {
+      case Some(msg) => ProtobufFieldMessage(msg.name)
+      case _ => klazz match {
+        case `stringClass` =>  ProtobufFieldString()
+        case `intClass`    =>  ProtobufFieldInt()
+        case `longClass`   =>  ProtobufFieldLong()
+        case `dateClass`   =>  ProtobufFieldLong()
+        case `floatClass`  =>  ProtobufFieldFloat()
+        case `doubleClass` =>  ProtobufFieldDouble()
+        case _ => throw new IllegalArgumentException ("Type "+klazz+" is not mapped to any known Protocol Buffer type.")
+      }
+    }
   }
 
-  /**
-   *
-   */
-  def generateField(builder: StringBuilder, field: ProtobufFieldModel): Unit = {
-    builder.append(INDENT).append(field.mode).append(" ").append(field.fieldType).append(" ").append(field.name).append(" = ").append(field.ordinal).append(NL);
+  private def checkOrSetRepeated(fieldModel:ProtobufFieldModel):Unit = {
+    fieldModel.classifier =
+    fieldModel.classifier match {
+      case ProtobufFieldClassifier.Auto =>
+        logger.info("Field classifier " + fieldModel.name + " has been set automatically to Repeated")
+        Repeated
+      case Repeated =>
+        Repeated
+      case c:ProtobufFieldClassifier =>
+        logger.warn("Field classifier " + fieldModel.name + " is not appropriate, you should probably classify it as Auto or Repeated")
+        c
+    }
   }
 
   /**
@@ -239,14 +247,10 @@ class ProtobufGenerator extends Generator {
     val aField: ProtobufField = field.getAnnotation(classOf[ProtobufField])
 
     val model = new ProtobufFieldModel(defaultIfEmpty(aField.name, getFieldName(field)))
-    if (aField.order > 0)
-      model.ordinal = aField.order
-    model.mode = aField.mode.pbuf
+    model.ordinal = if (aField.order > 0) Some(aField.order) else None
+    model.classifier = aField.classifier
     model.relatedField = Some(field);
-    model.fieldType = aField.fieldType match {
-      case Auto => None
-      case t:FieldPBType => Some(t.pbuf)
-    }
+    model.fieldType = aField.fieldType
     model
   }
 }

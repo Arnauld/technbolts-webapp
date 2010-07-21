@@ -1,4 +1,4 @@
-package org.technbolts.mda.annotation;
+package org.technbolts.mda.protobuf;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
