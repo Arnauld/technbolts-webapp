@@ -3,6 +3,11 @@
 # except for .gitignore
 !.gitignore
 
+#intellij
+*.iws
+*.ipr
+*.iml
+
 # Ignore target...
 target/
 db/
