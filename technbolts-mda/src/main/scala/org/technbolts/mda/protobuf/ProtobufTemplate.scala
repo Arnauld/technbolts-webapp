@@ -28,14 +28,16 @@ class ProtobufTemplate extends Template {
   var optimizeForSpeed = """|option optimize_for = SPEED;
                             |""".stripMargin
 
+  val fieldTemplate = """|  ${classifier} ${type} ${name} = ${ordinal}
+                         |""".stripMargin
   /**
    * 
    */
   def generateProtoFile(builder:StringBuilder, model: ProtobufFileModel): Unit = {
-    val header = subVars(protoFileHeaderTemplate,
-                         Map("protoPackage"->model.protoPackage,
-                             "java_package"->model.javaPackage,
-                             "java_outer_classname"->model.javaOuterClassName))
+    val header = subVars(protoFileHeaderTemplate, Map(
+                    "protoPackage"->model.protoPackage,
+                    "java_package"->model.javaPackage,
+                    "java_outer_classname"->model.javaOuterClassName))
 
     builder.append(header)
     if (model.optimizedForSpeed)
@@ -61,11 +63,12 @@ class ProtobufTemplate extends Template {
    *
    */
   def generateField(builder: StringBuilder, field: ProtobufFieldModel): Unit = {
-    val template = """|From: ${FROM}
-                      |To: ${TO}
-                      |Subject: ${SUBJECT}
-                      |
-                      |Please, stop it.""".stripMargin
-    builder.append(INDENT).append(field.classifier.pbuf).append(" ").append(field.fieldType.pbuf).append(" ").append(field.name).append(" = ").append(field.ordinal).append(NL);
+    val fragment = subVars(fieldTemplate, Map(
+                      "classifier"->field.classifier.pbuf,
+                      "type"->field.fieldType.pbuf,
+                      "name"->field.name,
+                      "ordinal"->field.ordinal.getOrElse(-1).toString
+                    ))
+    builder.append(fragment)
   }
 }
