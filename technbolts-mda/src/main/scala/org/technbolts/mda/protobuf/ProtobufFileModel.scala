@@ -1,7 +1,7 @@
 package org.technbolts.mda.protobuf
 
-import collection.mutable.ListBuffer
 import java.lang.reflect.Field
+import collection.mutable.{HashSet, ListBuffer}
 
 class ProtobufFileModel(val name:String) {
   var protoFileName:String = _
@@ -9,8 +9,14 @@ class ProtobufFileModel(val name:String) {
   var javaPackage:String = _
   var javaOuterClassName:String = _
   var optimizedForSpeed:Boolean = true
-  var imports = new ListBuffer[String]
+  var imports = new HashSet[String]
   var messages = new ListBuffer[ProtobufMessageModel]
+
+  def addImport(required:String):Unit = {
+    //no self dependency
+    if(required!=protoFileName)
+      imports.add(required)  
+  }
 }
 
 class ProtobufMessageModel(val name:String, val partOf:String) {
@@ -42,7 +48,7 @@ case class ProtobufTypeDouble extends ProtobufTypeModel("double")
 case class ProtobufTypeBool   extends ProtobufTypeModel("bool")
 case class ProtobufTypeString extends ProtobufTypeModel("string")
 case class ProtobufTypeBytes  extends ProtobufTypeModel("bytes")
-case class ProtobufTypeMessage(val message:String) extends ProtobufTypeModel(message)
+case class ProtobufTypeMessage(val message:ProtobufMessageModel) extends ProtobufTypeModel(message.name)
 
 class ProtobufFieldModel(val name:String) {
   var ordinal:Option[Int] = None

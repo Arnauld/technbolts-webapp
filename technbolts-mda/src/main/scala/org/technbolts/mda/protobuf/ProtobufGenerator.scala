@@ -37,12 +37,11 @@ class ProtobufGenerator extends Generator {
     }
   }
 
-  def getProtoFileName(clazz: Class[_]): String = {
+  def getProtoFileName(model:ProtobufFileModel, clazz: Class[_]): String = {
     if (useClazzAsProtoFileName)
       clazz.getCanonicalName + ".proto"
     else
-    // what else to return ?
-      clazz.getCanonicalName + ".proto"
+      model.name + ".proto"
   }
 
   def getJavaPackageName(clazz: Class[_]): String = {
@@ -63,7 +62,7 @@ class ProtobufGenerator extends Generator {
       clazz.getSimpleName
   }
 
-  val protobufModels = new HashMap[String, ProtobufFileModel]
+  val protobufFileModels = new HashMap[String, ProtobufFileModel]
   val protobufMessages = new HashMap[Class[_], ProtobufMessageModel]
 
   /**
@@ -75,7 +74,7 @@ class ProtobufGenerator extends Generator {
     logger.info(">Collecting models")
     // first collect models
     getModelsWithAnnotation(classOf[ProtobufFile]).foreach {clazz => processModel(clazz)}
-    logger.info(">Models collected: " + protobufModels.size)
+    logger.info(">Models collected: " + protobufFileModels.size)
 
     logger.info(">Collecting messages")
     // then collect message to fill models
@@ -84,7 +83,7 @@ class ProtobufGenerator extends Generator {
       val model = processMessage(clazz)
     }
 
-    val count = protobufModels.values.foldLeft(0) {
+    val count = protobufFileModels.values.foldLeft(0) {
       (prev, model) => model.messages.size + prev
     }
     logger.info(">Messages collected: " + count)
@@ -93,8 +92,8 @@ class ProtobufGenerator extends Generator {
     resolveTypes
     
     // then generate proto file
-    logger.info(">Generating #" + protobufModels.size + " proto file(s)")
-    protobufModels.values.foreach {
+    logger.info(">Generating #" + protobufFileModels.size + " proto file(s)")
+    protobufFileModels.values.foreach {
       model =>
         logger.info(">Generating proto file for model: " + model.name)
         val content = ProtobufTemplate.generateProtoFile(model)
@@ -106,12 +105,24 @@ class ProtobufGenerator extends Generator {
     protobufMessages.values.foreach {
       message =>
         logger.info(">Resolving dependencies and field types for message: " + message.name)
+        val enclosing = protobufFileModels.get(message.partOf).get
+        
         message.fields.foreach { fieldModel =>
           resolveFieldType(message, fieldModel)
 
           if(fieldModel.classifier==ProtobufFieldClassifier.Auto) {
             logger.info("Field classifier " + fieldModel.name + " has been set automatically to Optional")
             fieldModel.classifier = Optional
+          }
+
+          // make sure the import is updated is required
+          fieldModel.fieldType match {
+            case ProtobufTypeMessage(msg) =>
+              val fileDependency = protobufFileModels.get(msg.partOf).get
+
+              // prevent self dependency
+              enclosing.addImport(fileDependency.protoFileName)
+            case _ => //nothing special to do
           }
         }
     }
@@ -164,7 +175,7 @@ class ProtobufGenerator extends Generator {
 
   private def mapClassToProtobufType(klazz:Class[_]):ProtobufTypeModel = {
     protobufMessages.get(klazz) match {
-      case Some(msg) => ProtobufTypeMessage(msg.name)
+      case Some(msg) => ProtobufTypeMessage(msg)
       case _ => klazz match {
         case `stringClass`  =>  ProtobufTypeString()
         case `intClass`     =>  ProtobufTypeInt32()
@@ -198,16 +209,16 @@ class ProtobufGenerator extends Generator {
   def processModel(clazz: Class[_]): Unit = {
     val protobufFile: ProtobufFile = clazz.getAnnotation(classOf[ProtobufFile])
 
-    protobufModels.get(protobufFile.name) match {
+    protobufFileModels.get(protobufFile.name) match {
       case Some(m) => throw new IllegalStateException("Duplicate ProtobufFile model with name <" + protobufFile.name + ">")
       case _ => {
         val m = new ProtobufFileModel(protobufFile.name)
         m.protoPackage = defaultIfEmpty(protobufFile.protoPackage, getProtoPackageName(clazz))
-        m.protoFileName = defaultIfEmpty(protobufFile.protoFileName, getProtoFileName(clazz))
+        m.protoFileName = defaultIfEmpty(protobufFile.protoFileName, getProtoFileName(m, clazz))
         m.javaOuterClassName = defaultIfEmpty(protobufFile.javaOuterClassName, getJavaOuterClassName(clazz))
         m.javaPackage = defaultIfEmpty(protobufFile.javaPackage, getJavaPackageName(clazz))
         m.optimizedForSpeed = protobufFile.optimizedForSpeed
-        protobufModels.put(m.name, m)
+        protobufFileModels.put(m.name, m)
       }
     }
   }
@@ -221,11 +232,11 @@ class ProtobufGenerator extends Generator {
 
     val m = new ProtobufFileModel(name)
     m.protoPackage = getProtoPackageName(clazz)
-    m.protoFileName = getProtoFileName(clazz)
+    m.protoFileName = getProtoFileName(m, clazz)
     m.javaOuterClassName = getJavaOuterClassName(clazz)
     m.javaPackage = getJavaPackageName(clazz)
     m.optimizedForSpeed = true
-    protobufModels.put(m.name, m)
+    protobufFileModels.put(m.name, m)
     m
   }
 
@@ -234,28 +245,27 @@ class ProtobufGenerator extends Generator {
    */
   def processMessage(clazz: Class[_]): Unit = {
     val message: ProtobufMessage = clazz.getAnnotation(classOf[ProtobufMessage])
+    val enclosing =
+      if (message.partOf.isEmpty)
+        generateModelFor(clazz, message)
+      else {
+        protobufFileModels.get(message.partOf) match {
+          case Some(e) => e
+          case _ => throw new IllegalStateException("Part of <" + message.partOf + "> value does not refer to a known model")
+        }
+      }
 
-    val model = new ProtobufMessageModel(defaultIfEmpty(message.name, clazz.getSimpleName), message.partOf)
-
+    val name   = defaultIfEmpty(message.name, clazz.getSimpleName)
     val fields = getFieldsWithAnnotation(clazz, classOf[ProtobufField])
-    logger.info("Processing message " + model.name + " #" + fields.size + " fields found");
+    logger.info("Processing message " + name + " in class " + clazz + " #" + fields.size + " fields found");
 
+    val model = new ProtobufMessageModel(name, enclosing.name)
     model.relatedClass = Some(clazz);
     model.fields.appendAll(fields.map {field => processField(field)})
     model.generateFieldOrdinals
     model.sortFields
 
-    val enclosing =
-    if (message.partOf.isEmpty)
-      generateModelFor(clazz, message)
-    else {
-      protobufModels.get(message.partOf) match {
-        case Some(e) => e
-        case _ => throw new IllegalStateException("Part of <" + message.partOf + "> value does not refer to a known model")
-      }
-    }
     enclosing.messages.append(model)
-
     protobufMessages.put(clazz, model)
   }
 
