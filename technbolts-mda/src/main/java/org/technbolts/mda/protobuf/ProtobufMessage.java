@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE})
 public @interface ProtobufMessage {
     String partOf () default "";
-    String message();
+    String name() default "";
 }

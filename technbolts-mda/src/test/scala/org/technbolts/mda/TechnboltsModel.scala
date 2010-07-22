@@ -2,20 +2,29 @@ package org.technbolts.mda
 
 import org.junit.Test
 import annotation._
-import protobuf.{ProtobufFieldType, ProtobufMessage, ProtobufField}
 import java.util.Date
+import protobuf.{ProtobufFile, ProtobufFieldType, ProtobufMessage, ProtobufField}
 
 class TechnboltsModelTest {
   @Test
   def useCaseEx1: Unit = {
     val model = GeneratorModel("org.technbolts")
     model.models.append(
+      classOf[ProtobufFileEntity],
+      classOf[ProtobufFileCommon],
+      classOf[ProtobufFileRequest],
+
+      classOf[Ref],
       classOf[Request],
       classOf[RequestDetails],
+      classOf[RequestEvent],
       classOf[Entity])
     model.generate
   }
 }
+
+@ProtobufFile(name="common", javaOuterClassName="CommonDTO")
+class ProtobufFileCommon
 
 @ValueObject
 class RequestSystemState
@@ -30,13 +39,16 @@ class DistributionMode
 class RefType
 
 @ValueObject
-sealed abstract class Ref {
-  val refUuid: String
-}
-case class UserRef(val refUuid: String) extends Ref
-case class GroupRef(val refUuid: String) extends Ref
+@ProtobufMessage(partOf="common")
+sealed abstract class Ref(val refUuid: String)
+case class UserRef (override val refUuid: String) extends Ref(refUuid)
+case class GroupRef(override val refUuid: String) extends Ref(refUuid)
 
-@ProtobufMessage(message = "request")
+
+@ProtobufFile(name="request", javaOuterClassName="RequestDTO")
+class ProtobufFileRequest
+
+@ProtobufMessage(partOf = "request")
 @DomainModel
 class Request {
   @ProtobufField
@@ -68,7 +80,7 @@ class Request {
   var details: RequestDetails = _
 }
 
-@ProtobufMessage(message = "RequestDetails")
+@ProtobufMessage(partOf = "request")
 @ValueObject
 class RequestDetails {
   @ProtobufField
@@ -93,18 +105,14 @@ class RequestDetails {
   var entity: Entity = _
 }
 
-@ProtobufMessage(message = "Entity")
-@DomainModel
-class Entity
-
-@ProtobufMessage(message = "RequestEvent")
+@ProtobufMessage(partOf = "request")
 @ValueObject
 class RequestEvent {
   @Id
   @ProtobufField
   var id: Int = _
 
-  @ProtobufField
+  @ProtobufField(fieldType = ProtobufFieldType.Int)
   var eventType: EventType = _
 
   @ProtobufField
@@ -124,3 +132,10 @@ class RequestEvent {
 }
 
 class EventType
+
+@ProtobufFile(name="entity", javaOuterClassName="EntityDTO")
+class ProtobufFileEntity
+
+@ProtobufMessage(partOf = "entity")
+@DomainModel
+class Entity

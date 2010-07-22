@@ -8,7 +8,7 @@ object ProtobufTemplate {
   /**
    *
    */
-  def generateProtoFile(model: ProtobufModel): String = {
+  def generateProtoFile(model: ProtobufFileModel): String = {
     val builder = new StringBuilder
     new ProtobufTemplate().generateProtoFile(builder, model)
     builder.toString
@@ -31,14 +31,14 @@ class ProtobufTemplate extends Template {
   /**
    * 
    */
-  def generateProtoFile(builder:StringBuilder, model: ProtobufModel): Unit = {
+  def generateProtoFile(builder:StringBuilder, model: ProtobufFileModel): Unit = {
     val header = subVars(protoFileHeaderTemplate,
                          Map("protoPackage"->model.protoPackage,
                              "java_package"->model.javaPackage,
                              "java_outer_classname"->model.javaOuterClassName))
 
     builder.append(header)
-    if (model.optimizeForSpeed)
+    if (model.optimizedForSpeed)
       builder.append(optimizeForSpeed);
 
     model.imports.foreach {imp =>

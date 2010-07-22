@@ -7,11 +7,11 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
-public @interface Protobuf {
+public @interface ProtobufFile {
     String name();
-    String protoFileName();
-    String protoPackage();
-    String javaPackage();
-    String javaOuterClassName();
-    boolean optimizeForSpeed();
+    String protoFileName() default "";
+    String protoPackage() default "";
+    String javaPackage() default "";
+    String javaOuterClassName() default "";
+    boolean optimizedForSpeed() default true;
 }

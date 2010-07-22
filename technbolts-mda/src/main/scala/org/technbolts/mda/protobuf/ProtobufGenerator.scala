@@ -63,7 +63,7 @@ class ProtobufGenerator extends Generator {
       clazz.getSimpleName
   }
 
-  val protobufModels = new HashMap[String, ProtobufModel]
+  val protobufModels = new HashMap[String, ProtobufFileModel]
   val protobufMessages = new HashMap[Class[_], ProtobufMessageModel]
 
   /**
@@ -74,7 +74,7 @@ class ProtobufGenerator extends Generator {
 
     logger.info(">Collecting models")
     // first collect models
-    getModelsWithAnnotation(classOf[Protobuf]).foreach {clazz => processModel(clazz)}
+    getModelsWithAnnotation(classOf[ProtobufFile]).foreach {clazz => processModel(clazz)}
     logger.info(">Models collected: " + protobufModels.size)
 
     logger.info(">Collecting messages")
@@ -90,7 +90,7 @@ class ProtobufGenerator extends Generator {
     logger.info(">Messages collected: " + count)
 
     // resolve dependencies if any and required import
-    resolveDependencies
+    resolveTypes
     
     // then generate proto file
     logger.info(">Generating #" + protobufModels.size + " proto file(s)")
@@ -102,15 +102,13 @@ class ProtobufGenerator extends Generator {
     }
   }
 
-  def resolveDependencies: Unit = {
+  def resolveTypes: Unit = {
     protobufMessages.values.foreach {
       message =>
         logger.info(">Resolving dependencies and field types for message: " + message.name)
         message.fields.foreach { fieldModel =>
-          fieldModel.fieldType match {
-            case ProtobufFieldType.Auto => resolveFieldType(message, fieldModel)
-            case _ => //nothing special to do
-          }
+          resolveFieldType(message, fieldModel)
+
           if(fieldModel.classifier==ProtobufFieldClassifier.Auto) {
             logger.info("Field classifier " + fieldModel.name + " has been set automatically to Optional")
             fieldModel.classifier = Optional
@@ -128,30 +126,54 @@ class ProtobufGenerator extends Generator {
   }
 
   private def resolveTypeFromJField(fieldModel:ProtobufFieldModel, f:Field):Unit = {
-    ReflectUtils.fieldType(f) match {
-      case FieldPrimitive(field) => fieldModel.fieldType = protobufTypeMapping(field.getType)
-      case FieldRaw(field,klazz) => fieldModel.fieldType = protobufTypeMapping(klazz)
-      case FieldArray(field,itemClass) =>
+    val aField: ProtobufField = f.getAnnotation(classOf[ProtobufField])
+
+    val fieldToCollection = (field:Field,itemClass:Class[_]) => {
         itemClass match {
-          case `byteClass` => fieldModel.fieldType = ProtobufTypeBytes()
-          case _ =>
-            checkOrSetRepeated(fieldModel);
-            fieldModel.fieldType = protobufTypeMapping(itemClass)
+            case `byteClass` => ProtobufTypeBytes()
+            case _ =>
+              checkOrSetRepeated(fieldModel);
+              mapClassToProtobufType(itemClass)
         }
     }
+
+    val fieldToType = (field:Field) => ReflectUtils.fieldType(field) match {
+        case FieldPrimitive(field) => mapClassToProtobufType(field.getType)
+        case FieldRaw(field,klazz) => mapClassToProtobufType(klazz)
+        case FieldArray(field,itemClass) => fieldToCollection(field,itemClass)
+        case FieldCollection(field,itemClass) => fieldToCollection(field,itemClass)
+        case FieldCollectionUnknownType(field)=> throw new IllegalArgumentException ("Unable to find suitable type within collection for field "+field+".")
+        case FieldIterable(field,itemClass) => fieldToCollection(field,itemClass)
+        case FieldIterableUnknownType(field)=> throw new IllegalArgumentException ("Unable to find suitable type within iterable for field "+field+".")
+        case _ => throw new IllegalArgumentException ("Unable to find suitable type for field "+field+".")
+      }
+
+    fieldModel.fieldType = aField.fieldType match {
+      case ProtobufFieldType.Bool    => ProtobufTypeBool()
+      case ProtobufFieldType.Bytes   => ProtobufTypeBytes()
+      case ProtobufFieldType.Int     => ProtobufTypeInt32()
+      case ProtobufFieldType.Long    => ProtobufTypeInt64()
+      case ProtobufFieldType.String  => ProtobufTypeString()
+      case ProtobufFieldType.Double  => ProtobufTypeDouble()
+      case ProtobufFieldType.Float   => ProtobufTypeFloat()
+      case ProtobufFieldType.Message => fieldToType(f)
+      case ProtobufFieldType.Auto    => fieldToType(f)
+    }
+
   }
 
-  private def protobufTypeMapping(klazz:Class[_]):ProtobufType = {
+  private def mapClassToProtobufType(klazz:Class[_]):ProtobufTypeModel = {
     protobufMessages.get(klazz) match {
-      case Some(msg) => ProtobufFieldMessage(msg.name)
+      case Some(msg) => ProtobufTypeMessage(msg.name)
       case _ => klazz match {
-        case `stringClass` =>  ProtobufFieldString()
-        case `intClass`    =>  ProtobufFieldInt()
-        case `longClass`   =>  ProtobufFieldLong()
-        case `dateClass`   =>  ProtobufFieldLong()
-        case `floatClass`  =>  ProtobufFieldFloat()
-        case `doubleClass` =>  ProtobufFieldDouble()
-        case _ => throw new IllegalArgumentException ("Type "+klazz+" is not mapped to any known Protocol Buffer type.")
+        case `stringClass`  =>  ProtobufTypeString()
+        case `intClass`     =>  ProtobufTypeInt32()
+        case `longClass`    =>  ProtobufTypeInt64()
+        case `dateClass`    =>  ProtobufTypeInt64()
+        case `floatClass`   =>  ProtobufTypeFloat()
+        case `doubleClass`  =>  ProtobufTypeDouble()
+        case `booleanClass` =>  ProtobufTypeBool()
+        case _ => throw new IllegalArgumentException ("Type "+klazz+" is not mapped to any known Protocol Buffer type or any known message definition.")
       }
     }
   }
@@ -174,17 +196,17 @@ class ProtobufGenerator extends Generator {
    *
    */
   def processModel(clazz: Class[_]): Unit = {
-    val protobuf: Protobuf = clazz.getAnnotation(classOf[Protobuf])
+    val protobufFile: ProtobufFile = clazz.getAnnotation(classOf[ProtobufFile])
 
-    protobufModels.get(protobuf.name) match {
-      case Some(m) => throw new IllegalStateException("Duplicate Protobuf model with name <" + protobuf.name + ">")
+    protobufModels.get(protobufFile.name) match {
+      case Some(m) => throw new IllegalStateException("Duplicate ProtobufFile model with name <" + protobufFile.name + ">")
       case _ => {
-        val m = new ProtobufModel(protobuf.name)
-        m.protoPackage = defaultIfEmpty(protobuf.protoPackage, getProtoPackageName(clazz))
-        m.protoFileName = defaultIfEmpty(protobuf.protoFileName, getProtoFileName(clazz))
-        m.javaOuterClassName = defaultIfEmpty(protobuf.javaOuterClassName, getJavaOuterClassName(clazz))
-        m.javaPackage = defaultIfEmpty(protobuf.javaPackage, getJavaPackageName(clazz))
-        m.optimizeForSpeed = protobuf.optimizeForSpeed
+        val m = new ProtobufFileModel(protobufFile.name)
+        m.protoPackage = defaultIfEmpty(protobufFile.protoPackage, getProtoPackageName(clazz))
+        m.protoFileName = defaultIfEmpty(protobufFile.protoFileName, getProtoFileName(clazz))
+        m.javaOuterClassName = defaultIfEmpty(protobufFile.javaOuterClassName, getJavaOuterClassName(clazz))
+        m.javaPackage = defaultIfEmpty(protobufFile.javaPackage, getJavaPackageName(clazz))
+        m.optimizedForSpeed = protobufFile.optimizedForSpeed
         protobufModels.put(m.name, m)
       }
     }
@@ -193,15 +215,16 @@ class ProtobufGenerator extends Generator {
   /**
    *
    */
-  def generateModelFor(clazz: Class[_], message: ProtobufMessage): ProtobufModel = {
-    logger.info(">Generating model for message: " + message.message)
+  def generateModelFor(clazz: Class[_], message: ProtobufMessage): ProtobufFileModel = {
+    val name = defaultIfEmpty(message.name, clazz.getSimpleName)
+    logger.info(">Generating model for message: " + name)
 
-    val m = new ProtobufModel(message.message)
+    val m = new ProtobufFileModel(name)
     m.protoPackage = getProtoPackageName(clazz)
     m.protoFileName = getProtoFileName(clazz)
     m.javaOuterClassName = getJavaOuterClassName(clazz)
     m.javaPackage = getJavaPackageName(clazz)
-    m.optimizeForSpeed = true
+    m.optimizedForSpeed = true
     protobufModels.put(m.name, m)
     m
   }
@@ -211,10 +234,11 @@ class ProtobufGenerator extends Generator {
    */
   def processMessage(clazz: Class[_]): Unit = {
     val message: ProtobufMessage = clazz.getAnnotation(classOf[ProtobufMessage])
-    val model = new ProtobufMessageModel(message.message, message.partOf)
+
+    val model = new ProtobufMessageModel(defaultIfEmpty(message.name, clazz.getSimpleName), message.partOf)
 
     val fields = getFieldsWithAnnotation(clazz, classOf[ProtobufField])
-    logger.info("Processing message #" + fields.size + " fields found");
+    logger.info("Processing message " + model.name + " #" + fields.size + " fields found");
 
     model.relatedClass = Some(clazz);
     model.fields.appendAll(fields.map {field => processField(field)})
@@ -250,7 +274,6 @@ class ProtobufGenerator extends Generator {
     model.ordinal = if (aField.order > 0) Some(aField.order) else None
     model.classifier = aField.classifier
     model.relatedField = Some(field);
-    model.fieldType = aField.fieldType
     model
   }
 }

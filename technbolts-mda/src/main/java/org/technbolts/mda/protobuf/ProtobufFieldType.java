@@ -9,7 +9,7 @@ public enum ProtobufFieldType {
     String("string"),
     Bytes("bytes"),
     Auto("<auto:not_resolved>"),
-    Message("<message>");
+    Message("<message:not_resolved>");
     
     public final String pbuf;
 
