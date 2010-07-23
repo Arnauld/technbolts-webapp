@@ -1,11 +1,11 @@
 package org.technbolts.mda.protobuf
 
 import org.technbolts.mda._
+import org.technbolts.reflect._
 import Classes._
 import collection.mutable.HashMap
 import _root_.java.lang.reflect.Field
 import ProtobufFieldClassifier._
-import ProtobufFieldType._
 import org.slf4j.{LoggerFactory, Logger}
 
 
