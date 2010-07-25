@@ -1,12 +1,15 @@
 package org.technbolts.mda.protobuf
 
+import java.lang.annotation.{Annotation => JAnnotation}
+
 import org.technbolts.mda._
+import annotation.{DomainModel, ValueObject}
 import org.technbolts.reflect._
 import Classes._
-import collection.mutable.HashMap
 import _root_.java.lang.reflect.Field
 import ProtobufFieldClassifier._
 import org.slf4j.{LoggerFactory, Logger}
+import collection.mutable.{ListBuffer, HashMap}
 
 
 class ProtobufGenerator extends Generator {
@@ -64,6 +67,7 @@ class ProtobufGenerator extends Generator {
 
   val protobufFileModels = new HashMap[String, ProtobufFileModel]
   val protobufMessages = new HashMap[Class[_], ProtobufMessageModel]
+  val plugins = new ListBuffer[ProtobufGeneratorPlugin]
 
   /**
    *
@@ -88,6 +92,9 @@ class ProtobufGenerator extends Generator {
     }
     logger.info(">Messages collected: " + count)
 
+    logger.info(">Messages postScan")
+    plugins.foreach { _.postScan(this) }
+
     // resolve dependencies if any and required import
     resolveTypes
     
@@ -97,7 +104,7 @@ class ProtobufGenerator extends Generator {
       model =>
         logger.info(">Generating proto file for model: " + model.name)
         val content = ProtobufTemplate.generateProtoFile(model)
-        logger.debug(">Generated: " + model.protoFileName + "\n" + content)
+        logger.warn(">Generated: " + model.protoFileName + "\n" + content)
     }
   }
 
@@ -285,5 +292,28 @@ class ProtobufGenerator extends Generator {
     model.classifier = aField.classifier
     model.relatedField = Some(field);
     model
+  }
+
+  def initDefaultPlugins:Unit = {
+    plugins.append(new NameDTOFormatter)
+  }
+}
+
+class NameDTOFormatter extends ProtobufGeneratorPlugin {
+  def postScan(generator: ProtobufGenerator):Unit = {
+    generator.protobufMessages.filterKeys { isCandidate(_) }
+      .values.foreach { model =>
+        if(!model.name.toLowerCase.endsWith("dto"))
+          model.name = model.name+"DTO"
+    }
+  }
+
+  def isCandidate(klazz:Class[_]):Boolean = {
+    val msg:ProtobufMessage = klazz.getAnnotation(classOf[ProtobufMessage])
+    val nameNotDefined = (msg==null || msg.name.isEmpty)
+
+    EnhancedClass(klazz).hasOneOfAnnotations(
+      classOf[DomainModel],
+      classOf[ValueObject]) && nameNotDefined 
   }
 }

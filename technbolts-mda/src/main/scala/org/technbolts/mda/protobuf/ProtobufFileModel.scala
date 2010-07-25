@@ -19,7 +19,7 @@ class ProtobufFileModel(val name:String) {
   }
 }
 
-class ProtobufMessageModel(val name:String, val partOf:String) {
+class ProtobufMessageModel(var name:String, val partOf:String) {
   var fields = new ListBuffer[ProtobufFieldModel]
 
   def generateFieldOrdinals:Unit = {

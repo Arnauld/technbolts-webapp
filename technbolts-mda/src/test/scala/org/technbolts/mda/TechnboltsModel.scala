@@ -2,23 +2,26 @@ package org.technbolts.mda
 
 import org.junit.Test
 import annotation._
+import org.scalatest.junit.JUnitSuite
 import java.util.Date
 import protobuf.{ProtobufFile, ProtobufFieldType, ProtobufMessage, ProtobufField}
+import org.springframework.core.`type`.filter.AnnotationTypeFilter
+import org.technbolts.reflect.ClassScanner
+import ClassScanner._
 
-class TechnboltsModelTest {
+class TechnboltsModelSpec extends JUnitSuite {
   @Test
   def useCaseEx1: Unit = {
+    
     val model = GeneratorModel("org.technbolts")
-    model.models.append(
-      classOf[ProtobufFileEntity],
-      classOf[ProtobufFileCommon],
-      classOf[ProtobufFileRequest],
 
-      classOf[Ref],
-      classOf[Request],
-      classOf[RequestDetails],
-      classOf[RequestEvent],
-      classOf[Entity])
+    val scanner = new ClassScanner
+    scanner.addIncludeFilter(composeAnnotationsOr(classOf[ProtobufMessage], classOf[ProtobufFile]))
+    scanner.getComponentClasses("org.technbolts").foreach {
+      klazz =>
+        println(klazz)
+        model.models.append(klazz)
+    }
     model.generate
   }
 }
@@ -39,7 +42,7 @@ class DistributionMode
 class RefType
 
 @ValueObject
-@ProtobufMessage(partOf="common")
+@ProtobufMessage(partOf="common", name="Ref")
 sealed abstract class Ref(val refUuid: String)
 case class UserRef (override val refUuid: String) extends Ref(refUuid)
 case class GroupRef(override val refUuid: String) extends Ref(refUuid)

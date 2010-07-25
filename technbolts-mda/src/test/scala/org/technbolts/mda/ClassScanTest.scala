@@ -8,12 +8,12 @@ import org.springframework.util.ClassUtils
 import ClassUtils._
 import org.springframework.core.`type`.filter.{AnnotationTypeFilter}
 import protobuf.ProtobufMessage
-import org.technbolts.reflect.ComponentClassScanner
+import org.technbolts.reflect.ClassScanner
 
 class ClassScanTest {
   @Test
   def useCase(): Unit = {
-    val scanner = new ComponentClassScanner
+    val scanner = new ClassScanner
     //scanner.addIncludeFilter(new AssignableTypeFilter())
     scanner.addIncludeFilter(new AnnotationTypeFilter(classOf[ProtobufMessage]))
     scanner.getComponentClasses("org.technbolts").foreach {

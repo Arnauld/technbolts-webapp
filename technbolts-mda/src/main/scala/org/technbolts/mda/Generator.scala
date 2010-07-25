@@ -30,8 +30,11 @@ trait GeneratorModel {
 
   var generators:List[Generator] = null
   def getGenerators:List[Generator] = {
-    if(generators==null)
-      generators = List(new ProtobufGenerator)
+    if(generators==null) {
+      val protobuf = new ProtobufGenerator
+      protobuf.initDefaultPlugins
+      generators = List(protobuf)
+    }
     generators
   }
 
