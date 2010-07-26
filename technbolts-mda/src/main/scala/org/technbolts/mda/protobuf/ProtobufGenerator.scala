@@ -100,17 +100,17 @@ class ProtobufGenerator extends Generator {
     
     // then generate proto file
     logger.info(">Generating #" + protobufFileModels.size + " proto file(s)")
-    protobufFileModels.values.foreach {
-      model =>
-        logger.info(">Generating proto file for model: " + model.name)
-        val content = ProtobufTemplate.generateProtoFile(model)
-        logger.warn(">Generated: " + model.protoFileName + "\n" + content)
+    protobufFileModels.values.foreach { model =>
+      logger.info(">Generating proto file for model: " + model.name)
+      val content = ProtobufTemplate.generateProtoFile(model)
+      logger.warn(">Generated: " + model.protoFileName + "\n" + content)
     }
   }
 
+
   def resolveTypes: Unit = {
-    protobufMessages.values.foreach {
-      message =>
+    protobufFileModels.values.foreach { fileModel =>
+      fileModel.messages.foreach { message =>
         logger.info(">Resolving dependencies and field types for message: " + message.name)
         val enclosing = protobufFileModels.get(message.partOf).get
         
@@ -132,6 +132,7 @@ class ProtobufGenerator extends Generator {
             case _ => //nothing special to do
           }
         }
+      }
     }
   }
 
@@ -296,6 +297,7 @@ class ProtobufGenerator extends Generator {
 
   def initDefaultPlugins:Unit = {
     plugins.append(new NameDTOFormatter)
+    plugins.append(new DomainModelCRUDCommands)
   }
 }
 
@@ -315,5 +317,27 @@ class NameDTOFormatter extends ProtobufGeneratorPlugin {
     EnhancedClass(klazz).hasOneOfAnnotations(
       classOf[DomainModel],
       classOf[ValueObject]) && nameNotDefined 
+  }
+}
+
+class DomainModelCRUDCommands extends ProtobufGeneratorPlugin {
+  def postScan(generator: ProtobufGenerator):Unit = {
+    val filtered = generator.protobufMessages.filterKeys { isCandidate(_) }
+    filtered.foreach { case (klazz,model) =>
+      generateCommands(generator, klazz, model) 
+    }
+  }
+
+  def isCandidate(klazz:Class[_]):Boolean = {
+    klazz.isAnnotationPresent(classOf[DomainModel])
+  }
+
+  def generateCommands(generator: ProtobufGenerator, klazz:Class[_], model:ProtobufMessageModel):Unit = {
+    val partOf = model.partOf
+    val fileModel = generator.protobufFileModels.get(partOf).get
+
+    val createCmd = new ProtobufMessageModel("Create"+model+"Cmd", partOf)
+    fileModel.messages.append(createCmd)
+
   }
 }
