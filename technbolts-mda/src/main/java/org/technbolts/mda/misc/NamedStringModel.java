@@ -1,4 +1,4 @@
-package org.technbolts.mda.annotation;
+package org.technbolts.mda.misc;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,5 +7,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
-public @interface ValueObject {
+public @interface NamedStringModel {
 }

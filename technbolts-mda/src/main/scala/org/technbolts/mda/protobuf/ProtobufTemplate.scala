@@ -28,7 +28,7 @@ class ProtobufTemplate extends Template {
   var optimizeForSpeed = """|option optimize_for = SPEED;
                             |""".stripMargin
 
-  val fieldTemplate = """|  ${classifier} ${type} ${name} = ${ordinal}
+  val fieldTemplate = """|  ${classifier} ${type} ${name} = ${ordinal} ${default};
                          |""".stripMargin
   /**
    * 
@@ -63,11 +63,16 @@ class ProtobufTemplate extends Template {
    *
    */
   def generateField(builder: StringBuilder, field: ProtobufFieldModel): Unit = {
+    val defaultValue = field.defaultValue match {
+      case None => ""
+      case Some(v) => "[default="+v+"]"
+    }
     val fragment = subVars(fieldTemplate, Map(
                       "classifier"->field.classifier.pbuf,
                       "type"->field.fieldType.pbuf,
                       "name"->field.name,
-                      "ordinal"->field.ordinal.getOrElse(-1).toString
+                      "ordinal"->field.ordinal.getOrElse(-1).toString,
+                      "default"->defaultValue
                     ))
     builder.append(fragment)
   }

@@ -22,6 +22,7 @@
         <!--         Version                  -->
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <scala.version>2.8.0</scala.version>
+        <scalatest.version>1.2-for-scala-2.8.0.final-SNAPSHOT</scalatest.version>
         <lift.version>2.0-scala280-SNAPSHOT</lift.version>
 
         <!-- misc -->
@@ -80,17 +81,7 @@
                     <groupId>javax.mail</groupId>
                     <artifactId>mail</artifactId>
                 </exclusion>
-                <exclusion>
-                    <groupId>org.scala-lang</groupId>
-                    <artifactId>scala-library</artifactId>
-                </exclusion>
             </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>${scala.version}</version>
         </dependency>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -205,7 +196,7 @@
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
         <!--
-           annotation jsr250
+           domain jsr250
         -->
         <dependency>
             <groupId>javax.annotation</groupId>
@@ -320,6 +311,13 @@
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty</artifactId>
             <version>[6.1.6,7.0)</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest</artifactId>
+            <version>${scalatest.version}</version>
             <scope>test</scope>
         </dependency>
 

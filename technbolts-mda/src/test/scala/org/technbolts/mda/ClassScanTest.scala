@@ -5,14 +5,15 @@ import org.springframework.context.annotation.ClassPathScanningCandidateComponen
 import collection.mutable.ListBuffer
 import collection.JavaConversions._
 import org.springframework.util.ClassUtils
-import org.springframework.core.`type`.filter.{AnnotationTypeFilter, AssignableTypeFilter}
+import ClassUtils._
+import org.springframework.core.`type`.filter.{AnnotationTypeFilter}
 import protobuf.ProtobufMessage
+import org.technbolts.reflect.ClassScanner
 
 class ClassScanTest {
-
   @Test
-  def useCase():Unit = {
-    val scanner = new ComponentClassScanner
+  def useCase(): Unit = {
+    val scanner = new ClassScanner
     //scanner.addIncludeFilter(new AssignableTypeFilter())
     scanner.addIncludeFilter(new AnnotationTypeFilter(classOf[ProtobufMessage]))
     scanner.getComponentClasses("org.technbolts").foreach {
@@ -22,19 +23,3 @@ class ClassScanTest {
 }
 
 
-class ComponentClassScanner extends ClassPathScanningCandidateComponentProvider(false) {
-
-	def getComponentClasses(basePackage:String):List[Class[_]] = {
-		val basePkg = if (basePackage == null) "" else basePackage
-
-		val classes = new ListBuffer[Class[_]]
-		for (candidate <- findCandidateComponents(basePkg)) {
-      val cls:Class[_] = ClassUtils.resolveClassName(
-                          candidate.getBeanClassName(),
-                          ClassUtils.getDefaultClassLoader());
-      classes.add(cls);
-		}
-		classes.toList
-	}
-
-}

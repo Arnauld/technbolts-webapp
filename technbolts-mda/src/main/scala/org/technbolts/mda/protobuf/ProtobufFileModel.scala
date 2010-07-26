@@ -19,7 +19,7 @@ class ProtobufFileModel(val name:String) {
   }
 }
 
-class ProtobufMessageModel(val name:String, val partOf:String) {
+class ProtobufMessageModel(var name:String, val partOf:String) {
   var fields = new ListBuffer[ProtobufFieldModel]
 
   def generateFieldOrdinals:Unit = {
@@ -55,4 +55,26 @@ class ProtobufFieldModel(val name:String) {
   var classifier:ProtobufFieldClassifier = ProtobufFieldClassifier.Auto
   var fieldType:ProtobufTypeModel = ProtobufTypeAuto()
   var relatedField:Option[Field] = None
+  var defaultValue:Option[String] = None
+
+  def withClassifier(classifier:ProtobufFieldClassifier):ProtobufFieldModel = {
+    this.classifier = classifier
+    this
+  }
+  def optional:ProtobufFieldModel = withClassifier(ProtobufFieldClassifier.Optional)
+  def repeated:ProtobufFieldModel = withClassifier(ProtobufFieldClassifier.Repeated)
+  def required:ProtobufFieldModel = withClassifier(ProtobufFieldClassifier.Required)
+
+  def withDefault(defaultValue:String):ProtobufFieldModel = {
+    this.defaultValue = Some(defaultValue)
+    this
+  }
+  def withFieldType(fieldType:ProtobufTypeModel):ProtobufFieldModel = {
+    this.fieldType = fieldType
+    this
+  }
+  def withFieldType(message:ProtobufMessageModel):ProtobufFieldModel = {
+    this.fieldType = ProtobufTypeMessage(message)
+    this
+  }
 }

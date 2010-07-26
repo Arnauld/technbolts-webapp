@@ -1,4 +1,4 @@
-package org.technbolts.mda
+package org.technbolts.reflect
 
 import java.lang.{Class => JClass}
 

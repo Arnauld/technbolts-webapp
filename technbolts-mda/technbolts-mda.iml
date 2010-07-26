@@ -11,7 +11,7 @@
         </option>
         <option name="myScalaSdkJarPaths">
           <array>
-            <option value="$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.8.0/scala-library-2.8.0.jar" />
+            <option value="$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.8.0.RC6/scala-library-2.8.0.RC6.jar" />
           </array>
         </option>
       </configuration>
@@ -36,6 +36,7 @@
     <orderEntry type="library" name="Maven: net.liftweb:lift-common:2.0-scala280-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.5.10" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.15" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.8.0.RC6" level="project" />
     <orderEntry type="library" name="Maven: net.liftweb:lift-json:2.0-scala280-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.thoughtworks.paranamer:paranamer:2.0" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.2" level="project" />
@@ -47,7 +48,6 @@
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: com.h2database:h2:1.2.139" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.derby:derby:10.5.3.0_1" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.8.0" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.2" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
@@ -71,6 +71,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.mortbay.jetty:jetty:6.1.24" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mortbay.jetty:jetty-util:6.1.24" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mortbay.jetty:servlet-api:2.5-20081211" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.scalatest:scalatest:1.2-for-scala-2.8.0.final-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.scala-lang:scala-compiler:2.8.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-all:1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.8.4" level="project" />

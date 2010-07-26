@@ -13,4 +13,5 @@ public @interface ProtobufField {
     int order()   default -1;
     String name() default "";
     ProtobufFieldType fieldType() default ProtobufFieldType.Auto;
+    String defaultValue() default "";
 }
