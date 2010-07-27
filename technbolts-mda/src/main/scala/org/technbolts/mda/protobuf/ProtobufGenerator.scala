@@ -382,6 +382,10 @@ trait CommandsGenerator {
     val (klazz,model) = founds.head
     model
   }
+
+  def appendErrorField(model:ProtobufMessageModel):Unit = {
+    model.fields.append(new ProtobufFieldModel("error").repeated.withFieldType(errorModel))
+  }
 }
 
 class DomainModelCRUDCommandsPlugin extends ProtobufGeneratorPlugin {
@@ -422,8 +426,9 @@ class CRUDCommandsGenerator(generator: ProtobufGenerator, klazz:Class[_], model:
 
   def generateDeleteCommands:Iterable[ProtobufMessageModel] = {
     val deleteCmd = new ProtobufMessageModel("Delete"+formatName(model.name)+CMD_REQUEST_SUFFIX, partOf)
+    //ReflectUtils.
     val deleteRep = new ProtobufMessageModel("Delete"+formatName(model.name)+CMD_RESPONSE_SUFFIX, partOf)
-
+    appendErrorField(deleteRep)
     List(deleteCmd, deleteRep)
   }
 
@@ -435,7 +440,7 @@ class CRUDCommandsGenerator(generator: ProtobufGenerator, klazz:Class[_], model:
     searchCmd.fields.append(new ProtobufFieldModel("parameter").repeated.withFieldType(namedStringModel))
 
     val searchRep = new ProtobufMessageModel("Search"+formatName(model.name)+CMD_RESPONSE_SUFFIX, partOf)
-    searchRep.fields.append(new ProtobufFieldModel("error").repeated.withFieldType(errorModel))
+    appendErrorField(searchRep)
     searchRep.fields.append(new ProtobufFieldModel("found").repeated.withFieldType(model))
 
     List(searchCmd, searchRep)
