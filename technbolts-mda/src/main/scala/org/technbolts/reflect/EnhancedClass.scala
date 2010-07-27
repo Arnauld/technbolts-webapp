@@ -16,11 +16,6 @@ class EnhancedClass(val underlying:Class[_]) {
   def findFieldsWith(annotation:Class[_ <: JAnnotation]):List[Field] = {
     underlying.getDeclaredFields.filter {
       _.isAnnotationPresent(annotation)
-    }
-  }
-  def findFieldWith(annotation:Class[_ <: JAnnotation]):Field = {
-    underlying.getDeclaredFields.filter {
-      _.isAnnotationPresent(annotation)
-    }.head
+    }.toList
   }
 }

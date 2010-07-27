@@ -3,7 +3,7 @@ package org.technbolts.mda.protobuf
 import java.lang.annotation.{Annotation => JAnnotation}
 
 import org.technbolts.mda._
-import domain.{DomainModel, ValueObject}
+import domain.{Id, DomainModel, ValueObject}
 import misc.{NamedStringModel, PagingModel, ErrorModel}
 import org.technbolts.reflect._
 import Classes._
@@ -418,27 +418,37 @@ class CRUDCommandsGenerator(generator: ProtobufGenerator, klazz:Class[_], model:
   val partOf = model.partOf
 
   def generateCreateCommands:Iterable[ProtobufMessageModel] = {
+    /* request */
     val createCmd = new ProtobufMessageModel("Create"+formatName(model.name)+CMD_REQUEST_SUFFIX, model.partOf)
-    val createRep = new ProtobufMessageModel("Create"+formatName(model.name)+CMD_RESPONSE_SUFFIX, partOf)
 
+    /* response */
+    val createRep = new ProtobufMessageModel("Create"+formatName(model.name)+CMD_RESPONSE_SUFFIX, partOf)
+    appendErrorField(createRep)
     List(createCmd, createRep)
   }
 
   def generateDeleteCommands:Iterable[ProtobufMessageModel] = {
+    /* request */
     val deleteCmd = new ProtobufMessageModel("Delete"+formatName(model.name)+CMD_REQUEST_SUFFIX, partOf)
-    //ReflectUtils.
+    EnhancedClass(klazz).findFieldsWith(classOf[Id]).foreach { field =>
+      deleteCmd.fields.append(generator.processField(field))
+    }
+
+    /* response */
     val deleteRep = new ProtobufMessageModel("Delete"+formatName(model.name)+CMD_RESPONSE_SUFFIX, partOf)
     appendErrorField(deleteRep)
     List(deleteCmd, deleteRep)
   }
 
   def generateSearchCommands:Iterable[ProtobufMessageModel] = {
+    /* request */
     val searchCmd = new ProtobufMessageModel("Search"+formatName(model.name)+CMD_REQUEST_SUFFIX, partOf)
     searchCmd.fields.append(new ProtobufFieldModel("sample").optional.withFieldType(model))
     searchCmd.fields.append(new ProtobufFieldModel("paging").optional.withFieldType(pagingModel))
     searchCmd.fields.append(new ProtobufFieldModel("id_only").optional.withFieldType(ProtobufTypeBool()).withDefault("false"))
     searchCmd.fields.append(new ProtobufFieldModel("parameter").repeated.withFieldType(namedStringModel))
 
+    /* response */
     val searchRep = new ProtobufMessageModel("Search"+formatName(model.name)+CMD_RESPONSE_SUFFIX, partOf)
     appendErrorField(searchRep)
     searchRep.fields.append(new ProtobufFieldModel("found").repeated.withFieldType(model))
